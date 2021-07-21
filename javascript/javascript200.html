@@ -212,7 +212,7 @@
             padding: 5px;
         }
 
-</style>
+    </style>
 </head>
 
 
@@ -492,10 +492,10 @@
     // 2 * 8 = 16;
     // 2 * 9 = 18;
 
-    for(var i=2; i&lt;=9; i++){
-        for(var j=1; j&lt;=9; j++){
+    for( var i=2; i&lt;=9; i++ ){
+        for( var j=1; j&lt;=9; j++ ){
             var sum = i * j;
-        document.write(i + " * " + j + " = " + sum,);
+        document.write( i + " * " + j + " = " + sum, );
 }
 </code></pre>
     </div>
@@ -855,29 +855,58 @@
                     var sum = i * j;
                 document.write(i + " * " + j + " = " + sum,"<br>");
             }
+
+            document.write("<br>")
+        }
+
+        //sample200 : 테이블 만들기
+        {
+            document.write("***200. 테이블 만들기 ***<br>");
+
+            let num = 1;        
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";    
+                for( let j=1; j<=10; j++){
+                    table += "<td>"+ num +"</td>";
+                    num ++; //= num + 1;  num += 1;
+                }
+                table += "</tr>"
+            }   
+
+            table += "</table>";
+
+            document.write(table);
+
+            document.write("<br>")
+        }
+
+        //sample201 : 테이블 만들기 (숙제)
+        {
+            document.write("***201. 테이블 만들기 (숙제)***<br>");
+
+            let num = 100;        
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";    
+                for( let j=1; j<=10; j++){
+                    table += "<td>"+ num +"</td>";
+                    num --; //= num + 1;  num += 1;
+                }
+                table += "</tr>"
+            }   
+
+            table += "</table>";
+
+            document.write(table);
+
+            document.write("<br>")
         }
     }    
 
-    //sample101 : 테이블 만들기
-    {
-        document.write("***200. 테이블 만들기 ***<br>");
-
-        let num = 1;        
-        let table = "<table>";
-
-        for( let i=1; i<=10; i++ ){
-            table += "<tr>";    
-            for( let j=1; j<=10; j++){
-                table += "<td>"+ num +"</td>";
-                num ++; //= num + 1;  num += 1;
-            }
-            table += "</tr>"
-        }   
-
-        table += "</table>";
-
-        document.write(table);
-    }
+    
 
     </script>
 </body>
