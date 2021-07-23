@@ -254,7 +254,7 @@
         <h2>01. 선언적 함수  <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{                 
-    function func(){
+    function func( ){
         //실행문
         document.write("함수가 실행되었습니다.<br><br>");
     }
@@ -271,7 +271,7 @@
         <h2>02. 익명 함수  <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{   
-    const func = function(){
+    const func = function( ){
         document.write("함수가 실행되었습니다.<br><br>");
     }
     func( );
@@ -303,12 +303,12 @@
         <h2>04. 리턴값(결과값) 함수  <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{  
-    function func(){
+    function func( ){
         const str = "함수가 실행되었습니다.<br><br>";
         return str;
     }
 
-    document.write(func());
+    document.write(func( ));
 }
 </code></pre>
         </div>
@@ -330,7 +330,7 @@
             function func(){
                 //실행문
                 document.write("*** 01. 선언적 함수***<br>");
-                document.write("01. 함수가 실행되었습니다.<br><br>");
+                document.write("함수가 실행되었습니다.<br><br>");
             }
             func();
         }
@@ -340,7 +340,7 @@
         {
             const func = function(){
                 document.write("*** 02. 익명 함수***<br>");
-                document.write("02. 함수가 실행되었습니다.<br><br>");
+                document.write("함수가 실행되었습니다.<br><br>");
             }
             func();
         }
