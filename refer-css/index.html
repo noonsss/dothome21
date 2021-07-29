@@ -100,6 +100,21 @@
             color: #fff;
             cursor: crosshair;
         }
+        .link li {
+            list-style: none;
+        }
+        .link li a {
+            color: #fff;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            background-color: #000;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .link li a:hover {
+            background: #00db72;
+        }
         @media (max-width: 1220px){
             #contents {
                 width:98%;
@@ -117,9 +132,11 @@
             }
             #header strong {
                 font-size: 14px;
+                bottom: 10%;
             }
             main h2 {
                 font-size: 30px;
+                padding: 22% 5% 5%;
             }
             .refer {
                 padding: 10px;
@@ -128,6 +145,7 @@
             .refer h3 {
                 margin-bottom: 10px;
                 font-size: 16px;
+                padding: 6px 10px;
             }
             .refer table th {
                 padding: 8px;
@@ -148,6 +166,9 @@
 
     <main id="contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
+        <ul class="link">
+            <li><a href="../javascript/javascript602-sample01.html">CSS 속성 첫 글자 검색하기</a></li>
+        </ul>
         <section class="refer">
             <h3>Alphabet</h3>
             <table>
@@ -364,7 +385,7 @@
                     </tr>
                     <tr>
                         <td>border-top</td>
-                        <td>border-top 속성은 테두리 위쪽 속성을 일괄적으로 설정합니다</td>
+                        <td>border-top 속성은 테두리 위쪽 속성을 일괄적으로 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>border-top-color</td>
@@ -376,23 +397,23 @@
                     </tr>
                     <tr>
                         <td>border-top-right-radius</td>
-                        <td>속성은 윗부분 오른쪽 모서리 굴곡을 설정합니다.</td>
+                        <td>border-top-right-radius 속성은 윗부분 오른쪽 모서리 굴곡을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>border-top-style</td>
-                        <td>속성은 테두리 위쪽 스타일 속성을 설정합니다.</td>
+                        <td>border-top-style 속성은 테두리 위쪽 스타일 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>border-top-width</td>
-                        <td>속성은 테두리 위쪽 두께 속성을 설정합니다</td>
+                        <td>border-top-width 속성은 테두리 위쪽 두께 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>border-width</td>
-                        <td>속성은 테두리 두께 속성을 설정합니다.</td>
+                        <td>border-width 속성은 테두리 두께 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>bottom</td>
-                        <td>속성은 위치 요소의 아래쪽 속성을 설정합니다.</td>
+                        <td>bottom 속성은 위치 요소의 아래쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>box-decoration-break</td>
@@ -656,7 +677,7 @@
                     </tr>
                     <tr>
                         <td>left</td>
-                        <td>속성은 위치 요소의 왼쪽 속성을 설정합니다.</td>
+                        <td>left 속성은 위치 요소의 왼쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>letter-spacing</td>
@@ -688,7 +709,7 @@
                     </tr>
                     <tr>
                         <td>margin-bottom</td>
-                        <td>margin-bottom 속성은 박스 요소 아래의 바깥 여백을 설정합니다.</td>
+                        <td>margin-bottom 속성은 박스 요소 아래쪽의 바깥 여백을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>margin-left</td>
@@ -776,19 +797,19 @@
                     </tr>
                     <tr>
                         <td>padding-bottom</td>
-                        <td>속성은 박스 요소 아래의 안쪽 여백을 일괄적으로 설정합니다.</td>
+                        <td>padding-bottom 속성은 박스 요소 아래의 안쪽 여백을 일괄적으로 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>padding-left</td>
-                        <td>속성은 박스 요소 아래의 왼쪽의 안쪽 여백을 일괄적으로 설정합니다.</td>
+                        <td>padding-left 속성은 박스 요소 왼쪽의 안쪽 여백을 일괄적으로 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>padding-right</td>
-                        <td>속성은 박스 요소 아래의 왼쪽의 오른쪽 여백을 일괄적으로 설정합니다.</td>
+                        <td>padding-right 속성은 박스 요소 오른쪽의 여백을 일괄적으로 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>padding-top</td>
-                        <td>속성은 박스 요소 위의 여백을 일괄적으로 설정합니다.</td>
+                        <td>padding-top 속성은 박스 요소 위의 여백을 일괄적으로 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>page-break-after</td>
@@ -816,7 +837,7 @@
                     </tr>
                     <tr>
                         <td>position</td>
-                        <td>속성은 요소의 위치를 설정합니다.</td>
+                        <td>position 속성은 요소의 위치를 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>quotes</td>
@@ -828,7 +849,7 @@
                     </tr>
                     <tr>
                         <td>right</td>
-                        <td>속성은 위치 요소의 오른쪽 속성을 설정합니다.</td>
+                        <td>right 속성은 위치 요소의 오른쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>tab-size</td>
@@ -840,7 +861,7 @@
                     </tr>
                     <tr>
                         <td>text-align</td>
-                        <td>속성은 텍스트 정렬 방식을 설정합니다.</td>
+                        <td>text-align 속성은 텍스트 정렬 방식을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>text-align-last</td>
@@ -884,7 +905,7 @@
                     </tr>
                     <tr>
                         <td>top</td>
-                        <td>속성은 위치 요소의 위쪽 속성을 설정합니다.</td>
+                        <td>top 속성은 위치 요소의 위쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>transform</td>
