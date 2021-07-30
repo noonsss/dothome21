@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 연습10</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
         body {
-            background-color: #ffebee ;
+            background-color: #fce4ec;
         }
         #wrap {
             width: 1200px;
@@ -20,7 +20,7 @@
         header {
             width: 100%;
             height: 100px;
-            background-color: #fce4ec ;
+            background-color: #f8bbd0;
         }
         main {
             width: 100%;
@@ -30,42 +30,66 @@
             width: 30%;
             height: 900px;
             float: left;
-            background-color: #f48fb1 ;
+            background-color: #f48fb1;
         }
-        .article1 {
+        .atricle1 {
             width: 70%;
             height: 300px;
             float: left;
-            background-color: #f06292 ;
+            background-color: #f06292;
         }
-        .article2 {
+        .atricle2 {
             width: 70%;
             height: 300px;
             float: left;
-            background-color: #ec407a ;
+            background-color: #ec407a;
         }
-        .article3 {
+        .atricle3 {
             width: 70%;
             height: 300px;
             float: left;
-            background-color: #e91e63 ;
+            background-color: #e91e63;
         }
         footer {
             width: 100%;
             height: 100px;
-            background-color: #fff;
+            background-color: #d81b60;
         }
         @media (max-width: 1220px){
             #wrap {
                 width: 100%;
             }
-            article1 {
+            .atricle1 {
                 height: 450px;
             }
-            article2 {
+            .atricle2 {
                 height: 450px;
             }
-            article3 {
+            .atricle3 {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        @media (max-width: 800px){
+            .aside {
+                width: 100%;
+                height: 200px;
+            }
+            .atricle1 {
+                width: 50%;
+                height: 450px;
+            }
+            .atricle2 {
+                width: 50%;
+                height: 450px;
+            }
+        }
+        @media (max-width: 600px){
+            .atricle1 {
+                width: 100%;
+                height: 300px;
+            }
+            .atricle2 {
                 width: 100%;
                 height: 300px;
             }
@@ -73,13 +97,13 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrap">
         <header></header>
         <main>
             <aside class="aside"></aside>
-            <article class="article1"></article>
-            <article class="article2"></article>
-            <article class="article3"></article>
+            <article class="atricle1"></article>
+            <article class="atricle2"></article>
+            <article class="atricle3"></article>
         </main>
         <footer></footer>
     </div>
