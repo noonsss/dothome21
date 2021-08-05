@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 테스트 10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            background-color: #000;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #F7E5EC;
+        }
+        #banner {
+            width: 100%;
+            height: 300px;
+            background-color: #e694b0;
+        }
+        #contents {
+            width: 100%;
+            height: 600px;
+            background-color: #d94f7a;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #c53361;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 3%);
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div class="container"></div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>
