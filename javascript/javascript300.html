@@ -259,6 +259,9 @@
         <li><a href="javascript604.html">날짜 메서드</a></li>
         <li><a href="javascript605.html">이벤트 메서드</a></li>
     </ol>
+    <ol class="ol7">
+        <li><a href="javascript606.html">샘플</a></li>
+    </ol>
 
     <h2 class="mt20"> 데이터 실행 : 함수</h2>
     <ul>
@@ -328,6 +331,11 @@
         document.write(str);
     }
     func("함수가 실행되었습니다.<br><br>");
+
+    function func2(str1, str2){
+        document.write(str1, str2);
+    }
+    func2("함수가", " 실행되었습니다. <br><br>");
 }
 </code></pre>
         </div>
@@ -560,12 +568,12 @@
 <pre class="line-numbers"><code class="language-js">{  
 
     function func(strA, strB){
-        // document.write(strA, "<br>");
-        // document.write(strB, "<br>");
-        document.write(arguments[0], "<br>");
-        document.write(arguments[1], "<br>");
+        // document.write(strA);
+        // document.write(strB);
+        document.write(arguments[0]);
+        document.write(arguments[1]);
     }
-    func("함수 A가 실행되었습니다.", "함수 B가 실행되었습니다.<br><br>");
+    func("함수 A가 실행되었습니다.", "함수 B가 실행되었습니다.");
 }
 </code></pre>
         </div>
@@ -579,16 +587,16 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{  
     // function func(){
-    //     document.write("함수가 실행되었습니다.<br>");
+    //     document.write("함수가 실행되었습니다.);
     //     func();
     // }
     // func();
 
     function func(num){
         if( num &lt;= 1){
-            document.write("함수가 실행되었습니다.<br>");
+            document.write("함수가 실행되었습니다.);
         } else {
-            document.write("함수가 실행되었습니다.<br>");
+            document.write("함수가 실행되었습니다.);
             func( num-1) ;
         }
     }
@@ -730,6 +738,11 @@
                 document.write(str);
             }
             func("함수가 실행되었습니다.<br><br>");
+
+            function func2(str1, str2){
+                document.write(str1, str2);
+            }
+            func2("함수가", " 실행되었습니다. <br><br>");
         }
 
         //sample04
@@ -968,6 +981,8 @@
                 }
             }
             callback(func);
+
+            document.write("<Br>");
         }
 
         //sample19
