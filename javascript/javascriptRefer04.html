@@ -27,15 +27,17 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: 'NEXON Lv1 Gothic OTF';
-            line-height: 1.6;
+            box-sizing: border-box;
         }
 
         body {
-            padding: 5%;
-            margin-bottom: 400px;
+            padding: 2%;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-
+        ul {
+            list-style: none;
+        }
+        
         h1 {
             padding-bottom: 20px 0;
         }
@@ -50,24 +52,34 @@
             border-width: 0px;
             border-bottom-width: 1px;
         }
-
+        .title {
+            border-top: 3px solid #0e43f1;
+            border-bottom: 1px solid #0e43f1;
+            margin-bottom: 20px;
+        }
+        .title h1 a {
+            font-family: 'TmonMonsori';
+            color: #0e43f1;
+            font-size: 50px;
+            display: inline-block;
+            padding: 15px 0 12px;
+            text-transform: uppercase;
+        }
         img {
             vertical-align: top;
             border-radius: 5px;
             margin: 5px;
         }
 
-        ul {
-            list-style: none;
+        ol {
+            padding-left: 26px;
         }
-
         a {
             text-decoration: none;
-            color: #333;
         }
 
         .sample {
-            border: 1px solid #E6E6E6;
+            font-family: 'NEXON Lv1 Gothic OTF';
             border-radius: 5px;
         }
 
@@ -76,8 +88,8 @@
             font-size: 16px;
             background-color: #F2F2F2;
             padding: 15px;
-            border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
+            font-weight: normal;
         }
 
         .sample h2 .dot {
@@ -113,73 +125,15 @@
             top: 0;
         }
 
-        .sample .ex {
-            padding: 20px;
-        }
-
-        .sample .ex .text {
-            margin: 10px 0;
-        }
-
-        .sample .re {
-            padding: 20px;
-            border-top: 1px solid #E6E6E6;
-        }
-
-        .sample .re a {
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 30px;
-            padding: 10px 30px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        .sample .re a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .sample .problem {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-            line-height: 1.6;
-        }
 
         .sample pre {
             margin: 0 !important;
             border-radius: 0;
         }
-
-        .sample .desc {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
+        .sample code {
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-
-        .sample .desc dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .desc dd {
-            padding: 3px 0 16px 0;
-            line-height: 1.6;
-        }
-
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
+        
         .mt20 {
             margin-top: 20px;
         }    
@@ -219,47 +173,76 @@
         }
         .menu li {
         display: inline;
-    }
-    .menu li a {
-        font-family: 'NEXON Lv1 Gothic OTF';
-        color: #000;
-        border: 1px dashed #000;
-        padding: 10px 30px;
-        display: inline-block;
-        border-radius: 50px;
-        font-size: 16px;
-        margin: 4px 1px;
-        box-shadow: inset 0 0 0 #000;
-        transition: all 0.4s;
-    }
-    .menu li a:hover {
-        box-shadow: inset 0px -100px 0 #000;
-        color: #fff;
-        border-style: solid;
-    }
-    @media(max-width:800px){
+        }
         .menu li a {
-            font-size: 12px;
-            padding: 5px 20px;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0e43f1;
+            border: 1px dashed #0e43f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            box-shadow: inset 0 0 0 #000;
+            transition: all 0.4s;
         }
-        .list li {
-            line-height: 1.2;
+        .menu li a:hover {
+            box-shadow: inset 0px -100px 0 #000;
+            color: #fff;
+            border-style: solid;
         }
-        .list a {
-            font-size: 12px;
-        }
-        .sample h2 {
-            font-size: 12px 10px;
-            padding: 10px;
-        }
-        .sample h2 .dot {
-            display: none;
-        }
-        .sample pre {
+        .list li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
             font-size: 14px;
+            line-height: 1.6;
+            color: #000;
         }
-        
-    }
+        @media(max-width:800px){
+            body {
+                padding: 5%;
+                font-size: 13px;
+            }
+            #wrap {
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+            }
+            #contents {
+                border-width: 6px;
+            }
+            .title {
+                border-top-width: 2px;
+            }
+            .title h1 {
+                text-align: center;
+            }
+            .title h1 a {
+                font-size: 40px;
+            }
+            .menu {
+                text-align: center;
+            }
+            .menu li a {
+                font-size: 13px;
+                padding: 5px 20px;
+            }
+            .list li a {
+                font-size: 13px;
+            }
+            .sample h2 {
+                font-size: 13px;
+                padding: 12px 10px 10px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .sample pre {
+                line-height: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 
@@ -294,22 +277,24 @@
 
     <h2 class="mt20">데이터 제어하기</h2>
     <ul class="list">
-        <li><a href="#sample01">01. if문</a></li>
-        <li><a href="#sample02">02. 다중 if문</a></li>
-        <li><a href="#sample03">03. 중첩 if문</a></li>
-        <li><a href="#sample04">04. wsitch문</a></li>
-        <li><a href="#sample05">05. 삼항 연산자</a></li>
-        <li><a href="#sample06">06. if문 생략</a></li>
-        <li><a href="#sample07">07. while문</a></li>
-        <li><a href="#sample08">08. do while문</a></li>
-        <li><a href="#sample09">09. for문</a></li>
-        <li><a href="#sample10">10. 중첩 for문</a></li>
-        <li><a href="#sample11">11. forEach()</a></li>
-        <li><a href="#sample12">12. for of문</a></li>
-        <li><a href="#sample13">13. for in문</a></li>
-        <li><a href="#sample14">14. break문</a></li>
-        <li><a href="#sample15">15. continue문</a></li>
-        </ul>
+        <ol>
+        <li><a href="#sample01"> if문</a></li>
+        <li><a href="#sample02"> 다중 if문</a></li>
+        <li><a href="#sample03"> 중첩 if문</a></li>
+        <li><a href="#sample04"> wsitch문</a></li>
+        <li><a href="#sample05"> 삼항 연산자</a></li>
+        <li><a href="#sample06"> if문 생략</a></li>
+        <li><a href="#sample07"> while문</a></li>
+        <li><a href="#sample08"> do while문</a></li>
+        <li><a href="#sample09"> for문</a></li>
+        <li><a href="#sample10"> 중첩 for문</a></li>
+        <li><a href="#sample11"> forEach()</a></li>
+        <li><a href="#sample12"> for of문</a></li>
+        <li><a href="#sample13"> for in문</a></li>
+        <li><a href="#sample14"> break문</a></li>
+        <li><a href="#sample15"> continue문</a></li>
+        </ol>
+    </ul>
 
     <hr>
 
