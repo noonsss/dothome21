@@ -344,6 +344,100 @@
             }
             f.result();
         }
+        {
+            function f1(){
+                document.write("함수1<br>");
+            }
+            f1();
+
+            let f2 = function(){
+                document.write("익명함수<br>");
+            }
+            f2();
+
+            let f3 = function(txt){
+                document.write(txt);
+            }
+            f3("매개변수<br>");
+
+            let f4 = function(){
+                let str = "리턴값 함수<br>";
+                return str;
+            }
+            document.write(f4());
+
+
+            f5 = () => {
+                document.write("화살표 함수:선언적 함수<br>");
+            }
+            f5();
+
+            f6 = (str) => {
+                document.write(str);
+            }
+            f6("화살표 함수:매개 변수<br>");
+
+            f7 = () => {
+                str2 = "화살표 함수:리턴값<br>";
+                return str2;
+            }
+            document.write(f7());
+
+            f8 = str => str;
+            document.write(f8("화살표함수 리턴값생략<br>"));
+
+            function f9(str1, str2){
+                document.write(str1 + str2);
+            }
+            f9("함수가", " 실행되었습니다.<br>");
+            f9("함수가", " 실행되었습니다.<br>");
+
+            //함수가 실행되었습니다.
+
+            function f10(str1, str2){
+                document.write(str1 + str2);
+            }
+            let a1 = "함수";
+            let a2 = "실행되었습니다.<br>";
+
+            f10(a1,a2);
+
+
+            function f11(str1, str2){
+                document.write(str1 + str2);
+            }
+            let a = ["함수가", "실행<br>"];
+
+            f11(a[0],a[1]);
+
+            function f12(str1, str2){
+                document.write(str1 + str2);
+            }
+            let ab = {a:"함수", b:"실행<br>"};
+            f12(ab.a, ab.b)
+
+            function f13(str1, str2){
+                document.write(str1 + str2);
+            }
+            let abc = [{a:"함수"}, {a:"실행<br>"}];
+
+            f12(abc[0].a, abc[1].a);
+
+
+
+            //객체 생성자 함수
+            function func13(str1, str2){
+                this.str1 = str1;
+                this.str2 = str2;
+                this.result = function(){
+                    document.write(str1+str2);
+                }
+
+            }
+            const info1 = new func13("함수는","실행");  //인스턴스 생성
+            info1.result();
+         }
+
 
     </script>
 </body>
