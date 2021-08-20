@@ -131,7 +131,7 @@ body {
 .cardType02 .card-wrap .card-word span{
     display: inline-block;
     margin: 6px 5px 0 1px;
-    padding: 2px 16px 3px;
+    padding: 2px 16px 2px;
     border-radius: 20px;
     border: solid 1px #000;
     background-color: #000;
@@ -140,99 +140,32 @@ body {
 }
 
 /* cardType03 */
-.cardType03 {
-    padding: 0 150px;
+.cardType03 {}
+.cardType03 h2 {}
+.cardType03 p {}
+.cardType03 .popular{
+    position: absolute;
+    right: 0; top: 0;
 }
-.cardType03 h2 {
-    padding: 96px 0 22px 0;
-    text-align: left;
-    font-family: 'NanumSquare';
-    font-size: 50px;
-    font-weight: 800;
+
+
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap ul {}
+.cardType03 .card-wrap .card{}
+
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
 }
-.cardType03 p {
-    display: inline-block;
-    padding: 2px 0 47px 0;
-    font-family: 'NanumSquare';
-    font-size: 18px;
-    text-align: left;
-}
-.cardType03 .p1 {
-    color: #ff2626;
-    float: right;
-    margin: 10px;
-    font-family: 'NanumSquare';
-    font-size: 16px;
-}
-.cardType03 .p2 {
-    float: right;
-    margin: 10px;
-    font-family: 'NanumSquare';
-    font-size: 16px;
-}
-.cardType03 .card-wrap a img {
+.cardType03 .card-wrap .card .card-img {
     width: 285px;
     height: 185px;
+    position: absolute;
 }
-.cardType03 .card-wrap {
-    display: flex;
-    margin-bottom: 30px;
-}
-.cardType03 .card-text {
-    height : 185px;
-}
-.cardType03 .card-title {
-    margin: 6px 0 0 20px;
-    display: block;
-    font-family: 'NanumSquare';
-    font-size: 26px;
-    font-weight: bold;
-    text-align: left;
-}
-.cardType03 .card-desc {
-    margin: 10px 0 15px 20px;
-    display: block;
-    font-family: 'NanumSquare';
-    font-size: 16px;
-    color: #555;
-    text-align: left;
-}
-.cardType03 .card-date {
-    margin: 15px 0 0 20px;
-    font-family: 'NanumSquare';
+.cardType03 .card-wrap .card .card-cate {
     font-size: 14px;
-    font-weight: bold;
-    color: #555;
+    font-weight: 800;
+    background: #ff5151;
 }
-.cardType03 .card-word1 {
-    vertical-align: top;
-    color: #fff;
-    padding: 2px 10px 2px 10px;
-    border-radius: 20px;
-    background-color: #ff5151;
-    margin: 0 0 12px 20px;
-}
-.cardType03 .card-word2 {
-    vertical-align: top;
-    color: #fff;
-    padding: 2px 10px 2px 10px;
-    border-radius: 20px;
-    background-color: #5465ff;
-    margin: 0 0 12px 20px;
-}
-.cardType03 .card-word3 {
-    vertical-align: top;
-    color: #fff;
-    padding: 2px 10px 2px 10px;
-    border-radius: 20px;
-    background-color: #ff5151;
-    margin: 0 0 12px 20px;
-}
-.cardType03 .card-word4 {
-    vertical-align: top;
-    color: #fff;
-    padding: 2px 10px 2px 10px;
-    border-radius: 20px;
-    background-color: #11c865;
-    margin: 0 0 12px 20px;
-}
+.cardType03 .card-wrap .card .card-title {}
+.cardType03 .card-wrap .card .card-desc {}
+.cardType03 .card-wrap .card .card-date {}

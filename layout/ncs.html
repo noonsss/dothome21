@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 60px;
+            color: #fff;
+        }
+        body {
+            background-color: #ffebee;
+        }
+        .wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .header {
+            height: 100px;
+            background-color: #ffcdd2;
+            line-height: 100px;
+        }
+        .nav {
+            height: 100px;
+            background-color: #ef9a9a;
+            line-height: 100px;
+        }
+        .side {
+            width: 400px;
+            height: 600px;
+            background-color: #e57373;
+            line-height: 600px;
+            float: left;
+        }
+        .content1 {
+            width: 800px;
+            height: 300px;
+            background-color: #ef5350;
+            float: left;
+            line-height: 300px;
+        }
+        .contetn2 {
+            width: 800px;
+            height: 300px;
+            background-color: #ec407a;
+            display: flex;
+        }
+        .cont1 {
+            width: 330px;
+            height: 200px;
+            background-color: #d81b60; 
+            float: left;
+            line-height: 200px;
+            margin: 50px 25px 0 50px;
+        }
+        .cont2 {
+            width: 330px;
+            height: 200px;
+            background-color: #c2185b;
+            float: left;
+            line-height: 200px;
+            margin: 50px 50px 0 25px;
+        }
+        .footer {
+            height: 100px;
+            background-color: #f44336;
+            line-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="container">header</div>
+    </div>
+    <!-- header -->
+
+    <div class="nav">
+        <div class="container">nav</div>
+    </div>
+    <!-- banner -->
+
+    <div class="contents">
+        <div class="side">side
+            <div class="container"></div>
+        </div>
+        <div class="content1">content1
+            <div class="container"></div>
+        </div>
+        <div class="contetn2">
+            <div class="cont1">cont1</div>
+            <div class="cont2">cont2</div>
+        </div>
+    </div>
+    <!-- contents -->
+
+    <div class="footer">
+        <div class="container">footer</div>
+    </div>
+    <!-- footer -->
+</div>
+
+</body>
+</html>
