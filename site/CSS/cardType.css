@@ -83,31 +83,58 @@ body {
 
 /* cardType02 */
 .cardType02 {
-    font-family: 'S-CoreDream';
-    padding: 150px 0;
     text-align: center;
+    
 }
 .cardType02 h2 {
-    font-weight: 500;
     font-size: 50px;
-    margin-bottom: 7px;
+    height: 60px;
+    margin: 0 115px 22px 116px;
+    font-family: 'S-CoreDream';
+    font-weight: 500;
+    padding: 97px 0 0 0;
 }
-
 .cardType02 p {
-    font-weight: 200;
+    height: 33px;
+    margin: 22px 195px 40px 204px;
+    font-family: 'S-CoreDream';
     font-size: 26px;
-    line-height: 1.28;
-    margin-bottom: 40px;
+    font-weight: 300;
 }
-
 .cardType02 .card-wrap {
-
-}
-.cardType02 .card-wrap .card{
-    width: 285px;
-    height: 356px;
-    margin: 40px 20px 0 0;
-    padding: 15px 15px 16px 14px;
+    width: 245px;
+    height: 355px;
+    flex-grow: 0;
+    margin: 20px 20px 100px 0;
+    padding: 15px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
+    display: inline-block;
+}
+.cardType02 .card-wrap .card-title{
+    display: block;
+    text-align: left;
+    font-family: 'S-CoreDream';
+    font-size: 24px;
+    font-weight: 500;
+}
+.cardType02 .card-wrap .card-desc{
+    display: block;
+    text-align: left;
+    font-family: 'S-CoreDream';
+    font-size: 14px;
+    font-weight: 300;
+}
+.cardType02 .card-wrap .card-word {
+    float: left;
+}
+.cardType02 .card-wrap .card-word span{
+    display: inline-block;
+    margin: 6px 5px 0 1px;
+    padding: 2px 16px 3px;
+    border-radius: 20px;
+    border: solid 1px #000;
+    background-color: #000;
+    color: #fff;
+    
 }
