@@ -60,3 +60,69 @@ body {
   .imgType01 .img-wrap .img .img-list .img-word a {
       color: white;
   }
+
+
+    /* imgType02 */
+
+/* imgType02 */
+.imgType02 {
+    font-family: 'GmarketSans';
+    font-size: 14px;
+    font-weight: 500;
+    padding: 100px 0;
+  }
+
+  .imgType02 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 41px;
+}
+
+.imgType02 .img-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.imgType02 .img-wrap .img {
+    width: 387px;
+    height: 387px;
+    position: relative;
+}
+
+.imgType02 .img-wrap .img img {}
+
+.imgType02 .img-wrap .img .img-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.imgType02 .img-wrap .img .img-tit {
+    width: 300px;
+    font-size: 30px;
+    padding: 3px 15px 0 15px;
+    font-weight: 500;
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.imgType02 .img-wrap .img .img-word {
+}
+.imgType02 .img-wrap .img .img-word a {
+    color: #fff;
+    margin: 5px 40px 0;
+    padding: 10px 19px 8px 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 17, 68, 0.8);
+}
+
+.imgType02 .img-wrap .img:hover .img-list .img-link {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 6px 15px 3px 15px;
+    border-radius: 10px;
+}
