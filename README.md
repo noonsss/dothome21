@@ -11,3 +11,5 @@ CSS 레퍼런스 <a href="https://noonsss.github.io/dothome21/refer-css/index.ht
 HTML 레퍼런스 <a href="https://noonsss.github.io/dothome21/refer-html/index.html">바로가기</a>
 
 SITE 만들기 <a href="https://noonsss.github.io/dothome21/site/cardType02.html">바로가기</a>
+
+imageType <<a href="https://noonsss.github.io/dothome21/site/imageType.html">바로가기</a>
