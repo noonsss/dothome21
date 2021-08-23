@@ -1,0 +1,73 @@
+/* 이미지 타입 */
+body {
+    background-color: #f3f3f3;
+}
+.cardType {
+    margin: 100px 0;
+    background-color: #fff;
+}
+/* imageType01 */
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+.imageType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+    margin-top: 93px;
+    margin-bottom: 41px;
+}
+.imageType01 .card-wrap {
+    line-height: 1.4;
+}
+.imageType01 .card-wrap .card .img2 {
+    position: absolute;
+    top: 309px; left: 610px;
+}
+.imageType01 .card-wrap .card .text1 {
+    padding-left: 45px;
+    position: absolute;
+    top: 540px; left: 0px;
+    padding: 11px 15px 11px 15px;
+    margin-left: 25px;
+    background-color: rgba(19, 30, 36, 0.7); 
+}
+.imageType01 .card-wrap .card .text2 {
+    padding-left: 45px;
+    position: absolute;
+    top: 540px; left: 605px;
+    padding: 11px 15px 11px 15px;
+    margin-left: 25px;
+    background-color: rgba(27, 26, 25, 0.8);
+}
+.imageType01 .card-wrap .card img {
+    width: 590px;
+    height: 385px;
+}
+.imageType01 .card-wrap .card-title {
+    display: block;
+    font-family: S-CoreDream-5;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.imageType01 .card-wrap .card-desc {
+    display: block;
+    font-family: S-CoreDream-5;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.imageType01 .card-wrap .card-word {
+    display: block;
+    font-family: S-CoreDream-5;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: underline;
+    color: #fff;
+}
