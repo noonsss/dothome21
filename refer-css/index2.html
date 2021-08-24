@@ -201,32 +201,34 @@
         <ul class="page">
             <li><a href="../refer-html/index.html">HTML</a> </li>
             <li> <a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+            <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
          </ul>
         <section class="refer">
             <h3><a href="index.html">Alphabet</a></h3>
             <h3 class="active"><a href="index2.html">Topics</a></h3>
+            <h3><a href="transform.html">Transform</a></h3>
+
 
             
             <ul class="link">
-                <li><a href="#sample01">기본 선택자</a></li>
-                <li><a href="#sample01">계층 선택자</a></li>
-                <li><a href="#sample01">속성 선택자</a></li>
-                <li><a href="#sample01">가상 요소</a></li>
-                <li><a href="#sample01">가상 클래스</a></li>
-                <li><a href="#sample01">링크 가상 클래스</a></li>
-                <li><a href="#sample01">폼 선택자</a></li>
+                <li><a href="#sample01-1">기본 선택자</a></li>
+                <li><a href="#sample01-2">계층 선택자</a></li>
+                <li><a href="#sample01-3">속성 선택자</a></li>
+                <li><a href="#sample01-4">가상 요소</a></li>
+                <li><a href="#sample01-5">가상 클래스</a></li>
+                <li><a href="#sample01-6">링크 가상 클래스</a></li>
+                <li><a href="#sample01-7">폼 선택자</a></li>
             </ul>
 
             <ul class="link">
-                <li><a href="#sample01">animation</a></li>
-                <li><a href="#sample02">background</a></li>
-                <li><a href="#sample03">box</a></li>
+                <li><a href="#sample02">animation</a></li>
+                <li><a href="#sample03">background</a></li>
+                <li><a href="#sample04">box</a></li>
             </ul>
 
             <!-- sample01 -->
-            <h4>선택자</h4>
-            <div id="sample01">
+            <h4 id="sample01-1">선택자</h4>
+            <div>
                 <table>
                     <colgroup>
                         <col style="width: 10%">
@@ -244,7 +246,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th rowspan="5">기본 선택자</th>
+                            <th rowspan="5"">기본 선택자</th>
                             <td>태그 선택자</td>
                             <td>p {color:#fff;}</td>
                             <td>p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다. </td>
@@ -270,7 +272,7 @@
                             <td>전체 태그를 선택하여 글씨 색을 하얀색으로 변경합니다. </td>
                         </tr>
                         <tr>
-                            <th rowspan="4">계층 선택자</th>
+                            <th rowspan="4" id="sample01-2">계층 선택자</th>
                             <td>하위 선택자(Descendant Selector)</td>
                             <td>div p {color:#fff;}</td>
                             <td>div 태그의 모든 자식 중 p 태그를 모두 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
@@ -291,7 +293,7 @@
                             <td>div 태그의 인접한 형제 첫번째 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="7">속성 선택자</th>
+                            <th rowspan="7" id="sample01-3">속성 선택자</th>
                             <td>[name]</td>
                             <td>a[href]</td>
                             <td>a 태그 속성 중에 href가 있으면 선택합니다.</td>
@@ -327,7 +329,7 @@
                             <td>a 태그 href 속성의 값이 'com'으로 끝나는 태그를 선택합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="5">가상 요소</th>
+                            <th rowspan="5" id="sample01-4">가상 요소</th>
                             <td>::first-line</td>
                             <td>p:first-line {color:#fff;}</td>
                             <td>문단의 첫 줄에 컬러색을 하얀색으로 변경합니다.</td>
@@ -353,7 +355,7 @@
                             <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="13">가상 클래스</th>
+                            <th rowspan="13" id="sample01-5">가상 클래스</th>
                             <td>:first-child</td>
                             <td>li:first-line {color:#fff;}</td>
                             <td>li 자식 요소 중 첫 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
@@ -419,7 +421,7 @@
                             <td>컨텐츠 요소가 없는 요소의 컬러를 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">링크 가상 클래스</th>
+                            <th rowspan="4" id="sample01-6">링크 가상 클래스</th>
                             <td>:link</td>
                             <td>a:link {color:#fff;}</td>
                             <td>방문하지 않는 링크의 글씨 색을 하얀색으로 설정합니다.</td>
@@ -440,7 +442,7 @@
                             <td>링크가 활성화되었을 경우 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">폼 관련 선택자</th>
+                            <th rowspan="4" id="sample01-7">폼 관련 선택자</th>
                             <td>:checked</td>
                             <td>input:checked {color:#fff;}</td>
                             <td>input 태그가 체크되었을 때 글씨 색을 하얀색으로 변경합니다.</td>
@@ -466,7 +468,7 @@
             <!-- //sample01 -->
 
             <h4>애니메이션</h4>
-            <div id="sample01">
+            <div id="sample02">
                 <table>
                     <colgroup>
                         <col style="width: 10%">
@@ -568,7 +570,7 @@
 
             <!-- sample02 -->
             <h4>백그라운드</h4>
-            <div id="sample01">
+            <div id="sample03">
                 <table>
                     <colgroup>
                         <col style="width: 10%">
@@ -631,7 +633,7 @@
 
             <!-- sample03 -->
             <h4>박스</h4>
-            <div id="sample01">
+            <div id="sample04">
                 <table>
                     <colgroup>
                         <col style="width: 10%">
