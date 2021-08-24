@@ -41,7 +41,7 @@ body {
     margin: 0 0 20px 30px;
   }
   
-  .imgType01 .img-wrap .img .img-list .img-tit {
+  .imgType01 .img-wrap .img .img-list .img-title {
     font-size: 30px;
     margin-bottom: 8px;
     color: white;
@@ -99,7 +99,7 @@ body {
     text-align: center;
 }
 
-.imgType02 .img-wrap .img .img-tit {
+.imgType02 .img-wrap .img .img-title {
     width: 300px;
     font-size: 30px;
     padding: 3px 15px 0 15px;
