@@ -358,7 +358,7 @@ body {
     font-size: 13px;
 }
 .sample h2 {
-    font-size: 13px;
+    font-size: 12px ;
     padding: 12px 10px 10px;
 }
 .sample h2 .dot {
@@ -388,6 +388,10 @@ body {
     color: #bdbdbd;
     background: #f1f1f1;
 }
+
+
+}
+
     
     
     
