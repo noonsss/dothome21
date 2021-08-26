@@ -32,6 +32,7 @@
             <li><a href="javascriptRefer06.html">배열 객체</a></li>
             <li><a href="javascriptRefer07.html">날짜 객체</a></li>
             <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer14.html">숫자 객체</a></li>
             <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
             <li><a href="javascriptRefer10.html">요소 객체</a></li>
             <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
@@ -432,7 +433,7 @@
     
     <!-- sample06 -->
     <div id="sample06" class="sample">
-        <h2>06. 문자열 메서드 : charAt() / subString() : 지정한 인덱스의 문자를 추출 : 반환(문자) :<span class="dot"></span></h2>
+        <h2>06. 문자열 메서드 : charAt() / subString() : 지정한 인덱스의 문자를 추출 : 반환(문자) <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -485,7 +486,7 @@
     
     <!-- sample07 -->
     <div id="sample07" class="sample">
-        <h2>07. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자) :<span class="dot"></span></h2>
+        <h2>07. 문자열 메서드 : slice() / subString() / substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)<span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -657,7 +658,7 @@
         document.querySelector(".sample08_R3").innerHTML = text3;
     
         const str4 = "010-3848-0398";
-        const text4 = str4.replace(/-/g, ' ');
+        const text4 = str4.replace(/-/g, '');
                 
         document.querySelector(".sample08_R4").innerHTML = text4;
     
@@ -1251,11 +1252,11 @@
 
             document.querySelector(".sample08_N4").innerHTML = "4";
             document.querySelector(".sample08_Q4").innerHTML = str4;
-            document.querySelector(".sample08_M4").innerHTML = ".replace(/-/g, ' ')";                    
+            document.querySelector(".sample08_M4").innerHTML = ".replace(/-/g, '')";                    
             document.querySelector(".sample08_R4").innerHTML = text4;
 
             const str5 = "010-3858-0398";
-            const text5 = str5.replace(/-/g, '');
+            const text5 = str5.replace(/-/g, ' ');
 
             document.querySelector(".sample08_N5").innerHTML = "5";
             document.querySelector(".sample08_Q5").innerHTML = str5;
