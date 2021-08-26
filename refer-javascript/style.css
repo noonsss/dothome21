@@ -297,10 +297,38 @@ ol {
     background: #000;
     color: #fff;
 }
+.table table {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-spacing: 0;
+    text-align: left;
+    width: 100%;
+}
+.table table caption {
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.table table tr:nth-child(even) {
+    background-color: #f2f6fd;
+}
+.table table th {
+    border-bottom: 2px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table .center {
+    text-align: center;
+}
 @media(max-width:800px){
 body {
     padding: 5%;
-    font-size: 13px;
+    font-size: 12px;
 }
 #wrap {
     margin: 0;
@@ -330,7 +358,7 @@ body {
     font-size: 13px;
 }
 .sample h2 {
-    font-size: 12px 10px;
+    font-size: 13px;
     padding: 12px 10px 10px;
 }
 .sample h2 .dot {
@@ -340,7 +368,7 @@ body {
     line-height: 1.2 !important;
 }
 .sample code {
-    font-size: 13px;
+    font-size: 12px;
 }
 .view {
     border-right: 1px solid #e6e6e6;
@@ -360,14 +388,10 @@ body {
     color: #bdbdbd;
     background: #f1f1f1;
 }
-
-
-}
-
     
     
     
-    
+/*     
     
     
     @font-face {
@@ -541,7 +565,7 @@ body {
             color: #000;
             border: 1px dashed #000;
             padding: 10px 30px;
-            display: inline-block;
+            display: i;
             border-radius: 50px;
             font-size: 16px;
             margin: 4px 1px;
@@ -558,6 +582,7 @@ body {
             font-size: 14px;
             line-height: 1.6;
             color: #000;
+            display: list-item;
         }
         @media(max-width:800px){
             body {
@@ -588,7 +613,7 @@ body {
                 font-size: 13px;
                 padding: 5px 20px;
             }
-            .list li a {
+            .li a {
                 font-size: 13px;
             }
             .sample h2 {
@@ -604,4 +629,4 @@ body {
             .sample code {
                 font-size: 13px;
             }
-        }
+        } */
