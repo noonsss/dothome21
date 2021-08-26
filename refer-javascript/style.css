@@ -23,6 +23,9 @@ body {
     line-height: 1.6;
 }
 
+ul {
+    list-style: none;
+}
 h1 {
     padding-bottom: 50px 0;
 }
@@ -44,26 +47,21 @@ img {
     margin: 5px;
 }
 
-ul {
-    list-style: none;
-}
 
 a {
     text-decoration: none;
-    color: black;
-
+    color: #000;
 }
 ol {
     padding-left: 26px;
 }
 .title {
-    border-top: 3px solid #0e43f1;
-    border-bottom: 1px solid #0e43f1;
     margin-bottom: 20px;
+    color: #7020ba;
 }
 .title h1 a {
     font-family: 'TmonMonsori';
-    color: #0e43f1;
+    color: #7020ba;
     font-size: 50px;
     display: inline-block;
     padding: 15px 0 12px;
@@ -77,8 +75,7 @@ ol {
 .sample h2 {
     position: relative;
     font-size: 16px;
-    line-height: 1.4;
-    background-color: #F2F2F2;
+    background-color: #F2F6Fd;
     padding: 15px;
     font-weight: normal;
     border-radius: 5px 5px 0 0;
@@ -212,6 +209,7 @@ ol {
     position: absolute;
     right: 20px;
     top: 15px;
+    font-size: 12px;
 }
 .page li {
     display: inline;
@@ -222,30 +220,30 @@ ol {
     color: #222;
 }
 .page li a:hover {
-    color : #098a4c;
+    color : #830078;
 }
 .menu li {
     display: inline;
 }
 .menu li a {
     font-family: 'NEXON Lv1 Gothic OTF';
-    color: #000;
-    border: 1px dashed #000;
+    color: #7020ba;
+    border: 1px dashed #7020ba;
     padding: 10px 30px;
     display: inline-block;
     border-radius: 50px;
     font-size: 16px;
     margin: 4px 1px;
-    box-shadow: inset 0 0 0 #000;
+    box-shadow: inset 0 0 0 #7020ba;
     transition: all 0.4s;
 }
 .menu li a:hover {
-    box-shadow: inset 0px -100px 0 #000;
+    box-shadow: inset 0px -100px 0 #7020ba;
     color: #fff;
     border-style: solid;
 }
 .menu li .active a {
-    background-color: #000;
+    background-color: #7020ba;
     color: #fff;
 }
 .list li a {
@@ -253,6 +251,9 @@ ol {
     font-size: 14px;
     line-height: 1.6;
     color: #000;
+}
+.list .link {
+    color: black;
 }
 .view table {
     border: 1px solid #e6e6e6;
@@ -309,6 +310,9 @@ ol {
     margin-bottom: 4px;
     font-size: 16px;
 }
+.table .link {
+    color: black;
+}
 .table table tr:nth-child(even) {
     background-color: #f2f6fd;
 }
@@ -340,6 +344,7 @@ body {
 }
 .title {
     border-top-width: 2px;
+    color: #7020ba;
 }
 .title h1 {
     text-align: center;

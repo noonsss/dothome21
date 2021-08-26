@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <h1><a href="index.html"> Javascript 레퍼런스</a></h1>
+    <h1><a class="title" href="index.html"> Javascript 레퍼런스</a></h1>
     <ul class="page">
         <li><a href="../refer-html/index.html">HTML</a> </li>
         <li> <a href="../refer-css/index.html">CSS</a></li>
@@ -90,7 +90,7 @@
 }
 </code></pre>
 <div class="tab_menu">
-    <a href="#tab1" class="btn">결과보기</a>
+    <a href="#tab" class="tab-btn">결과보기</a>
     <div id="tab1" class="cont">100 200 javascript</div>
 </div>
         </div>
@@ -100,7 +100,7 @@
         const tabList = document.querySelector(".tab_menu");
 
         document.querySelector(".btn").addEventListener("click", function(){
-            document.querySelector(".cont").classList.toggle();
+            document.querySelector(".cont").classList.toggle(".tab1");
         });
     </script>
     <!-- //sample01 -->
