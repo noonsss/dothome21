@@ -140,18 +140,33 @@ body {
 }
 
 /* cardType03 */
-.cardType03 {}
-.cardType03 h2 {}
-.cardType03 p {}
+.cardType03 {
+    padding: 100px 0;
+    font-family: 'NanumSquare';
+    position: relative;
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.cardType03 p {
+    font-size: 18px;
+    line-height: 1.28;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
 .cardType03 .popular{
     position: absolute;
-    right: 0; top: 0;
+    right: 0; top: 179px;
+    line-height: 1.28;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 50px;
 }
-
-
-.cardType03 .card-wrap {}
-.cardType03 .card-wrap ul {}
-.cardType03 .card-wrap .card{}
+.cardType03 .card-wrap .card{
+    margin-bottom: 28px;
+}
 
 .cardType03 .card-wrap .card .right {
     padding-left: 305px;
@@ -164,9 +179,83 @@ body {
 .cardType03 .card-wrap .card .card-cate {
     font-size: 14px;
     font-weight: 800;
-    background: #ff5151;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
-.cardType03 .card-wrap .card .card-title {}
-.cardType03 .card-wrap .card .card-desc {}
-.cardType03 .card-wrap .card .card-date {}
+.cardType03 .card-wrap .card .card-cate.red {
+    background: #ff5151;
+} 
+.cardType03 .card-wrap .card .card-cate.blue {
+    background: #5465ff;
+} 
+.cardType03 .card-wrap .card .card-cate.green {
+    background: #11c865;
+} 
+.cardType03 .card-wrap .card .card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+}
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.cardType03 .card-wrap .card .card-date {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 20px;
+}
 
+
+
+
+/* cardType04 */
+.cardType04 {
+    padding: 100px 0;
+}
+.cardType04 .title{
+    font-family: 'S-CoreDream';
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.cardType04 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 45px;
+}
+.cardType04 .card-wrap .card {
+    position: relative;
+}
+.cardType04 .card-wrap .card .img {
+}
+.cardType04 .card-wrap .card .memo {
+    position: absolute;
+    left: 40px; top: 55px;
+    font-family: 'S-CoreDream';
+    font-size: 14px;
+    font-weight: 500;
+    color: #a9a8a8;
+}
+.cardType04 .card-wrap .card .desc {
+    position: absolute;
+    left: 40px; top: 95px;
+    font-family: 'S-CoreDream';
+    font-weight: 600;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.5;
+}

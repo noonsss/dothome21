@@ -41,11 +41,11 @@ hr {
     border-bottom-width: 1px;
 }
 
-img {
+/* img {
     vertical-align: top;
     border-radius: 5px;
     margin: 5px;
-}
+} */
 
 
 a {
@@ -329,6 +329,10 @@ ol {
 .table table .center {
     text-align: center;
 }
+.tab_menu {}
+.tab-btn{}
+.tab1{}
+.cont{}
 @media(max-width:800px){
 body {
     padding: 5%;
