@@ -329,76 +329,107 @@ ol {
 .table table .center {
     text-align: center;
 }
-.tab_menu {}
-.tab-btn{}
-.tab1{}
-.cont{}
-@media(max-width:800px){
-body {
-    padding: 5%;
-    font-size: 12px;
-}
-#wrap {
-    margin: 0;
-    border-width: 6px;
-    border-radius: 18px;
-}
-#contetns {
-    border-width: 6px;
-}
-.title {
-    border-top-width: 2px;
-    color: #7020ba;
-}
-.title h1 {
-    text-align: center;
-}
-.title h1 a {
-    font-size: 40px;
-}
-.menu {
-    text-align: center;
-}
-.menu li a {
-    font-size: 13px;
-    padding: 5px 20px;
-}
-.list li a {
-    font-size: 13px;
-}
-.sample h2 {
-    font-size: 12px ;
-    padding: 12px 10px 10px;
-}
-.sample h2 .dot {
+
+.sample .result-view {
+    margin-top: 5px;
+  }
+  
+  .sample .result-view span{
+    background-color: #F2F2F2;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .sample .result-view span:hover{
+    cursor: pointer;
+  }
+  .sample .result-view.look span{
+    border-radius: 5px 5px 0 0; 
+  }
+  .sample .result-view .result{
     display: none;
-}
-.sample pre {
-    line-height: 1.2 !important;
-}
-.sample code {
-    font-size: 12px;
-}
-.view {
-    border-right: 1px solid #e6e6e6;
-    border-left: 1px solid #e6e6e6;
-    overflow: auto;
-}
-.view table {
-    border-left: 0px ;
-    border-right: 0px ;
-}
-.view table th,
-.view table td {
-    white-space: nowrap;
-    font-size: 13px;
-}
-.view table td.result {
-    color: #bdbdbd;
-    background: #f1f1f1;
-}
-
-
+    border-radius: 0 5px 5px 5px;
+    color: #fff;
+    background-color: #272822;
+    font-size: 14px;
+    padding: 16px;
+    line-height: 1.8;
+  }
+  
+  .sample .result-view.look .result{
+    display: block;
+  }
+@media(max-width:800px){
+    body {
+        padding: 5%;
+        font-size: 12px;
+    }
+    #wrap {
+        margin: 0;
+        border-width: 6px;
+        border-radius: 18px;
+    }
+    #contetns {
+        border-width: 6px;
+    }
+    .title {
+        border-top-width: 2px;
+        color: #7020ba;
+    }
+    .title h1 {
+        text-align: center;
+    }
+    .title h1 a {
+        font-size: 40px;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu li a {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+    .list li a {
+        font-size: 13px;
+    }
+    .sample h2 {
+        font-size: 12px ;
+        padding: 12px 10px 10px;
+    }
+    .sample h2 .dot {
+        display: none;
+    }
+    .sample pre {
+        line-height: 1.2 !important;
+    }
+    .sample code {
+        font-size: 12px;
+    }
+    .view {
+        border-right: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        overflow: auto;
+    }
+    .view table {
+        border-left: 0px ;
+        border-right: 0px ;
+    }
+    .view table th,
+    .view table td {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+    .view table td.result {
+        color: #bdbdbd;
+        background: #f1f1f1;
+    }
+    .sample .result-view span {
+        font-size: 13px;
+    }
+    .sample .result-view .result {
+        font-size: 13px;
+    }
 }
 
     

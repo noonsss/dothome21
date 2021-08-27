@@ -87,12 +87,12 @@
     document.write(x);
     document.write(y);
     document.write(z);
+
 }
 </code></pre>
-<div class="tab_menu">
-    <a href="#tab" class="tab-btn">결과보기</a>
-    <div id="tab1" class="cont">100 200 javascript</div>
-</div>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
         </div>
     </div>
     <hr>
@@ -550,6 +550,11 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector("#sample01 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample01 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample01 .result-view").classList.toggle("look");
+            });
         }
 
         //sample02
