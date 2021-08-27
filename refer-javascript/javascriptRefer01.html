@@ -96,13 +96,6 @@
         </div>
     </div>
     <hr>
-    <script>
-        const tabList = document.querySelector(".tab_menu");
-
-        document.querySelector(".btn").addEventListener("click", function(){
-            document.querySelector(".cont").classList.toggle(".tab1");
-        });
-    </script>
     <!-- //sample01 -->
 
     <!-- sample02-->
@@ -122,6 +115,12 @@
     document.write(z);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
+    </div>
+    <hr>
         </div>
     </div>
     <hr>
@@ -144,6 +143,10 @@
     document.write(z);         
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -166,6 +169,10 @@
     document.write(z);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -186,6 +193,10 @@
     document.write(arr[2]);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample05 -->
@@ -204,6 +215,10 @@
     document.write(arr[2]);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample06 -->
@@ -225,6 +240,10 @@
     document.write(arr[2]);        
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample07 -->
@@ -243,6 +262,10 @@
     document.write(arr[2]);                
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample08 -->
@@ -264,6 +287,10 @@
     document.write(obj[2]);        
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample09 -->
@@ -271,7 +298,7 @@
     <hr>
 
     <!-- sample10 -->
-    <div id="sampl10" class="sample">
+    <div id="sample10" class="sample">
         <h2>10. 객체 : 표현 방법2 : 객체 스타일 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{    
@@ -285,6 +312,10 @@
     document.write(obj.c);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample10 -->
@@ -306,6 +337,10 @@
     document.write(obj.c);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample11 -->
@@ -324,6 +359,10 @@
     document.write(obj.c);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample12 -->
@@ -345,6 +384,10 @@
     document.write(obj[1].c);    
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample13 -->
@@ -369,6 +412,10 @@
     document.write(obj.c);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample14 -->
@@ -391,6 +438,10 @@
     document.write(obj.c);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample15 -->
@@ -426,6 +477,10 @@
     obj.f( );   
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <!-- //sample16 -->
@@ -465,6 +520,10 @@
     document.write(a);
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -494,6 +553,10 @@
     document.write("y : " + y + " : " + typeof(y));
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -527,6 +590,10 @@
     document.write(typeof(sym));
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -571,6 +638,11 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector("#sample02 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample02 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample02 .result-view").classList.toggle("look");
+            });
         }
 
         //sample03
@@ -587,6 +659,11 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector("#sample03 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample03 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample03 .result-view").classList.toggle("look");
+            });
         }
 
         //sample04
@@ -603,6 +680,11 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector("#sample04 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample04 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample04 .result-view").classList.toggle("look");
+            });
         }
 
         //sample05
@@ -617,6 +699,11 @@
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br><br>");
+
+            document.querySelector("#sample05 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample05 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample05 .result-view").classList.toggle("look");
+            });
         }
 
         //sample06
@@ -628,6 +715,11 @@
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br><br>");
+
+            document.querySelector("#sample06 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample06 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample06 .result-view").classList.toggle("look");
+            });
         }
 
         //sample07
@@ -643,6 +735,10 @@
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br><br>");
 
+            document.querySelector("#sample07 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample07 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample07 .result-view").classList.toggle("look");
+            });
         }
 
         //sample08
@@ -654,6 +750,11 @@
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br><br>");
+
+            document.querySelector("#sample08 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample08 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample08 .result-view").classList.toggle("look");
+            });
         }
 
         //sample09
@@ -669,6 +770,10 @@
             document.write(obj[1], "<br>");
             document.write(obj[2], "<br><br>");
 
+            document.querySelector("#sample09 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample09 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample09 .result-view").classList.toggle("look");
+            });
         }
 
         //sample10
@@ -683,6 +788,11 @@
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample10 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample10 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample10 .result-view").classList.toggle("look");
+            });
         }
 
         //sample11
@@ -697,6 +807,11 @@
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample11 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector("#sample11 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample11 .result-view").classList.toggle("look");
+            });
         }
 
         //sample12
@@ -712,6 +827,11 @@
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample12 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector("#sample12 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample12 .result-view").classList.toggle("look");
+            });
         }
 
         //sample13
@@ -730,6 +850,11 @@
             document.write(obj[0].a, "<br>");
             document.write(obj[0].b, "<br>");
             document.write(obj[1].c, "<br><br>");
+
+            document.querySelector("#sample13 .result-view .result").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
+            document.querySelector("#sample13 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample13 .result-view").classList.toggle("look");
+            });
         }
 
         //sample14
@@ -747,6 +872,11 @@
             document.write(obj.b[0], "<br>");
             document.write(obj.b[1], "<br>");
             document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample14 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.b[0]} ${obj.b[1]} ${obj.c}`;
+            document.querySelector("#sample14 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample14 .result-view").classList.toggle("look");
+            });
         }
 
         //sample15
@@ -766,6 +896,11 @@
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample15 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector("#sample15 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample15 .result-view").classList.toggle("look");
+            });
         }
 
         //sample16
@@ -797,6 +932,11 @@
             obj.f();
 
             document.write("<br>");
+
+            document.querySelector("#sample16 .result-view .result").innerHTML = `${obj.a} ${obj.b} ${obj.b[0]} ${obj.b[1]} ${obj.c} ${obj.d()} ${obj.e} ${obj.f}`;
+            document.querySelector("#sample16 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample16 .result-view").classList.toggle("look");
+            });
         }
 
         //smaple17
@@ -865,55 +1005,70 @@
             // }
             // document.write(func4());
 
-            //sample18
-            //18. 형변환
-            {
-                document.write("*** 18. 변수의 변환  ***<br>");
+            document.querySelector("#sample17 .result-view .result").innerHTML = `${x} ${y} ${z} ${a}`;
+            document.querySelector("#sample17 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample17 .result-view").classList.toggle("look");
+            });
+        }
+        
+        
+        //sample18
+        //18. 형변환
+        {
+            document.write("*** 18. 변수의 변환  ***<br>");
 
-                let x = 100;
-                let y = "100";
+            let x = 100;
+            let y = "100";
 
-                document.write("x : " + x + " : " + typeof(x), "<br>");
-                document.write("y : " + y + " : " + typeof(y), "<br><br>");
+            document.write("x : " + x + " : " + typeof(x), "<br>");
+            document.write("y : " + y + " : " + typeof(y), "<br><br>");
 
-                x = "" + x;     //숫자를 문자열로 형 변환
-                document.write("x : " + x + " : " + typeof(x), "<br>");
-                y = Number(y);  //내장 객체를 이용한 형 변환
-                document.write("y : " + y + " : " + typeof(y), "<br><br>");
+            x = "" + x;     //숫자를 문자열로 형 변환
+            document.write("x : " + x + " : " + typeof(x), "<br>");
+            y = Number(y);  //내장 객체를 이용한 형 변환
+            document.write("y : " + y + " : " + typeof(y), "<br><br>");
 
-                x = Number(x);
-                document.write("x : " + x + " : " + typeof(x), "<br>");
-                y =  String(y);
-                document.write("y : " + y + " : " + typeof(y), "<br><br>");
-            }
+            x = Number(x);
+            document.write("x : " + x + " : " + typeof(x), "<br>");
+            y =  String(y);
+            document.write("y : " + y + " : " + typeof(y), "<br><br>");
 
-            //19 변수의 유형(데이터 타입)
-            //변수 : 숫자(number), 문자(string), 함수(function), 배열(object)
-            //      객체(object), 불린(boolen), 특수값(null), undifined, 심볼(symbol)
-            {
-                document.write("*** 19. 변수의 유형  ***<br>");
+            document.querySelector("#sample18 .result-view .result").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector("#sample18 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample18 .result-view").classList.toggle("look");
+            });
+        }
 
-                let num = 100;
-                let str = "javascript";
-                let func = function(){};
-                let arr = [1,2,3];
-                let obj = {a:100, b:200, c:300};
-                let boo = true;
-                let nul;                //아무런 값이 없을 때
-                let und = undefined;    //값이 정의되어 있지 않을 때
-                let sym = Symbol();
+        //19 변수의 유형(데이터 타입)
+        //변수 : 숫자(number), 문자(string), 함수(function), 배열(object)
+        //      객체(object), 불린(boolen), 특수값(null), undifined, 심볼(symbol)
+        {
+            document.write("*** 19. 변수의 유형  ***<br>");
 
-                document.write(typeof(num), "<br>");
-                document.write(typeof(str), "<br>");
-                document.write(typeof(func), "<br>");
-                document.write(typeof(arr), "<br>");
-                document.write(typeof(obj), "<br>");
-                document.write(typeof(boo), "<br>");
-                document.write(typeof(nul), "<br>");
-                document.write(typeof(und), "<br>");
-                document.write(typeof(sym), "<br>");
+            let num = 100;
+            let str = "javascript";
+            let func = function(){};
+            let arr = [1,2,3];
+            let obj = {a:100, b:200, c:300};
+            let boo = true;
+            let nul;                //아무런 값이 없을 때
+            let und = undefined;    //값이 정의되어 있지 않을 때
+            let sym = Symbol();
 
-            }
+            document.write(typeof(num), "<br>");
+            document.write(typeof(str), "<br>");
+            document.write(typeof(func), "<br>");
+            document.write(typeof(arr), "<br>");
+            document.write(typeof(obj), "<br>");
+            document.write(typeof(boo), "<br>");
+            document.write(typeof(nul), "<br>");
+            document.write(typeof(und), "<br>");
+            document.write(typeof(sym), "<br>");
+
+            document.querySelector("#sample19 .result-view .result").innerHTML = `${typeof(num)} ${typeof(str)} ${typeof(func)} ${typeof(arr)} ${typeof(obj)} ${typeof(boo)} ${typeof(nul)} ${typeof(und)} ${typeof(sym)} `;
+            document.querySelector("#sample19 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample19 .result-view").classList.toggle("look");
+            });
         }
 
 
