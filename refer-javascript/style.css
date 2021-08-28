@@ -20,14 +20,14 @@
 body {
     padding: 2%;
     font-family: 'NEXON Lv1 Gothic OTF';
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 ul {
     list-style: none;
 }
 h1 {
-    padding-bottom: 50px 0;
+    padding-bottom: 30px;
 }
 h1 a {
     font-family: 'TmonMonsori';
@@ -51,6 +51,7 @@ hr {
 a {
     text-decoration: none;
     color: #000;
+    
 }
 ol {
     padding-left: 26px;
@@ -64,7 +65,7 @@ ol {
     color: #7020ba;
     font-size: 50px;
     display: inline-block;
-    padding: 15px 0 12px;
+    padding: 15px 0 20px;
     text-transform: uppercase;
 }
 .sample {
