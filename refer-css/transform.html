@@ -361,7 +361,7 @@
             <br>
             <h4 class="black">Transform</h4>
             <p class="desc">변환(Transform)은 요소의 좌표를 조작하여, 위치나 크기, 회전, 각도 등을 변경하는 속성입니다. 이동(translate), 확대(scale), 회전(skew), 기울기(skew), 행렬변환(matrix)이 있습니다.<br>
-                Transform : none | martix() | translate() | translateX() | translatyY() | scale() | scaleX() | scaleY() | skew() | skewX() | skewY() | skew() | skewX() | skewY() | martix3d() | translate3d() | translateZ() | scale3d() | scaleZ() | skew3d() | skewZ() | perspective()
+                Transform : none | martix( ) | translate( ) | translateX( ) | translatyY( ) | scale( ) | scaleX( ) | scaleY( ) | skew( ) | skewX( ) | skewY( ) | skew( ) | skewX( ) | skewY( ) | martix3d( ) | translate3d( ) | translateZ( ) | scale3d( ) | scaleZ( ) | skew3d( ) | skewZ( ) | perspective( )
             </p>
             
             <!-- sample01 -->
@@ -384,95 +384,95 @@
                     <tbody>
                         <tr>
                             <td rowspan="5" class="va">translate</td>
-                            <td>translate()</td>
+                            <td>translate( )</td>
                             <td>transform: translate(10px, 20px)</td>
                             <td>X좌표, Y좌표 이동을 나타냅니다.</td>
                         </tr>
                         <tr>
-                            <td>translate3d()</td>
+                            <td>translate3d( )</td>
                             <td>transform: translate3d(10px, 20px, 30px)</td>
                             <td>X좌표, Y좌표, Z좌표 이동을 나타냅니다.</td>
                         </tr>
                         <tr>
-                            <td>translateX()</td>
+                            <td>translateX( )</td>
                             <td>transform: translateX(10px)</td>
                             <td>X좌표 이동을 나타냅니다.</td>
                         </tr>
                         <tr>
-                            <td>translateY()</td>
+                            <td>translateY( )</td>
                             <td>transform: translateY(10px)</td>
                             <td>Y좌표 이동을 나타냅니다.</td>
                         </tr>
                         <tr>
-                            <td>translateZ()</td>
+                            <td>translateZ( )</td>
                             <td>transform: translateZ(10px)</td>
                             <td>Z좌표 이동을 나타냅니다.</td>
                         </tr>
                         <tr>
                             <td rowspan="5" class="va">scale</td>
-                            <td>scale()</td>
+                            <td>scale( )</td>
                             <td>transform: scale(2, 2)</td>
                             <td>선택한 요소의 X축과 Y축 확대를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>scale3d()</td>
+                            <td>scale3d( )</td>
                             <td>transform: scale3d(2, 2, 2)</td>
                             <td>선택한 요소의 X축, Y축, Z축 확대를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>scaleX()</td>
+                            <td>scaleX( )</td>
                             <td>transform: scaleX(2)</td>
                             <td>선택한 요소의 X축 확대를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>scaleY()</td>
+                            <td>scaleY( )</td>
                             <td>transform: scaleY(2)</td>
                             <td>선택한 요소의 Y축 확대를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>scaleZ()</td>
+                            <td>scaleZ( )</td>
                             <td>transform: scaleZ(2)</td>
                             <td>선택한 요소의 Z축 확대를 설정합니다.</td>
                         </tr>
                         <tr>
                             <td rowspan="5" class="va">skew</td>
-                            <td>skew()</td>
+                            <td>skew( )</td>
                             <td>transform: skew(10deg, 20deg)</td>
                             <td>선택한 요소의 X축, Y축 회전을 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skew3d()</td>
+                            <td>skew3d( )</td>
                             <td>transform: skew3d(10deg, 20deg, 30deg)</td>
                             <td>선택한 요소의 X축, Y축, Z축 회전을 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skewX()</td>
+                            <td>skewX( )</td>
                             <td>transform: skewX(10deg)</td>
                             <td>선택한 요소의 X축 회전을 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skewY()</td>
+                            <td>skewY( )</td>
                             <td>transform: skewY(10deg)</td>
                             <td>선택한 요소의 Y축 회전을 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skewZ()</td>
+                            <td>skewZ( )</td>
                             <td>transform: skewZ(10deg)</td>
                             <td>선택한 요소의 Z축 회전을 설정합니다.</td>
                         </tr>
                         <tr>
                             <td rowspan="3" class="va">skew</td>
-                            <td>skew()</td>
+                            <td>skew( )</td>
                             <td>transform: skew(10deg, 20deg)</td>
                             <td>선택한 요소의 X축, Y축 기울기를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skewX()</td>
+                            <td>skewX( )</td>
                             <td>transform: skewX(10deg)</td>
                             <td>선택한 요소의 X축 기울기를 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>skewY()</td>
+                            <td>skewY( )</td>
                             <td>transform: skewY(10deg)</td>
                             <td>선택한 요소의 Y축 기울기를 설정합니다.</td>
                         </tr>
