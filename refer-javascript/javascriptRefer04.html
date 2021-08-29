@@ -33,7 +33,7 @@
             <li><a href="javascriptRefer07.html">날짜 객체</a></li>
             <li><a href="javascriptRefer08.html">수학 객체</a></li>
             <li><a href="javascriptRefer14.html">숫자 객체</a></li>
-            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+            <li><a href="javascriptRefer10.html">브라우저 객체</a></li>
             <li><a href="javascriptRefer10.html">요소 객체</a></li>
             <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
             <li><a href="javascriptRefer12.html">샘플</a></li>
@@ -79,6 +79,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -105,6 +109,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -130,6 +138,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -158,6 +170,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -179,6 +195,10 @@
     ( num == 100 ) ? document.write("true<br><br>") : document.write("false<br><br>");
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -195,6 +215,10 @@
     else document.write("false");
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -212,6 +236,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -229,6 +257,10 @@
     } while ( num &lt;= 10 );
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -248,6 +280,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -266,6 +302,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -302,6 +342,10 @@
     });               
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -319,6 +363,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -351,10 +399,14 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
-    <!-- //sample14 -->  
+    <!-- //sample13 -->  
 
     <!-- sample14 -->
     <div id="sample14" class="sample">
@@ -382,6 +434,10 @@
     }
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -405,6 +461,10 @@
     }            
 }
 </code></pre>
+<div class="result-view">
+    <span>결과보기</span>
+    <div class="result"></div>
+        </div>
         </div>
     </div>
     <hr>
@@ -418,7 +478,221 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-
+        //sample01
+        {
+            document.querySelector("#sample01 .result-view .result").innerHTML = `조건문이 실행되었습니다.(true)`;
+            document.querySelector("#sample01 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample01 .result-view").classList.toggle("look");
+            });
+        }
+        //sample02
+        {
+            document.querySelector("#sample02 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num === 100)`;
+            document.querySelector("#sample02 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample02 .result-view").classList.toggle("look");
+            });
+        }
+        //sample03
+        {
+            document.querySelector("#sample03 .result-view .result").innerHTML = `
+                조건문이 실행되었습니다.(1)<br>
+                조건문이 실행되었습니다.(2)<br>
+                조건문이 실행되었습니다.(3)<br>
+            `;
+            document.querySelector("#sample03 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample03 .result-view").classList.toggle("look");
+            });
+        }
+        //sample04
+        {
+            document.querySelector("#sample04 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num === 100)`;
+            document.querySelector("#sample04 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample04 .result-view").classList.toggle("look");
+            });
+        }
+        //sample05
+        {
+            document.querySelector("#sample05 .result-view .result").innerHTML = `true`;
+            document.querySelector("#sample05 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample05 .result-view").classList.toggle("look");
+            });
+        }
+        //sample06
+        {
+            document.querySelector("#sample06 .result-view .result").innerHTML = `true`;
+            document.querySelector("#sample06 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample06 .result-view").classList.toggle("look");
+            });
+        }
+        //sample07
+        {
+            document.querySelector("#sample07 .result-view .result").innerHTML = `
+                1. 반복문이 실행되었습니다.<br>
+                2. 반복문이 실행되었습니다.<br>
+                3. 반복문이 실행되었습니다.<br>
+                4. 반복문이 실행되었습니다.<br>
+                5. 반복문이 실행되었습니다.<br>
+                6. 반복문이 실행되었습니다.<br>
+                7. 반복문이 실행되었습니다.<br>
+                8. 반복문이 실행되었습니다.<br>
+                9. 반복문이 실행되었습니다.<br>
+                10. 반복문이 실행되었습니다.
+            `;
+            document.querySelector("#sample07 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample07 .result-view").classList.toggle("look");
+            });
+        }
+        //sample08
+        {
+            document.querySelector("#sample08 .result-view .result").innerHTML = `
+                1. 반복문이 실행되었습니다.<br>
+                2. 반복문이 실행되었습니다.<br>
+                3. 반복문이 실행되었습니다.<br>
+                4. 반복문이 실행되었습니다.<br>
+                5. 반복문이 실행되었습니다.<br>
+                6. 반복문이 실행되었습니다.<br>
+                7. 반복문이 실행되었습니다.<br>
+                8. 반복문이 실행되었습니다.<br>
+                9. 반복문이 실행되었습니다.<br>
+                10. 반복문이 실행되었습니다.
+            `;
+            document.querySelector("#sample08 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample08 .result-view").classList.toggle("look");
+            });
+        }
+        //sample09
+        {
+            document.querySelector("#sample09 .result-view .result").innerHTML = `
+                1. 반복문이 실행되었습니다.<br>
+                2. 반복문이 실행되었습니다.<br>
+                3. 반복문이 실행되었습니다.<br>
+                4. 반복문이 실행되었습니다.<br>
+                5. 반복문이 실행되었습니다.<br>
+                6. 반복문이 실행되었습니다.<br>
+                7. 반복문이 실행되었습니다.<br>
+                8. 반복문이 실행되었습니다.<br>
+                9. 반복문이 실행되었습니다.<br>
+                10. 반복문이 실행되었습니다.
+            `;
+            document.querySelector("#sample09 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample09 .result-view").classList.toggle("look");
+            });
+        }
+        //sample10
+        {
+            document.querySelector("#sample10 .result-view .result").innerHTML = `
+                1. 반복문(아이)이 실행되었습니다.<br>
+                1. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(아이)이 실행되었습니다.<br>
+                1. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(아이)이 실행되었습니다.<br>
+                1. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(아이)이 실행되었습니다.<br>
+                1. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(아이)이 실행되었습니다.<br>
+                1. 반복문(제이)이 실행되었습니다.<br>
+                2. 반복문(제이)이 실행되었습니다.<br>
+                3. 반복문(제이)이 실행되었습니다.<br>
+                4. 반복문(제이)이 실행되었습니다.<br>
+                5. 반복문(제이)이 실행되었습니다.
+            `;
+            document.querySelector("#sample10 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample10 .result-view").classList.toggle("look");
+            });
+        }
+        
+        //sample11
+        {
+            document.querySelector("#sample11 .result-view .result").innerHTML = `
+              100,200,300,400,500<br>
+              100,200,300,400,500<br>
+              100,200,300,400,500<br>
+              100<br>
+              0<br>
+              100,200,300,400,500<br>
+              200<br>
+              1<br>
+              100,200,300,400,500<br>
+              300<br>
+              2<br>
+              100,200,300,400,500<br>
+              400<br>
+              3<br>
+              100,200,300,400,500<br>
+              500<br>
+              4<br>
+              100,200,300,400,500<br>
+            `;
+            document.querySelector("#sample11 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample11 .result-view").classList.toggle("look");
+            });
+        }
+        
+        //sample12
+        {
+            document.querySelector("#sample12 .result-view .result").innerHTML = `
+              100. 반복문이 실행되었습니다.<br>
+              200. 반복문이 실행되었습니다.<br>
+              300. 반복문이 실행되었습니다.<br>
+              400. 반복문이 실행되었습니다.<br>
+              500. 반복문이 실행되었습니다.<br>
+            `;
+            document.querySelector("#sample12 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample12 .result-view").classList.toggle("look");
+            });
+        }
+        
+        //sample13
+        {
+            document.querySelector("#sample13 .result-view .result").innerHTML = `
+              100, 200, 300, 400, 500<br>
+              a100<br>
+              b200<br>
+              c300<br>
+              d400<br>
+              e500<br>
+            `;
+            document.querySelector("#sample13 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample13 .result-view").classList.toggle("look");
+            });
+        }
+        
+        //sample14
+        {
+            document.querySelector("#sample14 .result-view .result").innerHTML = `
+              1,2,3,4,5,6,7,8,9,10<br>
+              1,2,3,4,5,6,7,8,9,10
+            `;
+            document.querySelector("#sample14 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample14 .result-view").classList.toggle("look");
+            });
+        }
+        
+        //sample15
+        {
+            document.querySelector("#sample15 .result-view .result").innerHTML = `
+                1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+            `;
+            document.querySelector("#sample15 .result-view span").addEventListener("click", function () {
+            document.querySelector("#sample15 .result-view").classList.toggle("look");
+            });
+        }
 
     </script>
 

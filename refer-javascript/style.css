@@ -361,6 +361,7 @@ ol {
   .sample .result-view.look .result{
     display: block;
   }
+
 @media(max-width:800px){
     body {
         padding: 5%;
