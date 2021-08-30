@@ -90,6 +90,18 @@
 
 }
 </code></pre>
+<div>
+    <div class="result show">
+        <h3><a href="#">결과보기</a></h3>
+        <div>
+            <span class="result1-1"></span>
+            <span class="result1-2"></span>
+            <span class="result1-3"></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="result-view">
     <span>결과보기</span>
     <div class="result"></div>
@@ -606,6 +618,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+        //정답보기
+        // document.querySelector(".result1 h3 ").addEventListener("click", resultBtn);
+        
+        // function resultBtn(e){
+        //     e.preventDfault();
+        //     document.querySelector(".rsult1 div").classList.toggle("show");
+        // } = 이름을 하나하나 붙이고 함수를 밖으로 뺀 방법
+        
+        // document.querySelector(".result1 h3 ").addEventListener("click", function(){
+        //     document.querySelector(".rsult1 div").classList.toggle("show");
+        // }); = 기존 선언 방법
+
+        // Document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click", function(e){
+        //         e.preventDfault();
+        //         this.parentNode.classList.toggle("show");
+        //     });
+        // }); = 함수하나만 만드는 방법
+
         //sample01
         //01. 변수 : 데이터 저장소
         {
@@ -617,6 +648,11 @@
             // document.write(x, "<br>");
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
+
+            // 쌤 방법
+            // document.querySelector(".result1-1").innerHTML = x;
+            // document.querySelector(".result1-2").innerHTML = x;
+            // document.querySelector(".result1-3").innerHTML = x;
 
             document.querySelector("#sample01 .result-view .result").innerHTML = `100, 200, javascript`;
             document.querySelector("#sample01 .result-view span").addEventListener("click", function () {
