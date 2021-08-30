@@ -330,34 +330,37 @@ ol {
 .table table .center {
     text-align: center;
 }
-/* .result he a { 
+.result-box h3 { 
+    text-align: center;
     font-size: 16px;
     padding: 10px 15px;
     font-weight: normal;
     margin-top: 5px;
-    background-color: #fff;
+    background-color: #f2f6fd;
     display: inline-block;
     border-radius: 4px;
     color: black;
 }
-
-.result div {
+.result-box h3:hover {
+    cursor: pointer;
+}
+.result-box div {
     background: #272822;
     color: #fff;
     padding: 15px 20px;
     border-radius: 0 4px 4px 4px;
-    display : none;
+    display: none; 
 }
-.result.show div{
+.result-box.active div {
     display : block;
 }
-.result span {
-    display : bolck;
-}
+/* .result span {
+    display : block;
+} */
 
- */
 
-.sample .result-view {
+
+/* .sample .result-view {
     margin-top: 5px;
   }
   
@@ -386,7 +389,7 @@ ol {
   
   .sample .result-view.look .result{
     display: block;
-  }
+  } */
 
 @media(max-width:800px){
     body {
@@ -448,7 +451,7 @@ ol {
         white-space: nowrap;
         font-size: 13px;
     }
-    .view table td.result {
+    /* .view table td.result {
         color: #bdbdbd;
         background: #f1f1f1;
     }
@@ -457,6 +460,12 @@ ol {
     }
     .sample .result-view .result {
         font-size: 13px;
+    } */
+    .result-box h3 {
+        font-size: 12px;
+    }
+    .result-box div {
+        font-size: 12px;
     }
 }
 

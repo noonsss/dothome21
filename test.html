@@ -11,16 +11,23 @@
     <script>
 
     {
-        const num = [100, 200, 300, 400, 500];
+            var x = 100; //변수 x에 숫자 100을 저장     
+            var y = 200; //변수 y에 숫자 200을 저장
+            var z = "javascript"; //변수 z에 문자 javascript를 저장
 
-        for(let i=0; i<num.length; i++){
-        document.write(num[i]);  
-        } 
+            document.write("*** 01. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
 
-        num.forEach(function(el){
-        document.write(el);
-        });
+        Document.querySelectorAll(".result h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDfault();
+                this.parentNode.classList.toggle("show");
+            });
+        }); 
 
+        $()
     }
 
     </script>
