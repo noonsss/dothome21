@@ -282,7 +282,6 @@ body {
 .cardType05 .card-wrap {
     display: flex;
     gap: 16px;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
