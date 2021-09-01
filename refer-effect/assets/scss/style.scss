@@ -205,36 +205,7 @@ $gradient6 : linear-gradient(to bottom,  #718cca 0%,#82af97 100%);
     }
   }
 }
-@media (max-width: 800px) {
-  body {
-      overflow: hidden;
-  }
-  #contents h1 {
-    font-size: 18vw;
-  }
-  #nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, 65px);
-    gap: 10px;
-  }
-  #nav ul li a {
-    font-size: 12px;
-    width: 65px;
-    height: 30px;
-    line-height: 2.5;
-  }
-  #main {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  #contents {
-    h1 {
-      font-size: 14vW;
-    }
-  }
-  
-}
+
 
 //info
 .info {
@@ -304,6 +275,142 @@ $gradient6 : linear-gradient(to bottom,  #718cca 0%,#82af97 100%);
     &:hover {
       box-shadow: 0 -50px 0 #fff inset;
       color: #000;
+    }
+  }
+}
+
+//modal
+#modal {
+  position: fixed;
+  position: fixed;
+	left:0; top:0;
+	width:100%; height:100vh;
+	z-index:1000;
+	transform: scale(0);
+
+  .modal-bg {
+    background: rgba(0,0,0,0.6);
+		height:100vh;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+
+    .modal-cont {
+			background: #fff;
+			padding: 3vw;
+			max-width: 50vw;
+			border-radius:5px;
+
+      h2 {
+				font-weight: 400;
+				font-size: 30px;
+				margin-bottom:10px;
+			}
+			p {
+				font-weight:300;
+				line-height:1.6;
+			}
+			button {
+				float: right;
+				border: 1px solid #000;
+				background: #000;
+				border-radius: 20px;
+				color: #fff;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+    }
+  }
+}
+
+#modal.show {
+	animation: unfoldIn 1s ease forwards;
+}
+@keyframes unfoldIn {
+	0%   {transform: scaley(0.005) scalex(0);}
+	50%  {transform: scaley(0.005) scalex(1);}
+	100% {transform: scaley(1) scalex(1);}
+}
+
+#modal.show.hide {
+	animation: unfoldOut 1s ease forwards;
+}
+@keyframes unfoldOut {
+	0%   {transform: scaley(1) scalex(1);}
+	50%  {transform: scaley(0.005) scalex(1);}
+	100% {transform: scaley(0.005) scalex(0);}
+}
+
+
+#modal.show .modal-bg .modal-cont {
+	transform: scale(0);
+	animation: zoomIn 0.5s 0.8s ease forwards;
+}
+#modal.show.hide .modal-bg .modal-cont {
+	transform: scale(0);
+	animation: zoomOut 0.5s ease forwards;
+}
+@keyframes zoomIn {
+	0%   {transform: scale(0)}
+	100% {transform: scale(1)}
+}
+@keyframes zoomOut {
+	0%   {transform: scale(1)}
+	100% {transform: scale(0)}
+}
+
+
+
+
+
+@media (max-width: 800px) {
+  body {
+      overflow: hidden;
+  }
+  #contents h1 {
+    font-size: 18vw;
+  }
+  #nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 65px);
+    gap: 10px;
+  }
+  #nav ul li a {
+    font-size: 12px;
+    width: 65px;
+    height: 30px;
+    line-height: 2.5;
+  }
+  #main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #contents {
+    h1 {
+      font-size: 14vW;
+    }
+  }
+  .info {
+    h1 {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+    }
+    button {
+      font-size: 8px;
+      padding: 3px 10px;
+    }
+    li {
+      a {
+        width: 15px;
+        height: 15px;
+        line-height: 17px;
+        font-size: 8px;
+      }
     }
   }
 }
