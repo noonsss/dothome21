@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1GothicOTF';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+span,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+.bg1 {
+  height: 100vh;
+  background-image: url(../img/bg01@2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+}
+
+#main.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#33a38d), to(#ceaf34));
+  background: linear-gradient(to bottom, #33a38d 0%, #ceaf34 100%);
+}
+
+#main.mouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c76da6), to(#d6c053));
+  background: linear-gradient(to bottom, #c76da6 0%, #d6c053 100%);
+}
+
+#main.slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#A8BFFF), to(#884D80));
+  background: linear-gradient(to bottom, #A8BFFF 0%, #884D80 100%);
+}
+
+#main.parallax {
+  background: -webkit-gradient(linear, left top, left bottom, from(#78dad5), to(#dd97ad));
+  background: linear-gradient(to bottom, #78dad5 0%, #dd97ad 100%);
+}
+
+#main.game {
+  background: -webkit-gradient(linear, left top, left bottom, from(#718cca), to(#82af97));
+  background: linear-gradient(to bottom, #718cca 0%, #82af97 100%);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 10vW;
+  white-space: nowrap;
+  font-family: "Six Caps", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vW;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a600ff), to(#1000a0));
+  background-image: linear-gradient(to bottom, #a600ff, #1000a0);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+
+#nav li {
+  list-style: none;
+  display: inline;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXONLv1GothicOTF";
+  -webkit-box-shadow: inset 0 0 0 #fff;
+          box-shadow: inset 0 0 0 #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#nav li a:hover {
+  -webkit-box-shadow: inset 0 -100px 0 #fff;
+          box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
