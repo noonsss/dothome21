@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
     </style>
@@ -757,19 +758,18 @@
 
         // = 함수하나만 만드는 방법
 
-        document.querySelectorAll(".result-box h3").forEach(el => {
-            el.addEventListener("click", function(){
-                event.preventDefault();
-                this.parentNode.classList.toggle("active");
-            })
-        });
-
-        //제이쿼리로 변환
-        // $(".result-box h3").click(function(){
-        //     $(".parents").toggle("active")
+        // document.querySelectorAll(".result-box h3").forEach(el => {
+        //     el.addEventListener("click", function(){
+        //         event.preventDefault();
+        //         this.parentNode.classList.toggle("active");
+        //     })
         // });
 
-       
+        //제이쿼리로 변환
+        $(".result-box h3").click(function(e){
+           e.preventDefault();
+           $(this).parents().toggleClass("active");
+        });
 
         //sample01
         //01. 변수 : 데이터 저장소
@@ -779,9 +779,13 @@
             var z = "javascript"; //변수 z에 문자 javascript를 저장
 
             // 쌤 방법
-            document.querySelector(".result1-1").innerHTML = x;
-            document.querySelector(".result1-2").innerHTML = y;
-            document.querySelector(".result1-3").innerHTML = z;
+            // document.querySelector(".result1-1").innerHTML = x;
+            // document.querySelector(".result1-2").innerHTML = y;
+            // document.querySelector(".result1-3").innerHTML = z;
+
+            $(".result1-1").html(x);
+            $(".result1-2").html(y);
+            $(".result1-3").html(z);
 
             // document.querySelector("#sample01 .result-view .result").innerHTML = `100, 200, javascript`;
             // document.querySelector("#sample01 .result-view span").addEventListener("click", function () {
