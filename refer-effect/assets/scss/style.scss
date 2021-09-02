@@ -2,41 +2,45 @@
 
 //webfonts
 @font-face {
-  font-family: 'NEXONLv1GothicOTF';
-  font-weight: 300;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NEXONLv1GothicOTF';
-  font-weight: 500;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NEXONLv1GothicOTF';
-  font-weight: 700;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
-  font-style: normal;
+	font-family: 'NEXONLv1GothicOTF';
+	font-weight: 300;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'NEXONLv2Gothic';
-  font-weight: 300;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
-  font-style: normal;
+	font-family: 'NEXONLv1GothicOTF';
+	font-weight: 500;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+	font-style: normal;
 }
+
 @font-face {
-  font-family: 'NEXONLv2Gothic';
-  font-weight: 500;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-  font-style: normal;
+	font-family: 'NEXONLv1GothicOTF';
+	font-weight: 700;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+	font-style: normal;
 }
+
 @font-face {
-  font-family: 'NEXONLv2Gothic';
-  font-weight: 700;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-  font-style: normal;
+	font-family: 'NEXONLv2Gothic';
+	font-weight: 300;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NEXONLv2Gothic';
+	font-weight: 500;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NEXONLv2Gothic';
+	font-weight: 700;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+	font-style: normal;
 }
 
 //reset
@@ -71,245 +75,258 @@ select,
 button,
 figure,
 figcaption {
-  margin: 0;
-  padding: 0
+	margin: 0;
+	padding: 0
 }
 
 //variable
 $font-Six : 'Six Caps';
-$font-NEXON1 :  'NEXONLv1GothicOTF';
-$font-NEXON2 :  'NEXONLv2GothicOTF';
+$font-NEXON1 : 'NEXONLv1GothicOTF';
+$font-NEXON2 : 'NEXONLv2GothicOTF';
 
-$gradient1 : linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); 
-$gradient2 : linear-gradient(to bottom,  #33a38d 0%,#ceaf34 100%); 
-$gradient3 : linear-gradient(to bottom,  #c76da6 0%,#d6c053 100%); 
-$gradient4 : linear-gradient(to bottom,  #A8BFFF 0%,#884D80 100%); 
-$gradient5 : linear-gradient(to bottom,  #78dad5 0%,#dd97ad 100%); 
-$gradient6 : linear-gradient(to bottom,  #718cca 0%,#82af97 100%); 
+$gradient1 : linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+$gradient2 : linear-gradient(to bottom, #33a38d 0%, #ceaf34 100%);
+$gradient3 : linear-gradient(to bottom, #c76da6 0%, #d6c053 100%);
+$gradient4 : linear-gradient(to bottom, #A8BFFF 0%, #884D80 100%);
+$gradient5 : linear-gradient(to bottom, #78dad5 0%, #dd97ad 100%);
+$gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 
 //mixin
 @mixin positionCenter {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
+
 @mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 @mixin content {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 //bg
 .bg {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 
-  &::before {
-    @include content;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    z-index: -1;
-  }
+	&::before {
+		@include content;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -1;
+	}
 }
+
 // .bg1 {
 //   background-image: url(../img/bg01@2.jpg);
 // }
 @for $i from 1 through 20 {
-  .bg#{$i} {
-    background-image: url(../img/bg#{$i}@2.jpg);
-  }
+	.bg#{$i} {
+		background-image: url(../img/bg#{$i}@2.jpg);
+	}
 }
 
 //main
 #main {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #11e8bb; 
-  background: $gradient1;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #11e8bb;
+	background: $gradient1;
 
-  &.menu {
-    background: $gradient2;
-  }
-  &.mouse{
-    background: $gradient3;
-  }
-  &.slider {
-    background: $gradient4;
-  }
-  &.parallax {
-    background: $gradient5;
-  }
-  &.game {
-    background: $gradient6;
-  }
+	&.menu {
+		background: $gradient2;
+	}
+
+	&.mouse {
+		background: $gradient3;
+	}
+
+	&.slider {
+		background: $gradient4;
+	}
+
+	&.parallax {
+		background: $gradient5;
+	}
+
+	&.game {
+		background: $gradient6;
+	}
 }
 
 
 
 #contents {
-  h1 {
-    @include positionCenter;
-    font-size: 10vW;
-    white-space: nowrap;
-    font-family: $font-Six, sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1vW;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to bottom, #a600ff, #1000a0);
-  }
+	h1 {
+		@include positionCenter;
+		font-size: 10vW;
+		white-space: nowrap;
+		font-family: $font-Six, sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 1vW;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-image: linear-gradient(to bottom, #a600ff, #1000a0);
+	}
 }
 
 #nav {
-  @include positionCenter;
-  bottom: 10px;
-  top: auto;
+	@include positionCenter;
+	bottom: 10px;
+	top: auto;
 
-  li {
-    list-style: none;
-    display: inline;
+	li {
+		list-style: none;
+		display: inline;
 
-    a {
-      color: #fff;
-      text-decoration: none;
-      width: 100px;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid #fff;
-      display: inline-block;
-      border-radius: 50px;
-      font-size: 14px;
-      text-align: center;
-      margin: 4px;
-      font-family: $font-NEXON1;
-      box-shadow: inset 0 0 0 #fff;
-      transition: all 0.4s;
+		a {
+			color: #fff;
+			text-decoration: none;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid #fff;
+			display: inline-block;
+			border-radius: 50px;
+			font-size: 14px;
+			text-align: center;
+			margin: 4px;
+			font-family: $font-NEXON1;
+			box-shadow: inset 0 0 0 #fff;
+			transition: all 0.4s;
 
-      &:hover {
-        box-shadow: inset 0 -100px 0 #fff;
-        color: #6c4a70;
-      }
-    }
-  }
+			&:hover {
+				box-shadow: inset 0 -100px 0 #fff;
+				color: #6c4a70;
+			}
+		}
+	}
 }
 
 
 //info
 .info {
-  color: #fff;
-  font-family: $font-NEXON1;
-  padding: 20px;
+	color: #fff;
+	font-family: $font-NEXON1;
+	padding: 20px;
+	position: absolute;
+	left: 0; 
+	top: 0;
 
-  &.right {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
+	&.right {
+		left: auto; //auto는 자동값,초기화,기본값 이 될 수 있다
+		right: 0px;
+	}
 
-  &.bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+	&.bottom {
+		top: auto;
+		left: auto;
+		bottom: 0;
+		right: 0;
+	}
 
-  }
+	h1 {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 1.6;
+		border-bottom: 1px dashed #fff;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
 
-  h1 {
-   font-weight: 300;
-   font-size: 20px;
-   line-height: 1.6;
-   border-bottom: 1px dashed #fff;
-   display: inline-block;
-   margin-bottom: 10px;
-  }
-  p {
-    font-weight: 300;
-    font-size: 15px;
-  }
-  li{
-    list-style: none;
-    display: inline;
+	p {
+		font-weight: 300;
+		font-size: 15px;
+	}
 
-    a{
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      border: 1px dashed #fff;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-      text-align: center;
-      font-size: 12px;
-      margin-bottom: 5px; 
-    }
-    &.active {
-      a {
-        background: #fff;
-        color: #000;
-      }
-    }
-  }
-  button {
-    background: transparent;
-    border: 1px solid #fff;
-    padding: 5px 20px;
-    color: #fff;
-    border-radius: 50px;
-    box-shadow: 0 0 0 #fff inset;
-    transition: all 0.4s;
+	li {
+		list-style: none;
+		display: inline;
 
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			border: 1px dashed #fff;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
 
-    &:hover {
-      box-shadow: 0 -50px 0 #fff inset;
-      color: #000;
-    }
-  }
+		&.active {
+			a {
+				background: #fff;
+				color: #000;
+			}
+		}
+	}
+
+	button {
+		background: transparent;
+		border: 1px solid #fff;
+		padding: 5px 20px;
+		color: #fff;
+		border-radius: 50px;
+		box-shadow: 0 0 0 #fff inset;
+		transition: all 0.4s;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 -50px 0 #fff inset;
+			color: #000;
+		}
+	}
 }
 
 //modal
 #modal {
-  position: fixed;
-  position: fixed;
-	left:0; top:0;
-	width:100%; height:100vh;
-	z-index:1000;
+	position: fixed;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
 	transform: scale(0);
 
-  .modal-bg {
-    background: rgba(0,0,0,0.6);
-		height:100vh;
-		display:flex;
-		align-items:center;
-		justify-content:center;
+	.modal-bg {
+		background: rgba(0, 0, 0, 0.6);
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    .modal-cont {
-			background: #fff;
-			padding: 3vw;
-			max-width: 50vw;
-			border-radius:5px;
+		.modal-cont {
 
-      h2 {
+			h2 {
 				font-weight: 400;
 				font-size: 30px;
-				margin-bottom:10px;
+				margin-bottom: 10px;
 			}
+
 			p {
-				font-weight:300;
-				line-height:1.6;
+				font-weight: 300;
+				line-height: 1.6;
 			}
+
 			button {
 				float: right;
 				border: 1px solid #000;
@@ -318,27 +335,46 @@ $gradient6 : linear-gradient(to bottom,  #718cca 0%,#82af97 100%);
 				color: #fff;
 				padding: 5px 10px;
 				cursor: pointer;
+				margin-top: 10px;
 			}
-    }
-  }
+		}
+	}
 }
 
 #modal.show {
 	animation: unfoldIn 1s ease forwards;
 }
+
 @keyframes unfoldIn {
-	0%   {transform: scaley(0.005) scalex(0);}
-	50%  {transform: scaley(0.005) scalex(1);}
-	100% {transform: scaley(1) scalex(1);}
+	0% {
+		transform: scaley(0.005) scalex(0);
+	}
+
+	50% {
+		transform: scaley(0.005) scalex(1);
+	}
+
+	100% {
+		transform: scaley(1) scalex(1);
+	}
 }
 
 #modal.show.hide {
 	animation: unfoldOut 1s ease forwards;
 }
+
 @keyframes unfoldOut {
-	0%   {transform: scaley(1) scalex(1);}
-	50%  {transform: scaley(0.005) scalex(1);}
-	100% {transform: scaley(0.005) scalex(0);}
+	0% {
+		transform: scaley(1) scalex(1);
+	}
+
+	50% {
+		transform: scaley(0.005) scalex(1);
+	}
+
+	100% {
+		transform: scaley(0.005) scalex(0);
+	}
 }
 
 
@@ -346,73 +382,197 @@ $gradient6 : linear-gradient(to bottom,  #718cca 0%,#82af97 100%);
 	transform: scale(0);
 	animation: zoomIn 0.5s 0.8s ease forwards;
 }
+
 #modal.show.hide .modal-bg .modal-cont {
 	transform: scale(0);
 	animation: zoomOut 0.5s ease forwards;
 }
+
 @keyframes zoomIn {
-	0%   {transform: scale(0)}
-	100% {transform: scale(1)}
+	0% {
+		transform: scale(0)
+	}
+
+	100% {
+		transform: scale(1)
+	}
 }
+
 @keyframes zoomOut {
-	0%   {transform: scale(1)}
-	100% {transform: scale(0)}
+	0% {
+		transform: scale(1)
+	}
+
+	100% {
+		transform: scale(0)
+	}
 }
 
+//code-view
+.code-view {
+	background: #fff;
+	width: 60vw;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+ 
+	.view-header {
+	   border-bottom: 1px solid #f2f2f2;
+ 
+	   .dot {
+		  padding: 13px 10px 10px 15px;
+ 
+ 
+		  span {
+			 width: 12px;
+			 height: 12px;
+			 display: inline-block;
+			 border-radius: 50%;
+			 margin: 0 2px;
+		  }
+ 
+		  span:nth-child(1) {
+			 background-color: #f56565;
+		  }
+ 
+		  span:nth-child(2) {
+			 background-color: #f6e05e;
+		  }
+ 
+		  span:nth-child(3) {
+			 background-color: #48bb78;
+		  }
+	   }
+	}
+ 
+	.view-title {
+	   border-bottom: 1px solid #f2f2f2;
+	   padding: 0 11px;
+	   font-family: 'NEXONLv2Gothic';
+ 
+	   li {
+		  display: inline;
+		  list-style: none;
+ 
+		  a {
+			 text-decoration: none;
+			 color: #ccc;
+			 padding: 10px 10px 12px;
+			 margin: 0 5px;
+			 display: inline-block;
+		  }
+ 
+		  &.active a {
+			 border-top: 2px solid #667EEA;
+			 color: #4a5568;
+		  }
+	   }
+ 
+	}
+	.view-cont {
+        height: 70vh;
+        overflow-y: scroll;
+		background: #F8F8F9;
 
+        > div {
+            display: none;
+        }
+        > div:nth-child(1){
+            display: block;
+        }
+    }
+ }
 
 
 
 @media (max-width: 800px) {
-  body {
-      overflow: hidden;
-      width: 100%;
-      height: 100vh;
-  }
-  #contents h1 {
-    font-size: 18vw;
-  }
-  #nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, 65px);
-    gap: 10px;
-  }
-  #nav ul li a {
-    font-size: 12px;
-    width: 65px;
-    height: 30px;
-    line-height: 2.5;
-  }
-  #main {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  #contents {
-    h1 {
-      font-size: 14vW;
-    }
-  }
-  .info {
-    h1 {
-      font-size: 14px;
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 12px;
-    }
-    button {
-      font-size: 8px;
-      padding: 3px 10px;
-    }
-    li {
-      a {
-        width: 15px;
-        height: 15px;
-        line-height: 17px;
-        font-size: 8px;
-      }
-    }
-  }
+	body {
+		overflow: hidden;
+		width: 100%;
+		height: 100vh;
+	}
+
+	#contents h1 {
+		font-size: 18vw;
+	}
+
+	#nav ul {
+		display: grid;
+		grid-template-columns: repeat(5, 65px);
+		gap: 10px;
+	}
+
+	#nav ul li a {
+		font-size: 12px;
+		width: 65px;
+		height: 30px;
+		line-height: 2.5;
+	}
+
+	#main {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	#contents {
+		h1 {
+			font-size: 14vW;
+		}
+	}
+
+	.info {
+		h1 {
+			font-size: 14px;
+			line-height: 1.4;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 12px;
+		}
+
+		button {
+			font-size: 8px;
+			padding: 3px 10px;
+		}
+
+		li {
+			a {
+				width: 15px;
+				height: 15px;
+				line-height: 17px;
+				font-size: 8px;
+			}
+		}
+	}
+	.modal-cont {
+		button {
+			font-size: 8px;
+		}
+	}
+	.view-title {
+		li {
+			a {
+				font-size: 9px;
+				padding: 5px 5px 6px;
+				margin: 0 5px;
+				display: inline-block;
+			}
+		}
+	}
+	.view-header {
+	
+		.dot {
+			padding: 6px 5px 4px 7px;
+	
+			span {
+				width: 8px;
+				height: 8px;
+				display: inline-block;
+				border-radius: 50%;
+				margin: 0 2px;
+			}
+		}
+	}
 }

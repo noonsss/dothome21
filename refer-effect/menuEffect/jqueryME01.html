@@ -11,17 +11,16 @@
 </head>
 <style>
 	#tab-menu {
-		font-family: 'NEXONLv2Gothic';
 		max-width: 600px;
-		background: rgb(252, 229, 99);
+		background: rgb(235, 206, 47);
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 5px;
 		overflow: hidden;
-		color: #fff;
-		
+		font-family: 'NEXONLv2Gothic';
+		color: #333;
 	}
 	.tab-btn ul {
 		display: flex;
@@ -33,21 +32,21 @@
 		font-size: 15px;
 	}
 	.tab-btn li a {
-		color: rgb(58, 31, 0);
+		color: #fff;
 		text-decoration: none;
 		padding: 19px 15px 15px  15px;
 		display: block;
 	}
 	.tab-btn li.active a {
 		border-bottom: 2px solid rgb(179, 95, 0);
-		color: #fff;
+		color: #333;
 	}
 	.tab-cont {
 		background: #fff;
 		padding: 20px;
 		color: #333;
 	}
-	.tab-cont > div {
+    .tab-cont > div {
         display: none;
     }
 	.tab-cont > div:first-child {
@@ -59,17 +58,11 @@
 	.tab-cont > div p {
 		line-height: 1.6;
 	}
-	.view-cont > div {
-		display: none;
-	}
-	.view-cont > div:first-child {
-		display: block;
-	}
 </style>
-<body class="bg bg2">
+<body class="bg bg8">
 
 	<!-- contetns -->
-	<main>
+	<main id="contents">
 		<div id="tab-menu">
 			<div class="tab-btn">
 				<ul>
@@ -120,20 +113,20 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html"></a> Javascript Menu Effect01</h1>
+        <h1><a href="index.html"></a> Jquery Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryME01.html">1</a></li>
+            <li class="active"><a href="jqueryME01.html">1</a></li>
             <li><a href="jqueryME02.html">2</a></li>
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
@@ -160,55 +153,55 @@
                     </div>
                 <div class="view-title">
                     <ul>
-                        <li class="active"><a href="#">Html</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">Javascript</a></li>
+                        <li class="active"><a href="#"> Html</a></li>
+                        <li><a href="#"> CSS</a></li>
+                        <li><a href="#"> Jquery</a></li>
                     </ul>
                 </div>
                 <div class="view-cont">
-					<div class="html">
+                    <div class="html">
 <pre><code class="language-html">&lt;div id="tab-menu"&gt;
-	&lt;div class="tab-btn"&gt;
-		&lt;ul&gt;
-			&lt;li class="active"&gt;&lt;a href="#"&gt;원칙1&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#"&gt;원칙2&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#"&gt;원칙3&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#"&gt;원칙4&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="#"&gt;원칙5&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;div class="tab-cont"&gt;
-		&lt;div&gt;
-			&lt;h2&gt;일찍 일어나자&lt;/h2&gt;
-			&lt;p&gt;일찍 일어나면 성실해지고, 문제 해결 능력이 향상되며, 여러 가지 일을 처리할 수 있다. 적절한 시간에 잘 수 있도록 준비한다. (자기 1시간 전 정도에는 전자 기기를 사용하지 않는 것 역시 포함한다.)
-				일어날 때 알람 시계의 일시정지 버튼을 누르지 않는다. 그 대신에 침대 건너 편에 있는 책상 등에 올려 놓는 것을 추천한다. 끄기 위해 일어나야 하기 때문이다.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div&gt;
-			&lt;h2&gt;운동을 하자&lt;/h2&gt;
-			&lt;p&gt;규칙적인 운동을 하면 다음과 같은 이득을 얻을 수 있다.
-				우울증을 감소시킨다. 
-				힘이 나게 하고 피로가 사라진다. 
-				면역 시스템을 향상시켜 병을 예방한다. 
-				인내심을 향상시키고 목표를 향해 나아갈 수 있게 한다. 
-				운동할 시간이 없다면, 삶에 변화를 주어서 계단을 오르내리거나, 가까운 곳은 버스를 타지 말고 걸어 다니든지 해 보자.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div&gt;
-			&lt;h2&gt;정신 건강을 위해 노력하자&lt;/h2&gt;
-			&lt;p&gt;자신감은 전문적인 일을 하는데 중요한 요소이며, 정신 건강은 자신감에 많은 영향을 끼친다. 실행: 어려운 일과 실패가 있더라도 꾸준히 실행해 나가야 한다. 자신을 의심하지 말고, 실망스러운 순간을 미래를 향한 동력으로 삼아야 한다.
-				통제: 무기력하지 않도록 통제한다. 일을 맡고, 필요한 작업들을 해 나가고, 결과를 그냥 일어나게 놔 두는 것이 아니라, 결과에 영향을 주려고 노력하는 것이다.
-				도전: 불굴의 용기를 가지고 긍정적 스트레스와 부정적인 스트레스를 넘어서고 배우고 발전해 나간다.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div&gt;
-			&lt;h2&gt;실패로부터 배운다 &lt;/h2&gt;
-			&lt;p&gt;태어나면서부터 성공하는 사람은 없다. 실패 같은 위기들을 넘긴 삶의 경험들이 쌓여서 성공하게 되는 것이다. 충동적으로 행동하는 것은 추천하지 않지만, 계산된 위험을 치러 보는 것은 나중에 큰 도움이 된다. 자신이 하는 모든 일에서 성공하지 못한다고 하더라도 실패하고 그것으로 배워 가는 것은 성공하는 사람들의 중요한 습관 중 하나이다.
-				스티브 잡스는 1985년 애플에서 해고되었다. 같이 일하기 힘든 사람이었기 때문이었다. 하지만 12년 후 복귀하고 실패한 회사를 성공한 회사로 바꾸어 놓았고, 더 좋은 리더가 되었다.
-			&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div&gt;
-			&lt;h2&gt;책임을 지자. &lt;/h2&gt;
-			&lt;p&gt;자신의 행동에 대한 책임을 다른 사람에게 돌리면, 성공에 대한 책임 역시 자신에게 돌릴 수 없게 된다. 실패의 책임을 남의 탓이라고 생각하지 말자. 그 대신, 자신이 한 일에 대해 생각해 보고, 그리고 다음에 어떻게 잘할지 고민해 보자. 성공과 실패는 자신이 결정한다는 것을 잊지 말자.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+    &lt;div class="tab-btn"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;원칙1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;원칙2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;원칙3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;원칙4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;원칙5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-cont"&gt;
+        &lt;div&gt;
+            &lt;h2&gt;일찍 일어나자&lt;/h2&gt;
+            &lt;p&gt;일찍 일어나면 성실해지고, 문제 해결 능력이 향상되며, 여러 가지 일을 처리할 수 있다. 적절한 시간에 잘 수 있도록 준비한다. (자기 1시간 전 정도에는 전자 기기를 사용하지 않는 것 역시 포함한다.)
+                일어날 때 알람 시계의 일시정지 버튼을 누르지 않는다. 그 대신에 침대 건너 편에 있는 책상 등에 올려 놓는 것을 추천한다. 끄기 위해 일어나야 하기 때문이다.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;운동을 하자&lt;/h2&gt;
+            &lt;p&gt;규칙적인 운동을 하면 다음과 같은 이득을 얻을 수 있다.
+                우울증을 감소시킨다. 
+                힘이 나게 하고 피로가 사라진다. 
+                면역 시스템을 향상시켜 병을 예방한다. 
+                인내심을 향상시키고 목표를 향해 나아갈 수 있게 한다. 
+                운동할 시간이 없다면, 삶에 변화를 주어서 계단을 오르내리거나, 가까운 곳은 버스를 타지 말고 걸어 다니든지 해 보자.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;정신 건강을 위해 노력하자&lt;/h2&gt;
+            &lt;p&gt;자신감은 전문적인 일을 하는데 중요한 요소이며, 정신 건강은 자신감에 많은 영향을 끼친다. 실행: 어려운 일과 실패가 있더라도 꾸준히 실행해 나가야 한다. 자신을 의심하지 말고, 실망스러운 순간을 미래를 향한 동력으로 삼아야 한다.
+                통제: 무기력하지 않도록 통제한다. 일을 맡고, 필요한 작업들을 해 나가고, 결과를 그냥 일어나게 놔 두는 것이 아니라, 결과에 영향을 주려고 노력하는 것이다.
+                도전: 불굴의 용기를 가지고 긍정적 스트레스와 부정적인 스트레스를 넘어서고 배우고 발전해 나간다.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;실패로부터 배운다 &lt;/h2&gt;
+            &lt;p&gt;태어나면서부터 성공하는 사람은 없다. 실패 같은 위기들을 넘긴 삶의 경험들이 쌓여서 성공하게 되는 것이다. 충동적으로 행동하는 것은 추천하지 않지만, 계산된 위험을 치러 보는 것은 나중에 큰 도움이 된다. 자신이 하는 모든 일에서 성공하지 못한다고 하더라도 실패하고 그것으로 배워 가는 것은 성공하는 사람들의 중요한 습관 중 하나이다.
+                스티브 잡스는 1985년 애플에서 해고되었다. 같이 일하기 힘든 사람이었기 때문이었다. 하지만 12년 후 복귀하고 실패한 회사를 성공한 회사로 바꾸어 놓았고, 더 좋은 리더가 되었다.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h2&gt;책임을 지자. &lt;/h2&gt;
+            &lt;p&gt;자신의 행동에 대한 책임을 다른 사람에게 돌리면, 성공에 대한 책임 역시 자신에게 돌릴 수 없게 된다. 실패의 책임을 남의 탓이라고 생각하지 말자. 그 대신, 자신이 한 일에 대해 생각해 보고, 그리고 다음에 어떻게 잘할지 고민해 보자. 성공과 실패는 자신이 결정한다는 것을 잊지 말자.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 
 
@@ -216,11 +209,11 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-					</div>
-					<div class="css">
+                    </div>
+                    <div class="css">
 <pre><code class="language-css">#tab-menu {
 		max-width: 600px;
-		background: rgb(252, 229, 99);
+		background: rgb(235, 206, 47);
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -228,10 +221,8 @@
 		border-radius: 5px;
 		overflow: hidden;
 		font-family: 'NEXONLv2Gothic';
-		color: #fff;
-		
+		color: #333;
 	}
-	.tab-btn {}
 	.tab-btn ul {
 		display: flex;
 	}
@@ -242,21 +233,21 @@
 		font-size: 15px;
 	}
 	.tab-btn li a {
-		color: rgb(58, 31, 0);
+		color: #fff;
 		text-decoration: none;
 		padding: 19px 15px 15px  15px;
 		display: block;
 	}
 	.tab-btn li.active a {
 		border-bottom: 2px solid rgb(179, 95, 0);
-		color: #fff;
+		color: #333;
 	}
 	.tab-cont {
 		background: #fff;
 		padding: 20px;
 		color: #333;
 	}
-	.tab-cont > div {
+    .tab-cont > div {
         display: none;
     }
 	.tab-cont > div:first-child {
@@ -268,36 +259,34 @@
 	.tab-cont > div p {
 		line-height: 1.6;
 	}
-	.view-cont > div {
-		display: none;
-	}
-	.view-cont > div:first-child {
-		display: block;
-	}
 </code></pre>
-					</div>
-					<div class="javascript">
-<pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
-const tabCont = document.querySelectorAll(".tab-cont > div");
+                    </div>
+                    <div class="jquery">
+<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당(저장)
+const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
 
-tabBtn.forEach((element, index)=> {
-	element.addEventListener("click", function(){
+//1. 버튼을 클릭하면 클릭한 버튼에 active 추가
+//2. 버튼을 클릭하지 않은 나머지 버튼들은 active 제거
+//3. 버튼 인덱스 설정
+//4. 1번째 버튼은 1번째 컨텐츠와 연결
+//5. 모든 컨텐츠를 안보이게 설정(css부분)
+//6. 클릭한 버튼에 해당하는 컨텐츠만 보이게 설정
 
-		tabBtn.forEach((el) => {
-			el.classList.remove("active");
-		});
-		element.classList.add("active");
+tabBtn.click(function(){
+    let target = $(this);
+    tabBtn.removeClass("active");
+    target.addClass("active");
 
-		tabCont.forEach(el => {
-			el.style.display = "none";
-		});
-		tabCont[index].style.display = "block";
-	});
+    let index = target.index();
+    tabCont.css("display", "none");
+    tabCont.eq(index).css("display", "block");
 });
 </code></pre>
-					</div>
+                    </div>
+                    <div></div>
 				</div>
             </div>
+
             <button>닫기</button>
           </div>
         </div>
@@ -306,32 +295,31 @@ tabBtn.forEach((element, index)=> {
 
 
 <!-- script -->
+<script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/custom.js"></script>
 <script src="../assets/js/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
 <script>
-{
-	const tabBtn = document.querySelectorAll(".tab-btn ul li");
-	const tabCont = document.querySelectorAll(".tab-cont > div");
+    const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당(저장)
+    const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
 
-	tabBtn.forEach((element, index)=> {
-		element.addEventListener("click", function(){
+    //1. 버튼을 클릭하면 클릭한 버튼에 active 추가
+    //2. 버튼을 클릭하지 않은 나머지 버튼들은 active 제거
+    //3. 버튼 인덱스 설정
+    //4. 1번째 버튼은 1번째 컨텐츠와 연결
+    //5. 모든 컨텐츠를 안보이게 설정(css부분)
+    //6. 클릭한 버튼에 해당하는 컨텐츠만 보이게 설정
 
-			tabBtn.forEach((el) => {
-				el.classList.remove("active");
-			});
-			element.classList.add("active");
+    tabBtn.click(function(){
+        let target = $(this);
+        tabBtn.removeClass("active");
+        target.addClass("active");
 
-			tabCont.forEach(el => {
-				el.style.display = "none";
-			});
-			tabCont[index].style.display = "block";
-		});
-	});
-}
-{
+        let index = target.index();
+        tabCont.css("display", "none");
+        tabCont.eq(index).css("display", "block");
+    });
 
-}
+    
 </script>
 </body>
 </html>
