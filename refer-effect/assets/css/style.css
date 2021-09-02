@@ -524,6 +524,7 @@ figcaption {
 .code-view {
   background: #fff;
   width: 60vw;
+  height: 100vw;
   border: 1px solid #f2f2f2;
   border-radius: 10px;
   overflow: hidden;
