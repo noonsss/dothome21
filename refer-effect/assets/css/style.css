@@ -622,9 +622,6 @@ figcaption {
     height: 100vh;
     overflow: hidden;
   }
-  #contents h1 {
-    font-size: 14vW;
-  }
   .info h1 {
     font-size: 14px;
     line-height: 1.4;
@@ -643,29 +640,35 @@ figcaption {
     line-height: 17px;
     font-size: 8px;
   }
-  .info.bottom {
+  .info .bottom {
     top: auto;
     left: auto;
     bottom: 150px;
     right: 0;
   }
-  .modal-cont button {
+  .code-view {
+    width: 90vw;
+  }
+  .modal .modal-cont button {
     font-size: 8px;
   }
-  .view-title li a {
-    font-size: 9px;
-    padding: 5px 5px 6px;
-    margin: 0 5px;
-    display: inline-block;
-  }
-  .view-header .dot {
+  .modal .modal-cont .view-header .dot {
     padding: 6px 5px 4px 7px;
   }
-  .view-header .dot span {
+  .modal .modal-cont .view-header .dot span {
     width: 8px;
     height: 8px;
     display: inline-block;
     border-radius: 50%;
     margin: 0 2px;
+  }
+  .modal .modal-cont .view-title li a {
+    font-size: 9px;
+    padding: 4px 4px 6px;
+    margin: 0;
+    display: inline-block;
+  }
+  .modal .modal-cont .view-cont {
+    font-size: 10px;
   }
 }
