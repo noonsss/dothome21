@@ -640,10 +640,10 @@ figcaption {
     line-height: 17px;
     font-size: 8px;
   }
-  .info .bottom {
+  .info.bottom {
     top: auto;
     left: auto;
-    bottom: 150px;
+    bottom: 100px;
     right: 0;
   }
   .code-view {

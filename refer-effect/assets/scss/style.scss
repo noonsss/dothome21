@@ -544,10 +544,10 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 				font-size: 8px;
 			}
 		}
-		.bottom {
+		&.bottom {
 			top: auto;
 			left: auto;
-			bottom: 150px;
+			bottom: 100px;
 			right: 0;
 		}
 	}
@@ -559,12 +559,12 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 	.modal{
 
 		.modal-cont {
-	
+			
 			button {
 				font-size: 8px;
 			}
 			.view-header {
-			
+				
 				.dot {
 					padding: 6px 5px 4px 7px;
 			
