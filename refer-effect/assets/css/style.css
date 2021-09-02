@@ -623,6 +623,9 @@ figcaption {
     height: 100vh;
     overflow: hidden;
   }
+  .code-view {
+    width: 90vw;
+  }
   .info h1 {
     font-size: 14px;
     line-height: 1.4;
@@ -646,9 +649,6 @@ figcaption {
     left: auto;
     bottom: 100px;
     right: 0;
-  }
-  .code-view {
-    width: 90vw;
   }
   .modal .modal-cont button {
     font-size: 8px;
