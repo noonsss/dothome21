@@ -625,6 +625,7 @@ figcaption {
   }
   .code-view {
     width: 90vw;
+    overflow: hidden;
   }
   .info h1 {
     font-size: 14px;
