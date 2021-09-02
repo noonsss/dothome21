@@ -14,4 +14,4 @@ cardType <a href="https://noonsss.github.io/dothome21/site/cardType.html">바로
 
 imageType <a href="https://noonsss.github.io/dothome21/site/imageType.html">바로가기</a>
 
-codepen <a href="https://noonsss.github.io/dothome21/refer-effect/index.html">바로가기</a>
+effect <a href="https://noonsss.github.io/dothome21/refer-effect/index.html">바로가기</a>
