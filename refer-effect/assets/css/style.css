@@ -648,7 +648,7 @@ figcaption {
   .info.bottom {
     top: auto;
     left: auto;
-    bottom: 100px;
+    bottom: 50px;
     right: 0;
   }
   .modal .modal-cont button {
