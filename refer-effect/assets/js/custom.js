@@ -50,7 +50,9 @@ function agentCheck(){
     for ( prop in browserList ){
         if(browserList[prop]){
             //console.log(prop)
-            document.querySelector("body").classList.add(prop)
+            document.querySelector("body").classList.add(prop);
+            //옛날 문법
+            document.getElementsByTagName("body");
         }
     }
 

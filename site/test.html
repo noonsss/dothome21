@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head profile="http://www.w3.org/2005/10/profile">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 사이트, 웹퍼블리셔, 프론트앤드개발자.">
+    <title>test</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/common.css">
+​
+    <!-- Slider Type CSS -->
+    <link rel="stylesheet" href="CSS/test.css">
+
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png"> 
+<style>
+    
+</style>
+</head>
+<body>
+    <!-- sliderType01 -->
+    <section class="sliderType">
+        <div class="sliderType01">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-banner">
+                            <h3>NAVER<br>INFLUENCER CENTER</h3>
+                            <span>
+                                <span>인플루언서 안내</span>
+                                <span>광고 수익 혜택</span>
+                                <span>성장 지원 프로그램</span>
+                                <span>브랜드커넥트</span>
+                                <span>공지</span>
+                            </span>
+                            <p>인플루언서로 로그인</p>
+                        </div>
+                        <div class="slider-main">
+                            <h1>NAVER<br> INFLUENCER CENTER<h1>
+                            <span>인플루언서에게 필요한 모든 것</span>
+                            <p>
+                                네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.<br>
+                                더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금 경험해보세요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider01">
+                        <p>로고전문가 최은빈과 함께하는</p>
+                        <span>세상에서 제일 쉬운 로고 만들기 심화편</span>
+                    </div>
+                    <div class="slider02">
+                        <p>로고전문가 최은빈과 함께하는</p>
+                        <span>세상에서 제일 쉬운 로고 만들기 심화편</span>
+                    </div>
+                    <div class="slider03">
+                        <p>로고전문가 최은빈과 함께하는</p>
+                        <span>세상에서 제일 쉬운 로고 만들기 심화편</span>
+                    </div>
+                    <div class="slider04">
+                        <p>로고전문가 최은빈과 함께하는</p>
+                        <span>세상에서 제일 쉬운 로고 만들기 심화편</span>
+                    </div>
+                    <div class="slider05">
+                        <p>로고전문가 최은빈과 함께하는</p>
+                        <span>세상에서 제일 쉬운 로고 만들기 심화편</span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!--// sliderType01 -->  
+
+ 
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

@@ -81,7 +81,6 @@
             <li><a href="#sample01"></a> 브라우저 객체 : navigator 객체 속성 : navigator.platform : 브라우저가 실행되는 플랫폼 정보를 반환</li>
             <li><a href="#sample01"></a> 브라우저 객체 : navigator 객체 속성 : navigator.product : 브라우저에서 사용되는 엔진 이름을 반환</li>
             <li><a href="#sample01"></a> 브라우저 객체 : navigator 객체 속성 : navigator.userAgent : 브라우저와 운영체제 정보를 반환</li>
-            <li><a href="#sample01"></a> 브라우저 객체 : navigator 객체 속성 : navigator.onLine : 네트워크 상태 가져오기(225)</li>
         </ol>
     </ul>
     <hr>
@@ -576,6 +575,16 @@
         var nowPlatform = navigator.platform;
         var nowProduct = navigator.product;
         var nowUserAgent = navigator.userAgent;
+
+        console.log(navigator.appCodeName);
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.cookieEnabled);
+        console.log(navigator.language);
+        console.log(navigator.onLine);
+        console.log(navigator.platform);
+        console.log(navigator.product);
+        console.log(navigator.userAgent);
 
         // btn61.addEventListener("click", () => {
         //     document.querySelector(".text6-1").innerHTML = nowAppCodeName;
