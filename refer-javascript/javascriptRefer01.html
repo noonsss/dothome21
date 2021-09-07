@@ -758,18 +758,18 @@
 
         // = 함수하나만 만드는 방법
 
-        // document.querySelectorAll(".result-box h3").forEach(el => {
-        //     el.addEventListener("click", function(){
-        //         event.preventDefault();
-        //         this.parentNode.classList.toggle("active");
-        //     })
-        // });
+        document.querySelectorAll(".result-box h3").forEach(el => {
+            el.addEventListener("click", function(){
+                event.preventDefault();
+                this.parentNode.classList.toggle("active");
+            })
+        });
 
         //제이쿼리로 변환
-        $(".result-box h3").click(function(e){
-           e.preventDefault();
-           $(this).parents().toggleClass("active");
-        });
+        // $(".result-box h3").click(function(e){
+        //    e.preventDefault();
+        //    $(this).parents().toggleClass("active");
+        // });
 
         //sample01
         //01. 변수 : 데이터 저장소
@@ -779,13 +779,13 @@
             var z = "javascript"; //변수 z에 문자 javascript를 저장
 
             // 쌤 방법
-            // document.querySelector(".result1-1").innerHTML = x;
-            // document.querySelector(".result1-2").innerHTML = y;
-            // document.querySelector(".result1-3").innerHTML = z;
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
 
-            $(".result1-1").html(x);
-            $(".result1-2").html(y);
-            $(".result1-3").html(z);
+            // $(".result1-1").html(x);
+            // $(".result1-2").html(y);
+            // $(".result1-3").html(z);
 
             // document.querySelector("#sample01 .result-view .result").innerHTML = `100, 200, javascript`;
             // document.querySelector("#sample01 .result-view span").addEventListener("click", function () {

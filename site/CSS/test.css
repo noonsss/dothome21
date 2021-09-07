@@ -1,15 +1,18 @@
-body {
+ body {
     background: url(../img/test0.png);
     background-position: center;
     width: 100%;
+    font-family: 'NanumSquare';
+    font-weight: normal;
 }
+
 .sliderType {
     margin: 10px 40px;
     color: #fff;
 }
 .sliderType01 {
-    font-family: 'NanumSquare';
 }
+
 .slider-banner {
     display: flex;
     justify-content: space-between;
@@ -47,4 +50,8 @@ body {
     font-size: 22px;
     margin-top: 50px;
     line-height: 1.9;
-}
+} 
+
+
+
+
