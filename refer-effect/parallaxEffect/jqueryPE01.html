@@ -16,7 +16,7 @@
     <!-- header -->
     <header class="paraInfo">
         <h1><a href="index.html">Parallax Effect01 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
+        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
     </header>
     <!-- //header -->
 ​
@@ -148,7 +148,27 @@
 ​
     <!-- footer -->
     <footer class="paraFooter">
-​
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+             </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+             <ul>
+                <li class="active"><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+             </ul>
+        </div>
     </footer>
     <!-- //footer -->
 ​
@@ -501,7 +521,7 @@
 
 $(window).scroll(function(){
     let scrollTop = $(window).scrollTop();
-    
+
     //for문
     // for(let i=0; i&lt;9; i++){
     //     if(scrollTop >= $(".content-item").eq(i).offset().top -2){
@@ -570,9 +590,33 @@ $(window).scroll(function(){
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
-            // if(scrollTop >= $(".paraCont > section").eq(i).offset().top -2){
-            //     $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-            // }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
+            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            }
 
             //for문
             // for(let i=0; i<9; i++){
@@ -589,11 +633,11 @@ $(window).scroll(function(){
             // });
 
             //this를 쓰면 eq 생략
-            $(".content-item").each(function(index){
-                if(scrollTop >= $(this).offset().top -2){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
+            // $(".content-item").each(function(index){
+            //     if(scrollTop >= $(this).offset().top -2){
+            //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            //     }
+            // });
             
             
             //info
