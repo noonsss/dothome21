@@ -614,21 +614,21 @@ $(window).scroll(function(){
 
         document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-        if(scrollTop > document.getElementById("section1").offsetTop){
-            document.querySelectorAll(".paraDot ul li").forEach((el) => {
-                el.classList.remove("active");
-            })
-            document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
-        }
-
-        // for(i=0; i<10; i++){
-        //     if(scrollTop > document.getElementById("section" +i).offsetTop){
-        //         document.querySelectorAll(".paraDot ul li").forEach((el) => {
-        //             el.classList.remove("active");
-        //         })
-        //         document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
-        //     }
+        // if(scrollTop > document.getElementById("section1").offsetTop){
+        //     document.querySelectorAll(".paraDot ul li").forEach((el) => {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
         // }
+
+        for(i=0; i<10; i++){
+            if(scrollTop > document.getElementById("section" +i).offsetTop){
+                document.querySelectorAll(".paraDot ul li").forEach((el) => {
+                    el.classList.remove("active");
+                })
+                document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
+            }
+        }
     });
     </script>
 </body>

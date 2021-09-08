@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NanumSquare';
+        }
+        #wrap {}
+        #header {
+            height: 100px;
+        }
+        .logo {
+            width: 20%;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 30px;
+            margin-top: 5px;
+            line-height: 1;
+        }
+        .nav {
+            width: 60%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .nav li {
+            display: inline-block;
+            padding: 16px;
+            margin: 30px 0;
+        }
+        .log {
+            width: 13%;
+            height: 35px;
+            line-height: 2.6;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.3);
+            margin-top: 40px;
+            
+        }
+        #banner {
+            height: 500px;
+            background: url(img/index.jpeg) no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        #banner p {
+            display: inline-block;
+            border-bottom: 4px solid hsla(0,0%,100%,.2);
+            font-weight: 700;
+            color: #fff;
+            margin: 100px 0 30px 0;
+            font-size: 20px;
+            line-height: 34px;
+        }        
+        #banner h2 {
+            font-size: 50px;
+            line-height: 70px;
+            font-weight: 700;
+            letter-spacing: -.93px;
+            color: #fff;
+        }        
+        #banner span {
+            display: inline-block;
+            color: #fff;
+            font-size: 22px;
+            margin-top: 25px;
+        }        
+        #content {}
+        #footer {}
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container2 {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #cont1 {}
+        #cont2 {}
+        #cont3 {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                    <div class="logo">
+                        naver <br>influencer center
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">인플루언서 안내</a></li>
+                            <li><a href="#">광고 수익 혜택</a></li>
+                            <li><a href="#">성장 지원 프로그램</a></li>
+                            <li><a href="#">브랜드커넥트</a></li>
+                            <li><a href="#">공지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="log"><a href="#">인플루언서로 로그인</a></div>
+            </div>
+        </header>
+        <section id="banner">
+            <p>멤버십 혜택</p>
+            <h2>인플루언서 활동에 꼭 필요한<br>네이버의 다양한 멤버십 혜택을 제공합니다.</h2>
+            <span>전국 파트너스퀘어의 스튜디오, 편집실 이용부터 네이버플러스 멤버십 이용권 1년 무료 혜택까지.<br>
+                네이버 인플루언서라면 네이버의 다양한 멤버십 혜택들을 누릴 수 있습니다.</span>
+        </section>
+        <section id="content">
+            <div id="cont1">
+                <div class="container2"></div>
+            </div>
+            <div id="cont2">
+                <div class="container2"></div>
+            </div>
+            <div id="cont3">
+                <div class="container2"></div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
