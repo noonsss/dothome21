@@ -38,15 +38,44 @@
     margin-top: 25px;
 }
 #contents {
-    height: 900px;
 }
 #footer {
-    height: 200px;
+    height: 250px;
     background: #000;
     text-align: center;
     color: #fff;
     padding-bottom: 60px;
-    clear: both;
+}
+#footer em a {
+    display: block;
+    font-size: 15px;
+    color: #868686;
+    padding: 20px;
+    border-bottom: 1px solid #4949497c;
+    cursor: pointer;
+}
+#footer button {
+    margin: 30px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #323232;
+    color: #868686;
+    font-size: 13px;
+    cursor: pointer;
+}
+#footer p {
+    font-weight: 800;
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: #868686;
+}
+#footer span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    color: #323232;
+    cursor: pointer;
 }
 .container {
     max-width: 1400px;
