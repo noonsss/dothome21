@@ -136,6 +136,13 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 		background-color: rgba(0, 0, 0, 0.7);
 		z-index: -1;
 	}
+	&.blue {
+		
+		&::before {
+			background-color: rgba(3, 11, 122, 0.7);
+
+		}
+	}
 }
 
 // .bg1 {
@@ -249,6 +256,12 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 		right: 0;
 	}
 
+	&.left {
+		top: auto;
+		left: 0;
+		bottom: 0;
+	}
+
 	h1 {
 		font-weight: 300;
 		font-size: 20px;
@@ -256,6 +269,11 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 		border-bottom: 1px dashed #fff;
 		display: inline-block;
 		margin-bottom: 10px;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 
 	p {
@@ -286,6 +304,19 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 				background: #fff;
 				color: #000;
 			}
+		}
+	}
+	&.list {
+		background: rgba(0,0,0,0.4);
+		color: #fff;
+		padding: 20px;
+		font-size: 12px;
+		line-height: 1.8;
+		border-radius: 10px;
+		margin: 20px;
+
+		li {
+			display: block;
 		}
 	}
 
@@ -802,6 +833,9 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 		}
 
 		li {
+			list-style: none;
+			display: inline-block;
+
 			a {
 				width: 15px;
 				height: 15px;
@@ -815,6 +849,7 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 			bottom: 50px;
 			right: 0;
 		}
+
 	}
 
 
