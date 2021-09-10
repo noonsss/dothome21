@@ -486,6 +486,194 @@ Query OK, 3 rows affected (0.01 sec)
                 </div>
                 <!-- //Intro6 -->
 
+<!-- INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('chvisty123', '조은선', '1234' 'chvisty123@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('mola', '김모씨', '9900' 'mola12@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('wow', '와우', '34443' 'wow@hanmail.net', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('window', '윈도우', '11!!' 'win@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('mac', '맥', '1234' 'mac@gmail.com', '1122');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('1', '내가 샀던 곳 중에서 최고', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('2', '검수 좀 잘해서 보내주세요 불량 옴', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('3', '첫번째 댓글 알바아님?', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('4', '그래도 난 쏘쏘 괜찮았음 보통', '1122');
+
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('webstoryboy', '황상연', '1234', 'webs@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('webs3', '황가연', '1234', 'jayeon@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('bboyda', '김가연', '12df34', 'acbfd@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('linkMe', '홍주연', '9999', 'Hong@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('Juuuu', '박주연', '12df34', 'juuu@naver.com', '1122');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('1', '내가 샀던 곳 중에서 최고', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('2', '검수 좀 잘해서 보내주세요 불량 옴', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('3', '첫번째 댓글 알바아님?', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('4', '그래도 난 쏘쏘 괜찮았음 보통', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(3, '이 가방 너무 좋네요!!! 당장 사야쥐', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(3, '이거 사지 마세요~~~ 사기예요~~', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(1, '여기 제품 좋습니다. 다 알바생이옝요~', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(2, '이거 엄청 좋네요~~ 굳 추천!!', '1122'); -->
+
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 Join</h2>
+
+<pre class="language-js"><code>create table myMember(
+    myMemberID int(10) unsinged auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myReviewID)
+) charset=utf8;
+
+mysql>     create table myReview(
+->         myReviewID int(10) unsigned auto_increment,
+->         myMemberID int(10) unsigned,
+->         youCont tinytext not null,
+->         regTime int(11) not null,
+->         PRIMARY KEY (myReviewID)
+->     ) charset=utf8;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table myMember(
+->     myMemberID int(10) unsigned auto_increment,
+->     youID varChar(15) not null,
+->     youName varchar(10) not null,
+->     youPass varchar(30) not null,
+->     youEmail varchar(30) not null,
+->     regTime int(11) not null,
+->     PRIMARY KEY (myMemberID)
+->     ) charset=utf8;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| myMember         |
+| myReview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc myReview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('webstoryboy', '황상연', '1234', 'webs@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('webs3', '황가연', '1234', 'jayeon@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('bboyda', '김가연', '12df34', 'acbfd@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('linkMe', '홍주연', '9999', 'Hong@naver.com', '1122');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('Juuuu', '박주연', '12df34', 'juuu@naver.com', '1122');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('1', '내가 샀던 곳 중에서 최고', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('2', '검수 좀 잘해서 보내주세요 불량 옴', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('3', '첫번째 댓글 알바아님?', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('4', '그래도 난 쏘쏘 괜찮았음 보통', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(3, '이 가방 너무 좋네요!!! 당장 사야쥐', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(3, '이거 사지 마세요~~~ 사기예요~~', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(1, '여기 제품 좋습니다. 다 알바생이옝요~', '1122');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(2, '이거 엄청 좋네요~~ 굳 추천!!', '1122');
+
+mysql> SELECT * FROM mymember;
++------------+-------------+-----------+---------+------------------+---------+
+| myMemberID | youID       | youName   | youPass | youEmail         | regTime |
++------------+-------------+-----------+---------+------------------+---------+
+|          1 | webstoryboy | 황상연    | 1234    | webs@naver.com   |    1122 |
+|          2 | webs3       | 황가연    | 1234    | jayeon@naver.com |    1122 |
+|          3 | bboyda      | 김가연    | 12df34  | acbfd@naver.com  |    1122 |
+|          4 | linkMe      | 홍주연    | 9999    | Hong@naver.com   |    1122 |
+|          5 | Juuuu       | 박주연    | 12df34  | juuu@naver.com   |    1122 |
++------------+-------------+-----------+---------+------------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM myreview;
++------------+------------+-----------------------------------------------------+---------+
+| myReviewID | myMemberID | youCont                                             | regTime |
++------------+------------+-----------------------------------------------------+---------+
+|          1 |          1 | 내가 샀던 곳 중에서 최고                                  |    1122 |
+|          2 |          2 | 검수 좀 잘해서 보내주세요 불량 옴                           |    1122 |
+|          3 |          3 | 첫번째 댓글 알바아님?                                    |    1122 |
+|          4 |          4 | 그래도 난 쏘쏘 괜찮았음 보통                               |    1122 |
+|          5 |          3 | 이 가방 너무 좋네요!!! 당장 사야쥐                          |    1122 |
+|          6 |          3 | 이거 사지 마세요~~~ 사기예요~~                             |    1122 |
+|          7 |          1 | 여기 제품 좋습니다. 다 알바생이옝요~                         |    1122 |
+|          8 |          2 | 이거 엄청 좋네요~~ 굳 추천!!                              |    1122 |
++------------+------------+-----------------------------------------------------+---------+
+8 rows in set (0.00 sec)
+</code></pre>                    
+                    
+                    <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결한 테이블명 앨리어스 ON(조건문);
+                    </div>
+                    <h4>두개의 테이블 JOIN하기</h4>
+<pre class="language-js"><code>mysql> SELECT m.youName, r.youCont, r.regTime FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID); 
++-----------+-----------------------------------------------------+---------+
+| youName   | youCont                                             | regTime |
++-----------+-----------------------------------------------------+---------+
+| 황상연    | 내가 샀던 곳 중에서 최고                                    |    1122 |
+| 황가연    | 검수 좀 잘해서 보내주세요 불량 옴                             |    1122 |
+| 김가연    | 첫번째 댓글 알바아님?                                      |    1122 |
+| 홍주연    | 그래도 난 쏘쏘 괜찮았음 보통                                 |    1122 |
+| 김가연    | 이 가방 너무 좋네요!!! 당장 사야쥐                           |    1122 |
+| 김가연    | 이거 사지 마세요~~~ 사기예요~~                              |    1122 |
+| 황상연    | 여기 제품 좋습니다. 다 알바생이옝요~                          |    1122 |
+| 황가연    | 이거 엄청 좋네요~~ 굳 추천!!                               |    1122 |
++-----------+-----------------------------------------------------+---------+
+8 rows in set (0.01 sec)
+</code></pre>
+
+                    <h4 class="pt20">필드명을 변경해 표시하는 방법</h4>
+<pre class="language-js"><code>mysql> SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID);
++-----------+-----------------------------------------------------+------------+
+| youName   | youCont                                             | reviewTime |
++-----------+-----------------------------------------------------+------------+
+| 황상연    | 내가 샀던 곳 중에서 최고                                    |       1122 |
+| 황가연    | 검수 좀 잘해서 보내주세요 불량 옴                             |       1122 |
+| 김가연    | 첫번째 댓글 알바아님?                                      |       1122 |
+| 홍주연    | 그래도 난 쏘쏘 괜찮았음 보통                                 |       1122 |
+| 김가연    | 이 가방 너무 좋네요!!! 당장 사야쥐                           |       1122 |
+| 김가연    | 이거 사지 마세요~~~ 사기예요~~                              |       1122 |
+| 황상연    | 여기 제품 좋습니다. 다 알바생이옝요~                          |       1122 |
+| 황가연    | 이거 엄청 좋네요~~ 굳 추천!!                               |       1122 |
++-----------+-----------------------------------------------------+------------+
+8 rows in set (0.01 sec)
+</code></pre>   
+
+                    <h4 class="pt20">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>mysql>     SELECT m.youName, r.youCont, r.regTime FROM myMember m LEFT JOIN myReview r ON (m.myMemberID = r.myMemberID);
++-----------+-----------------------------------------------------+---------+
+| youName   | youCont                                             | regTime |
++-----------+-----------------------------------------------------+---------+
+| 황상연    | 내가 샀던 곳 중에서 최고                                    |    1122 |
+| 황가연    | 검수 좀 잘해서 보내주세요 불량 옴                             |    1122 |
+| 김가연    | 첫번째 댓글 알바아님?                                      |    1122 |
+| 홍주연    | 그래도 난 쏘쏘 괜찮았음 보통                                 |    1122 |
+| 김가연    | 이 가방 너무 좋네요!!! 당장 사야쥐                           |    1122 |
+| 김가연    | 이거 사지 마세요~~~ 사기예요~~                              |    1122 |
+| 황상연    | 여기 제품 좋습니다. 다 알바생이옝요~                          |    1122 |
+| 황가연    | 이거 엄청 좋네요~~ 굳 추천!!                               |    1122 |
+| 박주연    | NULL                                                  |    NULL |
++-----------+-----------------------------------------------------+---------+
+9 rows in set (0.00 sec)    
+</code></pre>   
+                </div>
+                <!-- //Intro7 -->
 
 
 
@@ -530,6 +718,11 @@ Query OK, 3 rows affected (0.01 sec)
                                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 JOIN</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro7-1">JOIN문 사용하기 </a></li>
                             </ul>
                         </li>
                     </ul>
