@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
+        .paraNav {
+            top: -200px;
+            transition: top 0.4s ease;
+        }
+        .paraNav.show {
+            top: 20px;
+        }
         .paraNav li a {
             width: auto;
             padding: 5px 15px;
@@ -584,13 +591,19 @@ $(window).scroll(function(){
         // let scrollTop = $(document).scrollTop();
         // let scrollTop = $(this).scrollTop();
 
+        //숨김메뉴
+        if(scrollTop > 10){
+            $(".paraNav").addClass("show");
+        } else {
+            $(".paraNav").removeClass("show");
+        }
+
         //버튼용
         $(".content-item").each(function(index){
             if(scrollTop >= $(this).offset().top -2){
                 $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
             }
         });
-
 
         //출력용
         $(".paraScroll span").text(scrollTop);

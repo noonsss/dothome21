@@ -577,76 +577,104 @@ $(window).scroll(function(){
 //         });
 
 
+        // $(".paraNav ul li").click(function(e){
+        //     e.preventDefault();
+        //     let target = $(this);
+        //     let index = target.index();
+        //     let section = $(".paraCont > section").eq(index);
+        //     let offset = section.offset().top;
+        //     $("html, body").animate({scrollTop : offset}, 600);
+        // });
+
+
+        // $(window).scroll(function(){
+        //     let scrollTop = $(window).scrollTop();
+
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+        //     // if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+        //     //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+        //     // }
+
+        //     for문
+        //     for(let i=0; i<9; i++){
+        //         if(scrollTop >= $(".content-item").eq(i).offset().top -2){
+        //             $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+        //         }
+        //     }
+
+        //     //Each
+        //     // $(".content-item").each(function(index){
+        //     //     if(scrollTop >= $(this).eq(index).offset().top -2){
+        //     //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        //     //     }
+        //     // });
+
+        //     //this를 쓰면 eq 생략
+        //     // $(".content-item").each(function(index){
+        //     //     if(scrollTop >= $(this).offset().top -2){
+        //     //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        //     //     }
+        //     // });
+            
+            
+        //     //info
+        //     $(".paraScroll span").text(parseInt(scrollTop));
+
+        //     //$(".offset1").text(parseInt($("#section1").offset().top)+ "px");
+
+        //     for(let i=1; i<10; i++){
+        //         $(".offset"+i).text(parseInt($("#section"+i).offset().top)+ "px");
+        //     }
+        // });
+
+
         $(".paraNav ul li").click(function(e){
             e.preventDefault();
             let target = $(this);
             let index = target.index();
-            let section = $(".paraCont > section").eq(index);
+            let section = $(".content-item").eq(index);
             let offset = section.offset().top;
             $("html, body").animate({scrollTop : offset}, 600);
-        });
 
+        });
 
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if(scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
+            $(".content-item").each(function(index){
+                if( scrollTop >= $(this).offset().top - 2){
+                    $(".paraNav ul li").eq(index).addClass("active")
+                    .siblings().removeClass("active");
+                }
+            });
 
-            //for문
-            // for(let i=0; i<9; i++){
-            //     if(scrollTop >= $(".content-item").eq(i).offset().top -2){
-            //         $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-            //     }
-            // }
-
-            //Each
-            // $(".content-item").each(function(index){
-            //     if(scrollTop >= $(this).eq(index).offset().top -2){
-            //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-            //     }
-            // });
-
-            //this를 쓰면 eq 생략
-            // $(".content-item").each(function(index){
-            //     if(scrollTop >= $(this).offset().top -2){
-            //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-            //     }
-            // });
-            
-            
-            //info
             $(".paraScroll span").text(parseInt(scrollTop));
 
-            //$(".offset1").text(parseInt($("#section1").offset().top)+ "px");
-
-            for(let i=1; i<10; i++){
-                $(".offset"+i).text(parseInt($("#section"+i).offset().top)+ "px");
+            for(let i=1;i<=9;i++){
+                $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
             }
         });
     </script>
