@@ -143,6 +143,12 @@ $gradient6 : linear-gradient(to bottom, #718cca 0%, #82af97 100%);
 
 		}
 	}
+	&.brown {
+
+		&::before {
+			background-color: rgb(50, 31, 11, 0.9);
+		}
+	}
 }
 
 // .bg1 {
