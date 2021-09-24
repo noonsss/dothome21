@@ -157,7 +157,7 @@
     let sliderCount = slider.length; 
     let sliderWidth = slider.width();
     let sliderDuration = 600;
-    let sliderEasing = "easeoutExpo"
+    let sliderEasing = "easeOutExpo";
 
     setInterval(function(){
         //3초에 한번씩 왼쪽으로 800px 이동
@@ -185,8 +185,8 @@
         let sliderPosition = currentIndex * -sliderWidth;
         sliderInner.animate({left: sliderPosition}, sliderDuration, sliderEasing);
 
-        console.log(currentIndex);
-        console.log(sliderPosition);
+        // console.log(currentIndex);
+        // console.log(sliderPosition);
     }, 2000);
 </script>
 </body>

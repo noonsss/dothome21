@@ -149,18 +149,133 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
-    
+<pre><code class="language-html">&lt;main id="contents"&gt;
+&lt;div class="cursor"&gt;&lt;/div&gt;
+&lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+&lt;article class="mouseCont"&gt;
+    &lt;p&gt;&lt;em&gt;Do not be afriad&lt;/em&gt; to give up the good to go for the great&lt;/p&gt;
+    &lt;h2&gt;더 좋은 것을 쫓기 위해 좋은 것을 버리는 걸 &lt;em&gt;두려워하지 마라&lt;/em&gt;&lt;/h2&gt;
+&lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
-    
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NEXONLv1sGothicOTF';
+    cursor: none;
+}
+.mouseCont p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+}
+.mouseCont h2 {
+        font-size: 3vw;
+        font-weight: normal;
+}
+.mouseCont em {
+        font-style: normal;
+        border-bottom: 0.2vw dashed #fff;
+        color:  orange;
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.2s;
+}
+.cursor.active {
+    opacity: .5;
+    transform: scale(0);
+}
+.cursor-follower {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.6s ease-in-out, opacity 0.2s;
+}
+.cursor-follower.active {
+    opacity: 7;
+    transform: scale(5);
+    background: rgb(255, 166, 0, 0.5);
+}
+.cursor.show {
+    opacity: .5;
+    transform: scale(0);
+    background: rgb(197, 74, 228, 0.5);
+}
+.cursor-follower.show {
+    opacity: 7;
+    transform: scale(5);
+    background: rgb(197, 74, 228, 0.5);
+}
 </code></pre>
                     </div>
                     <div class="jquery">
-<pre><code class="language-javascript">
-    
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower"); //이름 선언
+
+//움직임효과
+document.addEventListener("mousemove", (e) => {
+    // cursor.style.left = e.pageX -5 +"px";
+    // cursor.style.top = e.pageY -5 +"px";
+
+    // let x = e.pageX -5 +"px";
+    // let y = e.pageY -5 +"px";
+    // let x2 = e.pageY -15 +"px";
+    // let y2 = e.pageY -15 +"px";
+
+    // cursor.style.cssText = "left:" + x + "; top:" + y;
+    // follower.style.cssText = "left:" + x2 + "; top:" + y2;
+
+    gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5})
+    gsap.to(follower, {duration: 0.8, left: e.pageX -15, top: e.pageY -15})
+
+    //마우스 오버 효과
+    document.querySelectorAll(".mouseCont em").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            follower.classList.add("active");
+        });
+        em.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            follower.classList.remove("active");
+        });
+    })
+    //마우스 오버 효과2
+    document.querySelectorAll(".info").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            cursor.classList.add("show");
+            follower.classList.add("show");
+        });
+        em.addEventListener("mouseleave", () => {
+            cursor.classList.remove("show");
+            follower.classList.remove("show");
+        });
+    })
+
+    //출력용
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+});
 </code></pre>
                     </div>
                     <div></div>

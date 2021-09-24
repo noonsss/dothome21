@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<script>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
 /*
     ! =  true를 false로, false를 true로 바꿀 수 있다
     && = 양쪽 값이 모두 true일 때 true 결과를 나타낸다 이 외에는 모두 flase
@@ -17,6 +17,55 @@
 
     
 */
-</script>
-</body>
-</html>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderWidth = slider.width();
+        let sliderDuration = 600;
+        let sliderEasing = "easeOutExpo";
+
+        setInterval(function() {
+            //3초에 한번씩 왼쪽으로 800ox을 이동시켜야 함
+            // sliderInner.animate({ left:"-800px" });
+            // sliderInner.animate({ left:"-1600px" });
+            // sliderInner.animate({ left:"-2400px" });
+            // sliderInner.animate({ left:"-3200px" });
+            // sliderInner.animate({ left:"-4000px" });
+            // sliderInner.animate({ left:"-0px" });
+            // sliderInner.animate({ left:"-800px" });
+
+            // currentIndex++;
+
+            // if(currentIndex &lt; 4) {
+            //     currentIndex++;
+            // } else {
+            //     currentIndex = 0;
+            // }
+            (currentIndex &lt; sliderCount - 1) ? currentIndex++ : currentIndex = 0
+
+            let sliderPosition = currentIndex * -800;
+            sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+
+
+            console.log(currentIndex);
+
+        }, 2000);
+
+
+
+        &lt;main id="contents"&gt;
+            &lt;div class="cursor"&gt;&lt;/div&gt;
+            &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+    
+            &lt;article class="mouseCont"&gt;
+                &lt;p&gt;&lt;em&gt;Love&lt;/em&gt; your neighbor as yourself.&lt;/p&gt;
+                &lt;h2&gt;네 이웃을 네 몸처럼 &lt;em&gt;사랑하여라&lt;/em&gt;&lt;/h2&gt;
+            &lt;/article&gt;
+        &lt;/main&gt;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

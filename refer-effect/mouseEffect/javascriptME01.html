@@ -166,18 +166,132 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
-    
+<pre><code class="language-html">&lt;main id="contents"&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;&lt;span class="style1"&gt;Slow&lt;/span&gt; and &lt;span class="style2"&gt;steady&lt;/span&gt; win the &lt;span class="style3"&gt;race.&lt;/span&gt;&lt;/p&gt;
+        &lt;h2&gt;&lt;span class="style4"&gt;천천히&lt;/span&gt; 그리고 &lt;span class="style5"&gt;꾸준히&lt;/span&gt; 하면 경주에서&lt;span class="style6"&gt;승리한다.&lt;/span&gt;&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
-    
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NEXONLv1sGothicOTF';
+    cursor: none;
+}
+.mouseCont p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+}
+.mouseCont h2 {
+        font-size: 3vw;
+        font-weight: normal;
+}
+.mouseCont span {
+        font-style: normal;
+        border-bottom: 0.2vw dashed #fff;
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: 
+        background-color .2s,
+        border-color .2s,
+        border-radius .2s,
+        transform .6s
+    ;
+}
+.cursor.style1 {
+    background-color: rgb(255, 167, 85, 0.4);
+    border-color: orange;
+}
+.cursor.style2 {
+    background-color: rgb(212, 121, 255,0.4);
+    border-color: rgb(140, 0, 255);
+    transform: rotateY(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgba(255, 251, 0, 0.4);
+    border-color: rgb(238, 255, 0);
+    transform: rotateX(360deg) rotateY(540deg);
+}
+.cursor.style4 {
+    background-color: rgba(35, 124, 0, 0.4);
+    border-color: rgb(121, 228, 49);
+    transform: scale(1.5);
+    border-radius: 20px;
+}
+.cursor.style5 {
+    background-color: rgba(35, 124, 0, 0.4);
+    border-color: rgb(121, 228, 49);
+    transform: scale(1.5);
+    border-radius: 20px;
+}
+.cursor.style6 {
+    background-color: rgba(35, 124, 0, 0.4);
+    border-color: rgb(121, 228, 49);
+    background-image: url(../assets/img/winner.jpeg);
+    background-size: cover;
+
+    transform: rotateX(360deg) rotateY(720deg) scale(2);
+}
 </code></pre>
                     </div>
                     <div class="jquery">
-<pre><code class="language-javascript">
-    
+<pre><code class="language-javascript">//출력용 
+window.addEventListener("mousemove", function(e){
+    document.querySelector(".clientX").innerText = e.clientX + "px";       
+    document.querySelector(".clientY").innerText = e.clientY + "px";       
+    document.querySelector(".offsetX").innerText = e.offsetX + "px";       
+    document.querySelector(".offsetY").innerText = e.offsetY + "px";       
+    document.querySelector(".pageX").innerText = e.pageX + "px";           
+    document.querySelector(".pageY").innerText = e.pageY + "px";           
+    document.querySelector(".screenX").innerText = e.screenX + "px";       
+    document.querySelector(".screenY").innerText = e.screenY + "px";       
+});
+
+//마우스 움직이기
+window.addEventListener("mousemove", function(e){
+    // document.querySelector(".cursor").style.left = e.clientX -25 + "px";
+    // document.querySelector(".cursor").style.top = e.clientY -25 + "px"; 
+
+    let x = e.clientX -25 + "px";
+    let y = e.clientY -25 + "px"; 
+    document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+
+});
+
+//마우스오버
+//getAtrribute( )
+document.querySelectorAll(".mouseCont span").forEach((element, index)=> {
+    let style = element.getAttribute("class");
+
+    element.addEventListener("mouseover", () => {
+        document.querySelector(".cursor").classList.add(style);
+    });
+    element.addEventListener("mouseout", () => {
+        document.querySelector(".cursor").classList.remove(style);
+    });
+});
 </code></pre>
                     </div>
                     <div></div>
