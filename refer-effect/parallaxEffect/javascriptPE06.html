@@ -581,16 +581,68 @@ $(window).scroll(function(){
     <script>
     modal2();
 
-    const scrollProgress = function(){    //익명함수
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    // const scrollProgress = function(){    //익명함수
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-        document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
+    //     document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
 
-        //출력
-        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-    }
-    window.addEventListener("scroll", scrollProgress)
+    //     //출력
+    //     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+    // }
+    // window.addEventListener("scroll", scrollProgress)
 
+
+        
+    const scrollMenu = function(){
+            document.querySelectorAll(".paraNav ul li a").forEach(li => {
+                li.addEventListener("click", e => { e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        }
+
+        scrollMenu();
+        
+        const scrollProgress = function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+
+            // document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
+
+            // for(let i=1 ; i<=9; i++ ){
+            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+            //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+            // }
+
+            //forEach
+            document.querySelectorAll(".content-item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+                item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
+            });
+
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if ( scrollTop >= item.offsetTop-2 ) {
+                    document.querySelectorAll(".paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            });
+            
+
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        }
+
+
+        window.addEventListener("scroll", scrollProgress);
 
     </script>
 </body>
