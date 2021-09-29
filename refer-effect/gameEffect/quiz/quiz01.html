@@ -163,7 +163,7 @@
             background: #e8e7e8;
             padding: 20px;
         }
-        .quiz-wrap .quiz .answer .answer-btn {
+        .quiz-wrap .quiz .answer .answer-confirm {
             background: #cacaca;
             text-align: center;
             padding: 13px 20px;
@@ -173,10 +173,17 @@
             width: 100%;
             font-family: 'DungGeunMo';
         }
-        .quiz-wrap .quiz .answer .answer-btn:active {
+        .quiz-wrap .quiz .answer .answer-confirm:active {
             background: #a3a3a3;
         }
-
+        .quiz-wrap .quiz .answer .answer-view {
+            text-align: center;
+            border: 6px groove #fff;
+            padding: 13px 20px;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+            display: none;
+        }
 
         @media (max-width:1200px){
             .ham {
@@ -188,7 +195,6 @@
                 background: #262626;
                 width: 100%;
                 display: none;
-                height: 0;
             }
             nav.show {
                 display: block;
@@ -447,231 +453,108 @@
         border-radius: 20px 20px 35px 35px;
     }
 
-    @-webkit-keyframes movetongue {
-        100% {
-            height: 27px;
-        }
+
+    .card.good .face::before {
+        margin-top: 10px;
     }
+    .card.good .face::after {
+        height: 85px;
+    }
+    .card.good .eyes {
+        top: 13%;
+    }
+    .card.good .eyes::before, 
+    .card.good .eyes::after {
+        width: 18px;
+        height: 5px;
+        margin: 0px 12.5%;
+        transform: rotate(-37.5deg);
+        border-radius: 20px;
+    }
+    .card.good .eyes::after {
+        transform: rotate(37.5deg);
+    }
+    .card.good .nose {
+        top: 18%;
+    }
+    .card.good .mouth {
+        top: 16.5%;
+    }
+    .card.good .tongue::before {
+        height: 12px;
+    }
+    .card.good .tongue::after {
+        height: 24px;
+        -webkit-animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
+                animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
+        }
+    .card.good .chin {
+        top: 34%;
+    }
+    .card.good .tail {
+        -webkit-animation: movetail 0.1s linear infinite alternate forwards;
+                animation: movetail 0.1s linear infinite alternate forwards;
+    }
+
+
+    
+
+
+    .card.bad .ears::before {
+        transform: rotate(-50deg) translate(-7px, 2px);
+    }
+    .card.bad .ears::after {
+        transform: rotate(50deg) translate(7px, 2px);
+    }
+    .card.bad  .face::before {
+        margin-top: 28px;
+    }
+    .card.bad .face::after {
+        height: 55px;
+    }
+    .card.bad  .eyes {
+        top: 38%;
+    }
+    .card.bad .eyes::before,
+    .card.bad .eyes::after {
+        width: 18px;
+        height: 5px;
+        margin: 0px 14.5%;
+        transform: rotate(-37.5deg);
+        border-radius: 20px;
+    }
+    .card.bad .eyes::after {
+        transform: rotate(37.5deg);
+    }
+    .card.bad .teardrop {
+        -webkit-animation: cry 0.1s ease-in 0.25s forwards;
+                animation: cry 0.1s ease-in 0.25s forwards;
+    }
+    .card.bad .nose {
+        top: 44%;
+    }
+    .card.bad  .mouth {
+        top: 42%;
+    }
+    .card.bad .chin {
+        top: 52%;
+    }
+    .card.bad .tail {
+        transform: rotate(0);
+    }
+
 
     @keyframes movetongue {
-    100% {
-        height: 27px;
-    }
-    }
-    @-webkit-keyframes movetail {
-    0% {
-        transform: rotate(37deg);
-    }
-    100% {
-        transform: rotate(52deg);
-    }
+        100% { height: 27px;}
     }
     @keyframes movetail {
-    0% {
-        transform: rotate(37deg);
-    }
-    100% {
-        transform: rotate(52deg);
-    }
-    }
-    @-webkit-keyframes cry {
-    100% {
-        visibility: visible;
-    }
+        0% {transform: rotate(37deg);}
+        100% {transform: rotate(52deg);}
     }
     @keyframes cry {
-    100% {
-        visibility: visible;
-    }
-    }
-    .btn {
-    width: 68px;
-    height: 68px;
-    position: absolute;
-    top: 50%;
-    margin-top: -34px;
-    padding-top: 10px;
-    outline: none;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #FEFEFE;
-    z-index: 5;
-    }
-    .btn:hover {
-    transform: scale(1.05);
-    }
-    .btn-like {
-    right: 10%;
-    }
-    @media (min-width: 768px) {
-    .btn-like {
-        left: calc(50% + 225px);
-        right: initial;
-    }
-    }
-    .btn-dislike {
-    left: 10%;
-    }
-    @media (min-width: 768px) {
-    .btn-dislike {
-        left: calc(50% - 293px);
-    }
-    }
-    .btn-dislike::after {
-    content: "";
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    top: 50%;
-    left: 50%;
-    width: 6px;
-    height: 38px;
-    background: #b5b5b5;
-    border: 2px solid #FEFEFE;
-    }
-    .btn-dislike .heart::before, .btn-dislike .heart::after {
-    background-color: #b5b5b5;
+    100% { visibility: visible;}
     }
 
-    .heart {
-    position: relative;
-    display: inline-block;
-    width: 36px;
-    height: 30px;
-    }
-    .heart::before, .heart::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    width: 18px;
-    height: 28px;
-    background-color: #F5534F;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-    }
-    .heart::after {
-    left: 18px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-    }
-
-    .btn-like:hover ~ .wrapper,
-    .btn-like:active ~ .wrapper {
-    background: #F0754A;
-    }
-    .btn-like:hover ~ .wrapper .face::before,
-    .btn-like:active ~ .wrapper .face::before {
-    margin-top: 10px;
-    }
-    .btn-like:hover ~ .wrapper .face::after,
-    .btn-like:active ~ .wrapper .face::after {
-    height: 85px;
-    }
-    .btn-like:hover ~ .wrapper .eyes,
-    .btn-like:active ~ .wrapper .eyes {
-    top: 13%;
-    }
-    .btn-like:hover ~ .wrapper .eyes::before, .btn-like:hover ~ .wrapper .eyes::after,
-    .btn-like:active ~ .wrapper .eyes::before,
-    .btn-like:active ~ .wrapper .eyes::after {
-    width: 18px;
-    height: 5px;
-    margin: 0px 12.5%;
-    transform: rotate(-37.5deg);
-    border-radius: 20px;
-    }
-    .btn-like:hover ~ .wrapper .eyes::after,
-    .btn-like:active ~ .wrapper .eyes::after {
-    transform: rotate(37.5deg);
-    }
-    .btn-like:hover ~ .wrapper .nose,
-    .btn-like:active ~ .wrapper .nose {
-    top: 18%;
-    }
-    .btn-like:hover ~ .wrapper .mouth,
-    .btn-like:active ~ .wrapper .mouth {
-    top: 16.5%;
-    }
-    .btn-like:hover ~ .wrapper .tongue::before,
-    .btn-like:active ~ .wrapper .tongue::before {
-    height: 12px;
-    }
-    .btn-like:hover ~ .wrapper .tongue::after,
-    .btn-like:active ~ .wrapper .tongue::after {
-    height: 24px;
-    -webkit-animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
-            animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
-    }
-    .btn-like:hover ~ .wrapper .chin,
-    .btn-like:active ~ .wrapper .chin {
-    top: 34%;
-    }
-    .btn-like:hover ~ .wrapper .tail,
-    .btn-like:active ~ .wrapper .tail {
-    -webkit-animation: movetail 0.1s linear infinite alternate forwards;
-            animation: movetail 0.1s linear infinite alternate forwards;
-    }
-
-    .btn-dislike:hover ~ .wrapper,
-    .btn-dislike:active ~ .wrapper {
-    background: #747499;
-    }
-    .btn-dislike:hover ~ .wrapper .ears::before,
-    .btn-dislike:active ~ .wrapper .ears::before {
-    transform: rotate(-50deg) translate(-7px, 2px);
-    }
-    .btn-dislike:hover ~ .wrapper .ears::after,
-    .btn-dislike:active ~ .wrapper .ears::after {
-    transform: rotate(50deg) translate(7px, 2px);
-    }
-    .btn-dislike:hover ~ .wrapper .face::before,
-    .btn-dislike:active ~ .wrapper .face::before {
-    margin-top: 28px;
-    }
-    .btn-dislike:hover ~ .wrapper .face::after,
-    .btn-dislike:active ~ .wrapper .face::after {
-    height: 55px;
-    }
-    .btn-dislike:hover ~ .wrapper .eyes,
-    .btn-dislike:active ~ .wrapper .eyes {
-    top: 38%;
-    }
-    .btn-dislike:hover ~ .wrapper .eyes::before, .btn-dislike:hover ~ .wrapper .eyes::after,
-    .btn-dislike:active ~ .wrapper .eyes::before,
-    .btn-dislike:active ~ .wrapper .eyes::after {
-    width: 18px;
-    height: 5px;
-    margin: 0px 14.5%;
-    transform: rotate(-37.5deg);
-    border-radius: 20px;
-    }
-    .btn-dislike:hover ~ .wrapper .eyes::after,
-    .btn-dislike:active ~ .wrapper .eyes::after {
-    transform: rotate(37.5deg);
-    }
-    .btn-dislike:hover ~ .wrapper .teardrop,
-    .btn-dislike:active ~ .wrapper .teardrop {
-    -webkit-animation: cry 0.1s ease-in 0.25s forwards;
-            animation: cry 0.1s ease-in 0.25s forwards;
-    }
-    .btn-dislike:hover ~ .wrapper .nose,
-    .btn-dislike:active ~ .wrapper .nose {
-    top: 44%;
-    }
-    .btn-dislike:hover ~ .wrapper .mouth,
-    .btn-dislike:active ~ .wrapper .mouth {
-    top: 42%;
-    }
-    .btn-dislike:hover ~ .wrapper .chin,
-    .btn-dislike:active ~ .wrapper .chin {
-    top: 52%;
-    }
-    .btn-dislike:hover ~ .wrapper .tail,
-    .btn-dislike:active ~ .wrapper .tail {
-    transform: rotate(0);
-    }
     </style>
 </head>
 <body>
@@ -692,11 +575,11 @@
     <div class="quiz-wrap">
         <h2>넌센스 퀴즈</h2>
         <div class="quiz">
-            <h3 class="question">채소 장사꾼이 제일 싫어하는 외국의 도시는?</h3>
+            <h3 class="question"></h3>
             <div class="answer">
                 <div class="answer-img">
                     <div class="card">
-                        <div class="dog">
+                        <div class="dog bad">
                         <div class="head">
                             <div class="ears"></div>
                             <div class="face"></div>
@@ -716,7 +599,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="answer-btn">정답 확인하기</button>
+                <button class="answer-confirm">정답 확인하기</button>
+                <div class="answer-view"></div>
             </div>
         </div>
     </div>
@@ -727,9 +611,33 @@
 <script src="../assets/js/custom.js"></script>
 <script src="../assets/js/highlight.min.js"></script>
 <script>
+    //퀴즈
+    const answerQuestion = document.querySelector(".question");
+    const answerConfirm = document.querySelector(".answer-confirm");
+    const answerView = document.querySelector(".answer-view");
+
+    //문제 정보
+    const quizAsk = "채소 장사꾼이 제일 싫어하는 외국의 도시는?";
+    const quizAnswer = "시드니";
+
+    //문제 출력
+    answerQuestion.innerHTML = quizAsk;
+    answerView.innerHTML = quizAnswer;
+
+    //정답 확인
+    answerConfirm.addEventListener("click", ()=>{
+        answerConfirm.style.display = "none";
+        answerView.style.display = "block";
+
+        //정답 눌렀을 때 강아지가 웃게
+        document.querySelector(".card").classList.add("good");
+
+    })
+
+    //메뉴
     document.querySelector(".ham").addEventListener("click", function(){
         document.querySelector("nav").classList.toggle("show");
-    })
+    });
 </script>
 </body>
 </html>
