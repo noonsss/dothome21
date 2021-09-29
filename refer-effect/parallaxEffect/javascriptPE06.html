@@ -34,7 +34,7 @@
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <h1><a href="index.html">Parallax Effect06 - Javascript</a></h1>
         <p>패럴랙스 스크롤링 효과 - 이질감</p>
     </header>
     <!-- //header -->
@@ -164,7 +164,7 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
              </ul>
@@ -177,7 +177,7 @@
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
-                <li class="active"><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
              </ul>
@@ -576,83 +576,20 @@ $(window).scroll(function(){
     <!-- //modal -->
 ​
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
     modal2();
 
-    //버튼클릭하면 이동
-    $(".paraDot ul li").click(function(e){
-        e.preventDefault();
-        let target = $(this);       //타겟 설정 : 사용자가 클릭한 버튼 저장
-        let index = target.index()  //인덱스 설정
-        //alert(index);
-        let section = $(".content-item").eq(index);
-        let offset = section.offset().top;
-        // alert(offset);
-        $("html, body").animate({scrollTop: offset}, 1400, "easeInOutBack");
-    });
-    
-    $(window).scroll(function(){
-        let scrollTop = $(window).scrollTop();
-        
-        // let offset1 = scrollTop - $("#section1").offset().top;  //내가 보이는 시점부터 0으로 시작하게
-        // let offset2 = scrollTop - $("#section2").offset().top;  
-        // let offset3 = scrollTop - $("#section3").offset().top;  
-        // let offset4 = scrollTop - $("#section4").offset().top;  
-        // let offset5 = scrollTop - $("#section5").offset().top;  
-        // let offset6 = scrollTop - $("#section6").offset().top;  
-        // let offset7 = scrollTop - $("#section7").offset().top;  
-        // let offset8 = scrollTop - $("#section8").offset().top;  
-        // let offset9 = scrollTop - $("#section9").offset().top;  
+    const scrollProgress = function(){    //익명함수
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-        
-        //0이 되어버리기 때무에 섹션의 오프셋 값을 빼줌
-        
-        // $("#section1").css({transform: "translateX("+offset1+"px)"});
-        // $("#section2").css({transform: "translateX("+offset2+"px)"});
-        // $("#section3").css({transform: "translateX("+offset3+"px)"});
-        // $("#section4").css({transform: "translateX("+offset4+"px)"});
-        // $("#section5").css({transform: "translateX("+offset5+"px)"});
-        // $("#section6").css({transform: "translateX("+offset6+"px)"});
-        // $("#section7").css({transform: "translateX("+offset7+"px)"});
-        // $("#section8").css({transform: "translateX("+offset8+"px)"});
-        // $("#section9").css({transform: "translateX("+offset9+"px)"});
-        
-        //for
-        // for(let i=1; i<10; i++){
-        //     let offset = scrollTop - $("#section"+i).offset().top;
-        //     $("#section"+i+" .desc").css({transform: "translateX("+offset+"px)"});
-        // }
-
-        //each()
-        // $(".content-item").each(function(index){
-        //     let offset = scrollTop - $(this).offset().top * 0.1;
-
-        //     $(this).find(".img").css({transform: "translateY("+offset+"px)"});
-        // })
-
-        $(".content-item").each(function(index){
-                let offset1 = (scrollTop - $(this).offset().top) * 0.1;
-                let offset2 = (scrollTop - $(this).offset().top) * 0.2;
-
-                $(this).find(".img").css({transform: "translateY("+offset1+"px)"});
-                $(this).find(".desc").css({transform: "translateY("+offset2+"px)"});
-
-                //메뉴
-                if(scrollTop > $(this).offset().top -5){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-        });
-
-
+        document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
 
         //출력
-        $(".paraScroll span").text(scrollTop);
-    })
-
+        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+    }
+    window.addEventListener("scroll", scrollProgress)
 
 
     </script>
