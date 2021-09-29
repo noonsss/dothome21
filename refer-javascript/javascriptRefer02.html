@@ -88,9 +88,9 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result1-1"></span>
+            <span class="result1-2"></span>
+            <span class="result1-3"></span>
         </div>
     </div>
 </div>
@@ -115,9 +115,9 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result2-1"></span>
+            <span class="result2-2"></span>
+            <span class="result2-3"></span>
         </div>
     </div>
 </div>
@@ -142,9 +142,9 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result3-1"></span>
+            <span class="result3-2"></span>
+            <span class="result3-3"></span>
         </div>
     </div>
 </div>
@@ -171,9 +171,11 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result4-1"></span>
+            <span class="result4-2"></span>
+            <span class="result4-3"></span>
+            <span class="result4-4"></span>
+            <span class="result4-5"></span>
         </div>
     </div>
 </div>
@@ -196,9 +198,7 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result5-1"></span>
         </div>
     </div>
 </div>
@@ -223,9 +223,7 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result6-1"></span>
         </div>
     </div>
 </div>
@@ -274,9 +272,14 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result7-1"></span>
+            <span class="result7-2"></span>
+            <span class="result7-3"></span>
+            <span class="result7-4"></span>
+            <span class="result7-5"></span>
+            <span class="result7-6"></span>
+            <span class="result7-7"></span>
+            <span class="result7-8"></span>
         </div>
     </div>
 </div>
@@ -301,9 +304,9 @@
     <div class="result-box">
         <h3><a href="#">결과보기</a></h3>
         <div class="result">
-            <span class="result10-1"></span>
-            <span class="result10-2"></span>
-            <span class="result10-3"></span>
+            <span class="result18-1"></span>
+            <span class="result18-2"></span>
+            <span class="result18-3"></span>
         </div>
     </div>
 </div>
@@ -796,45 +799,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-          //sample01
+        document.querySelectorAll(".result-box h3").forEach(el => {
+            el.addEventListener("click", function(){
+                event.preventDefault();
+                this.parentNode.classList.toggle("active");
+            })
+        });
+
+        //sample01
         //변수 : 데이터 불러오기
         {
-            // // let x = 100;
-            // // let y = 200;...
+            // let x = 100;
+            // let y = 200;...
 
-            // let x = 100, y = 200, z = "javascript";            
+            let x = 100, y = 200, z = "javascript";            
 
             // document.write("*** 01. 변수 : 데이터 불러오기 ***<br>")
             // document.write(x, "<br>");
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
 
-            document.querySelector("#sample01 .result-view .result").innerHTML = `100, 200, javascript`;
-            document.querySelector("#sample01 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample01 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
         }
 
         //sample02
         //상수 : 데이터 불러오기
         {            
-            // let x = 100, y = 200, z = "javascript";            
+            const x = 100, y = 200, z = "javascript";            
 
             // document.write("*** 02. 상수 : 데이터 불러오기 ***<br>")
             // document.write(x, "<br>");
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
 
-            document.querySelector("#sample02 .result-view .result").innerHTML = `100, 200, javascript`;
-            document.querySelector("#sample02 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample02 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result2-1").innerHTML = x;
+            document.querySelector(".result2-2").innerHTML = y;
+            document.querySelector(".result2-3").innerHTML = z;
         }
 
         //sample03
         //배열 : 데이터 불러오기
         {
-            // const arr = [100, 200, "javascript"];
+            const arr = [100, 200, "javascript"];
 
             // document.write("*** 03. 배열 : 데이터 불러오기 ***<br>");
             // document.write(arr[0], "<br>");
@@ -843,16 +851,15 @@
 
             // document.write("<br>");
 
-            document.querySelector("#sample03 .result-view .result").innerHTML = `100, 200, javascript`;
-            document.querySelector("#sample03 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample03 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result3-1").innerHTML = arr[0];
+            document.querySelector(".result3-2").innerHTML = arr[1];
+            document.querySelector(".result3-3").innerHTML = arr[2];
         }
 
         //sample04
         //배열 : 데이터 불러오기 : 2차 배열
         {
-            // const arr = [100, 200, ["javascript", "jquery"]];
+            const arr = [100, 200, ["javascript", "jquery"]];
 
             // document.write("*** 04. 배열 : 데이터 불러오기 : 2차 배열 ***<br>");
             // document.write(arr[0], "<br>");
@@ -861,50 +868,39 @@
             // document.write(arr[2][1], "<br>");
             // document.write(arr[2], "<br><br>");
 
-            document.querySelector("#sample04 .result-view .result").innerHTML = `
-                100<br>
-                200<br>
-                javascript<br>
-                jquery<br>
-                javascript, jquery<br>
-            `;
-            document.querySelector("#sample04 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample04 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result4-1").innerHTML = arr[0]+"<br>";
+            document.querySelector(".result4-2").innerHTML = arr[1]+"<br>";
+            document.querySelector(".result4-3").innerHTML = arr[2][0]+"<br>";
+            document.querySelector(".result4-4").innerHTML = arr[2][1]+"<br>";
+            document.querySelector(".result4-5").innerHTML = arr[2];
         }
 
         //sample05
         //배열 : 데이터 불러오기 : 갯수 구하기
         {
-            // const arr = [100, 200, "javascript"];
+            const arr = [100, 200, "javascript"];
 
             // document.write("*** 05. 배열 : 데이터 불러오기 : 갯수 구하기 ***<br>");
             // document.write(arr.length, "<br><br>");
 
-            document.querySelector("#sample05 .result-view .result").innerHTML = `arr.length : 3`;
-            document.querySelector("#sample05 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample05 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result5-1").innerHTML = arr.length;
         }
 
         //sample06
         //배열 : 데이터 불러오기 : for문
         {
-            // const arr = [100, 200, 300, 400, 500];
+            const arr = [100, 200, 300, 400, 500];
 
             // document.write("*** 06. 배열 : 데이터 불러오기 : for문 ***<br>");
             
-            // for(let i=0; i<arr.length; i++){
-            //     document.write(arr[i], "<br>")
-            // }
+            for(let i=0; i<arr.length; i++){
+                document.write(arr[i], "<br>")
+            }
             // // console.log(arr.length)
 
             // document.write("<br>");
 
-            document.querySelector("#sample06 .result-view .result").innerHTML = `100, 200, 300, 400, 500`;
-            document.querySelector("#sample06 .result-view span").addEventListener("click", function () {
-            document.querySelector("#sample06 .result-view").classList.toggle("look");
-            });
+            document.querySelector(".result6-1").innerHTML = arr[i];
         }
 
         // 7/26 숙제

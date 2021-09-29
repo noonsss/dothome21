@@ -12,74 +12,105 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        .paraDot {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            z-index: 1000;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.4);
-            padding: 20px 10px;
+        .paraNav {
+            top: 20px;
+            transition: top 0.4s ease;
+        }
+        .paraNav.hide {
+            top: -200px;
+        }
+        .paraNav li a {
+            width: auto;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        .paraNav li.active a {
             border-radius: 30px;
-        }
-        .paraDot li {
-            list-style: none;
-        }
-        .paraDot li a {
-            width: 20px;
-            height: 20px;
-            display: block;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            margin: 8px;
-            position: relative;
-            text-decoration: none;
-        }
-        .paraDot li.active a {
-            background: #fff;
-        }
-        .paraDot li a span {
-            position: absolute;
-            left: -85px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #fff;
-            color: #000;
-            display: block;
-            padding: 2px 15px;
-            border-radius: 30px;
-            opacity: 0;
-        }
-        .paraDot li.active a span {
-            opacity: 1;
         }
 
+        /* 한번에 나타나기 */
+        /* .content-item {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 1s;
+        }
+        .content-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* 개별적으로 나타나기 */
+        .content-item .num {
+            opacity: 0 !important;
+            transform: translateY(200px);
+            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+        .content-item .title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+        .content-item .img-Wrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg);
+            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+        .content-item .desc {
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+
+        .content-item.show .title {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 1s;
+        }
+        .content-item.show .num {
+            opacity: 0.07 !important;
+            transform: translateY(0);
+            transition: all 1s;
+        }
+        .content-item.show .img-Wrap {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+            transition: all 1s;
+        }
+        .content-item.show .desc {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 1s;
+        }
+
+        
     </style>
 </head>
 <body class="parallax">
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect02 - Javascript</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 닷 메뉴</p>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 이질감</p>
     </header>
     <!-- //header -->
 ​
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop( ) : <span>0</span></div>  <!-- //scroll -->
+        <div class="paraScroll">scrollTop( ) : <span>0</span>px</div>  <!-- //scroll -->
 
-        <div class="paraDot">
+
+        <div class="paraNav">
             <ul>
-                <li class="active"><a href="#section1"><span>section1</span></a></li>
-                <li><a href="#section2"><span>section2</span></a></li>
-                <li><a href="#section3"><span>section3</span></a></li>
-                <li><a href="#section4"><span>section4</span></a></li>
-                <li><a href="#section5"><span>section5</span></a></li>
-                <li><a href="#section6"><span>section6</span></a></li>
-                <li><a href="#section7"><span>section7</span></a></li>
-                <li><a href="#section8"><span>section8</span></a></li>
-                <li><a href="#section9"><span>section9</span></a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </div>
 
@@ -182,10 +213,10 @@
     <footer class="paraFooter">
         <h1>Parallax <em>Scrolling</em></h1>
         <div class="footerInfo">
-            <h2>자바스크립트</h2>
+            <h2>제이쿼리</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
-                <li class="active"><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
@@ -202,7 +233,7 @@
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
+                <li class="active"><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
              </ul>
@@ -601,43 +632,65 @@ $(window).scroll(function(){
     <!-- //modal -->
 ​
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.querySelectorAll(".paraDot ul li a").forEach((element)=>{
-            element.addEventListener("click", (e)=>{
-                e.preventDefault();
-                document.querySelector(element.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
+    modal2();
 
-        window.addEventListener("scroll", () => {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+    //버튼클릭하면 이동
+    $(".paraDot ul li").click(function(e){
+        e.preventDefault();
+        let target = $(this);       //타겟 설정 : 사용자가 클릭한 버튼 저장
+        let index = target.index()  //인덱스 설정
+        //alert(index);
+        let section = $(".content-item").eq(index);
+        let offset = section.offset().top;
+        // alert(offset);
+        $("html, body").animate({scrollTop: offset}, 1400, "easeInOutBack");
+    });
 
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) +"px";
+    $(window).scroll(function(){
+        let scrollTop = $(window).scrollTop()+$(window).height()/2;
 
-            // if(scrollTop>=document.getElementById("section1").offsetTop){
-            //     document.querySelectorAll(".paraDot ul li").forEach((el)=>{
-            //         el.classList.remove("active");
-            //     });
-            //     document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
-            // }
+        // //반복하는 방법
+        // if(scrollTop < $("#section1").offset().top){
+        //     $("#section1").addClass("show");
+        // }
+        // if(scrollTop < $("#section2").offset().top){
+        //     $("#section2").addClass("show");
+        // }      
 
-            for(let i=1;i<=9;i++){
-                if(scrollTop>=document.getElementById(`section${i}`).offsetTop - 2){
-                document.querySelectorAll(".paraDot ul li").forEach((el)=>{
-                    el.classList.remove("active");
-                });
-                document.querySelector(`.paraDot ul li:nth-child(${i})`).classList.add("active");
-                }
+        //for문
+        // for(let i=1; i<10; i++){
+        //     if(scrollTop  >= $("#section"+i).offset().top){
+        //         $("#section"+i).addClass("show");
+        //     } else {
+        //         $("#section"+i).removeClass("show");
+        //     }
+        // }
+
+        //Each
+        $(".content-item").each(function(index){
+            if(scrollTop> $(this).offset().top){
+                $(this).addClass("show");
+                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
             }
-        });
+        })
 
-        
 
-        modal2();
+
+        // $("#section").each(function(index){
+        //     if(scrollTop >= $(this).eq(index).offset().top -2){
+        //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        //     }
+        // });
+
+
+        //출력
+        $(".paraScroll span").text(parseInt(scrollTop));
+    })
     </script>
 </body>
 </html>
