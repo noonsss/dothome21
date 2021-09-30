@@ -17,3 +17,5 @@ imageType <a href="https://noonsss.github.io/dothome21/site/imageType.html">바�
 effect <a href="https://noonsss.github.io/dothome21/refer-effect/index.html">바로가기</a>
 
 site <a href="https://noonsss.github.io/dothome21/site/test4.html">바로가기</a>
+
+웹기능사 <a href="https://noonsss.github.io/dothome21/refer-effect/gameEffect/quiz/web20110213.html">바로가기</a>
