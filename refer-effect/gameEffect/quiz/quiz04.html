@@ -187,12 +187,11 @@
         .question_answer_view {
             text-align: center;
             border: 6px groove #fff;
-            padding: 13px 20px;
+            padding: 20px 13px;
             font-size: 22px;
             text-shadow: 1px 1px 1px #fff;
         }
         .question_answer_ex {
-            padding: 20px 0;
             line-height: 1.4;
         }
         .question_answer_selects {
@@ -802,10 +801,10 @@
             if(selectResult == currentQuestion.quizAnswer){
                 // alert("정답입니다.");
                 nowScroe++;
-                selectContainer.style.color = "red";
+                selectContainer.style.color = "blue";
             }else{
                 // alert("오답입니다.");
-                selectContainer.style.color = "blue";
+                selectContainer.style.color = "red";
                 const p = document.createElement("p");
                 selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
             }

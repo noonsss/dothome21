@@ -727,30 +727,31 @@
     }
     updateQuiz()
 
-    //정답 확인
-    function answerQuiz(){
-        for(let i=0; i<questionAnswerSelect.length; i++){
-            if(questionAnswerSelect[i].checked == true){
-                if(questionAnswerSelect[i].value == quizInfo[0].quizAnswer){
-                    questionAnswerView.style.display = "block";
-                    questionAnswerView.innerHTML = "정답입니다."
-                    questionAnswerConfirm.style.display = "block";
-                }else{
-                    questionAnswerEx.style.display = "block";
-                    questionAnswerView.style.display = "block";
-                    questionAnswerView.innerHTML = "오답입니다. 정답은" + quizInfo[0].quizAnswer + "입니다."
-                    questionAnswerConfirm.style.display = "block";
-                }
-            }else{
-                questionAnswerConfirm.innerHTML = "답을 선택해주세요.";
-                setTimeout(()=>{
-                    questionAnswerConfirm.innerHTML = "정답 확인하기";
-                },1000);
+//정답 확인
+function answerQuiz(){
+    for ( let i=0; i<questionAnswerSelect.length; i++ ){
+        //선택한것이 checked되있는건데 이게 true임.
+        if( questionAnswerSelect[i].checked == true ){
+            //1,2,3,4번과 퀴즈인포의 답 2가 같은지 
+            if( questionAnswerSelect[i].value == quizInfo[0].quizAnswer ){
+                questionAnswerConfirm.style.display = "none";
+                questionAnswerView.innerHTML = "정답입니다";
+                questionAnswerView.style.display = "block";
+            } else {
+                questionAnswerConfirm.style.display = "none";
+                questionAnswerView.style.display = "block";
+                questionAnswerView.innerHTML = "틀렸습니다. 정답은"+quizInfo[0].quizAnswer+"입니다";
+                questionAnswerEx.style.display = "block";
             }
+        } else {
+            questionAnswerConfirm.innerHTML = "정답을 체크해주세요!";
+            setTimeout(() => {
+                questionAnswerConfirm.innerHTML = "정답 확인하기";
+            }, 1000);
         }
     }
-
-    questionAnswerConfirm.addEventListener("click", answerQuiz);
+}
+questionAnswerConfirm.addEventListener("click", answerQuiz); //위에 answerQuiz함수 사용하고 호출은 아래서.
 
 
     //메뉴
