@@ -28,14 +28,46 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
+
+        /* 한번에 나타나기 */
+        /* .content-item .desc {
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+
+        /* 한 글자씩 나타나기 */
+        .content-item .desc span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc span.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        }
+
+        /* GSAP 한 글자씩 나타내기 */
+        .content-item .desc span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) rotate(90deg) scale(5);
+        }
     </style>
 </head>
 <body class="parallax">
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect06 - Javascript</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 이질감</p>
+        <h1><a href="index.html">Parallax Effect07 - Javascript</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
     </header>
     <!-- //header -->
 ​
@@ -65,7 +97,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">고난이 축복이다</p>
+                <p class="desc split">고난이 축복이다</p>
             </section>
             <!-- //section1 -->
 ​
@@ -75,7 +107,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">피투성이라도 살아있으라</p>
+                <p class="desc split">피투성이라도 살아있으라</p>
             </section>
             <!-- //section2 -->
 ​
@@ -85,7 +117,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">인생의 목적은 행복이 아닌 거룩입니다</p>
+                <p class="desc split">인생의 목적은 행복이 아닌 거룩입니다</p>
             </section>
             <!-- //section3 -->
 ​
@@ -95,7 +127,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">내일은 내일의 태양이 뜬다</p>
+                <p class="desc split">내일은 내일의 태양이 뜬다</p>
             </section>
             <!-- //section4 -->
 ​
@@ -115,7 +147,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">내 인생의 주인공은 나다</p>
+                <p class="desc split">내 인생의 주인공은 나다</p>
             </section>
             <!-- //section6 -->
 ​
@@ -125,7 +157,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">내가 믿는 대로 될것이다</p>
+                <p class="desc split">내가 믿는 대로 될것이다</p>
             </section>
             <!-- //section7 -->
 ​
@@ -135,7 +167,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">계단을 밟아야 계단 위에 올라설수 있다</p>
+                <p class="desc split">계단을 밟아야 계단 위에 올라설수 있다</p>
             </section>
             <!-- //section8 -->
 ​
@@ -145,7 +177,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">높은 목표를 세우고, 스스로 채찍질 한다</p>
+                <p class="desc split">높은 목표를 세우고, 스스로 채찍질 한다</p>
             </section>
             <!-- //section9 -->
         </div>
@@ -164,8 +196,8 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li class="active"><a href="javascriptPE06.html">6</a></li>
-                <li><a href="javascriptPE07.html">7</a></li>
+                <li><a href="javascriptPE06.html">6</a></li>
+                <li class="active"><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
              </ul>
         </div>
@@ -321,71 +353,135 @@
 .paraNav li.active a {
     border-radius: 30px;
 }
+
+/* 한번에 나타나기 */
+/* .content-item .desc {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* 한 글자씩 나타나기 */
+.content-item .desc span {
+    display: inline-block;
+    min-width: 1vw;
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc span.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+}
+
+/* GSAP 한 글자씩 나타내기 */
+.content-item .desc span {
+    opacity: 0;
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(100px) rotate(90deg) scale(5);
+}
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">// const scrollProgress = function(){    //익명함수
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+<pre><code class="language-javascript">//글씨 쪼개기
+    // let text = document.querySelector("#section1 .desc").innerText;
+    // let split = text.split('').join("</span><span>");
+    //     split = "<span>"+split+"</span>";
+    // document.querySelector("#section1 .desc").innerHTML =split;
 
-//     document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
+//다중 글씨 쪼개기
+    document.querySelectorAll(".split").forEach(el => {
+        let text = el.innerText;
+        let split = text.split('').join("</span><span area-hidden='true'>");
+        split = "<span area-hidden='true'>" + split + "</span>"; 
+        el.innerHTML = split;
+        el.setAttribute("aria-label", text);
+    });
 
-//     //출력
-//     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-// }
-// window.addEventListener("scroll", scrollProgress)
+//스크롤 이펙트
+    window.addEventListener("scroll", ()=>{
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;  //한꺼번에 쓰는 방법 = Babel 그 다음 typeScript
 
-
-    
-const scrollMenu = function(){
-        document.querySelectorAll(".paraNav ul li a").forEach(li => {
-            li.addEventListener("click", e => { e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-    }
-
-    scrollMenu();
-    
-    const scrollProgress = function(){
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-        // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
-
-        // document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
-
-        // for(let i=1 ; i<=9; i++ ){
-        //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
-        //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+        // if(scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight/2){
+        //     document.querySelectorAll("#section1 .split span").forEach((elem, index) => {
+        //         setTimeout(() => {
+        //             elem.classList.add("show");
+        //         }, 50 * index);
+        //     })
+        // }
+        // if(scrollTop >= document.getElementById("section2").offsetTop - window.innerHeight/2){
+        //     document.querySelectorAll("#section2 .split span").forEach((elem, index) => {
+        //         setTimeout(() => {
+        //             elem.classList.add("show");
+        //         }, 50 * index);
+        //     })
+        // }
+        // if(scrollTop >= document.getElementById("section3").offsetTop - window.innerHeight/2){
+        //     document.querySelectorAll("#section3 .split span").forEach((elem, index) => {
+        //         setTimeout(() => {
+        //             elem.classList.add("show");
+        //         }, 50 * index);
+        //     })
+        // }
+        // if(scrollTop >= document.getElementById("section4").offsetTop - window.innerHeight/2){
+        //     document.querySelectorAll("#section4 .split span").forEach((elem, index) => {
+        //         setTimeout(() => {
+        //             elem.classList.add("show");
+        //         }, 50 * index);
+        //     })
+        // }
+        // if(scrollTop >= document.getElementById("section5").offsetTop - window.innerHeight/2){
+        //     document.querySelectorAll("#section5 .split span").forEach((elem, index) => {
+        //         setTimeout(() => {
+        //             elem.classList.add("show");
+        //         }, 50 * index);
+        //     })
         // }
 
-        //forEach
-        document.querySelectorAll(".content-item").forEach(item => {
-            let offset1 = (scrollTop - item.offsetTop) * 0.1;
-            let offset2 = (scrollTop - item.offsetTop) * 0.2;
+        // for
+        // for(let i=1; i<10; i++){
+        //     if(scrollTop >= document.getElementById("section"+i).offsetTop - (window.innerHeight/2)){
+        //         document.querySelectorAll("#section"+i+ " .split span").forEach((elem, index) => {
+        //             setTimeout(() => {
+        //                 elem.classList.add("show");
+        //             }, 50 * i);
+        //         })
+        //     }
+        // }
 
-            item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
-            item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
-        });
+        // forEach()
+        // document.querySelectorAll('.content-item').forEach(function(el,idx){
+        //     if(scrollTop >= el.offsetTop){
+        //         el.querySelectorAll('.split span').forEach((elem, index)=>{
+        //             setTimeout(() => {
+        //                 elem.classList.add('show');
+        //             }, 50*index);
+        //         });
+        //     }
+        // });
 
-        //메뉴
-        document.querySelectorAll(".content-item").forEach((item, index) => {
-            if ( scrollTop >= item.offsetTop-2 ) {
-                document.querySelectorAll(".paraNav ul li").forEach(li => {
-                    li.classList.remove("active");
+        //gsap
+        document.querySelectorAll('.content-item').forEach((el,index)=>{
+            if(scrollTop >= el.offsetTop){
+                gsap.to(el.querySelectorAll(".desc span"),{
+                    duration: .5,
+                    opacity: 1,
+                    stagger: .05,
+                    y: 0,
+                    scale: 1,
+                    ease: "power4.out",
+                    rotation: 0
                 });
-                document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
             }
         });
-        
-
-        //출력
-        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-    }
 
 
-    window.addEventListener("scroll", scrollProgress);
+    })
 </code></pre> 
                         </div>
                     </div>
@@ -398,73 +494,107 @@ const scrollMenu = function(){
     <!-- //modal -->
 ​
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
     modal2();
 
-    // const scrollProgress = function(){    //익명함수
-    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    //글씨 쪼개기
+        // let text = document.querySelector("#section1 .desc").innerText;
+        // let split = text.split('').join("</span><span>");
+        //     split = "<span>"+split+"</span>";
+        // document.querySelector("#section1 .desc").innerHTML =split;
 
-    //     document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
+    //다중 글씨 쪼개기
+        document.querySelectorAll(".split").forEach(el => {
+            let text = el.innerText;
+            let split = text.split('').join("</span><span area-hidden='true'>");
+            split = "<span area-hidden='true'>" + split + "</span>"; 
+            el.innerHTML = split;
+            el.setAttribute("aria-label", text);
+        });
 
-    //     //출력
-    //     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-    // }
-    // window.addEventListener("scroll", scrollProgress)
+    //스크롤 이펙트
+        window.addEventListener("scroll", ()=>{
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;  //한꺼번에 쓰는 방법 = Babel 그 다음 typeScript
 
-
-        
-    const scrollMenu = function(){
-            document.querySelectorAll(".paraNav ul li a").forEach(li => {
-                li.addEventListener("click", e => { e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                });
-            });
-        }
-
-        scrollMenu();
-        
-        const scrollProgress = function(){
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
-
-            // document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
-
-            // for(let i=1 ; i<=9; i++ ){
-            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
-            //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+            // if(scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight/2){
+            //     document.querySelectorAll("#section1 .split span").forEach((elem, index) => {
+            //         setTimeout(() => {
+            //             elem.classList.add("show");
+            //         }, 50 * index);
+            //     })
+            // }
+            // if(scrollTop >= document.getElementById("section2").offsetTop - window.innerHeight/2){
+            //     document.querySelectorAll("#section2 .split span").forEach((elem, index) => {
+            //         setTimeout(() => {
+            //             elem.classList.add("show");
+            //         }, 50 * index);
+            //     })
+            // }
+            // if(scrollTop >= document.getElementById("section3").offsetTop - window.innerHeight/2){
+            //     document.querySelectorAll("#section3 .split span").forEach((elem, index) => {
+            //         setTimeout(() => {
+            //             elem.classList.add("show");
+            //         }, 50 * index);
+            //     })
+            // }
+            // if(scrollTop >= document.getElementById("section4").offsetTop - window.innerHeight/2){
+            //     document.querySelectorAll("#section4 .split span").forEach((elem, index) => {
+            //         setTimeout(() => {
+            //             elem.classList.add("show");
+            //         }, 50 * index);
+            //     })
+            // }
+            // if(scrollTop >= document.getElementById("section5").offsetTop - window.innerHeight/2){
+            //     document.querySelectorAll("#section5 .split span").forEach((elem, index) => {
+            //         setTimeout(() => {
+            //             elem.classList.add("show");
+            //         }, 50 * index);
+            //     })
             // }
 
-            //forEach
-            document.querySelectorAll(".content-item").forEach(item => {
-                let offset1 = (scrollTop - item.offsetTop) * 0.1;
-                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+            // for
+            // for(let i=1; i<10; i++){
+            //     if(scrollTop >= document.getElementById("section"+i).offsetTop - (window.innerHeight/2)){
+            //         document.querySelectorAll("#section"+i+ " .split span").forEach((elem, index) => {
+            //             setTimeout(() => {
+            //                 elem.classList.add("show");
+            //             }, 50 * i);
+            //         })
+            //     }
+            // }
 
-                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
-                item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
-            });
+            // forEach()
+            // document.querySelectorAll('.content-item').forEach(function(el,idx){
+            //     if(scrollTop >= el.offsetTop){
+            //         el.querySelectorAll('.split span').forEach((elem, index)=>{
+            //             setTimeout(() => {
+            //                 elem.classList.add('show');
+            //             }, 50*index);
+            //         });
+            //     }
+            // });
 
-            //메뉴
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                if ( scrollTop >= item.offsetTop-2 ) {
-                    document.querySelectorAll(".paraNav ul li").forEach(li => {
-                        li.classList.remove("active");
+            //gsap
+            document.querySelectorAll('.content-item').forEach((el,index)=>{
+                if(scrollTop >= el.offsetTop){
+                    gsap.to(el.querySelectorAll(".desc span"),{
+                        duration: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        scale: 1,
+                        ease: "power4.out",
+                        rotation: 0
                     });
-                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
             });
-            
-
-            //출력
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-        }
 
 
-        window.addEventListener("scroll", scrollProgress);
+        })
+
 
     </script>
 </body>

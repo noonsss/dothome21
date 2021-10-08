@@ -28,14 +28,46 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
+
+        /* 한번에 나타나기 */
+        /* .content-item .desc {
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+
+        /* 한 글자씩 나타나기 */
+        .content-item .desc span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc span.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        }
+
+        /* GSAP 한 글자씩 나타내기 */
+        /* .content-item .desc span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) rotate(90deg) scale(5);
+        } */
     </style>
 </head>
 <body class="parallax">
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect06 - Javascript</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 이질감</p>
+        <h1><a href="index.html">Parallax Effect07 - jQuery</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
     </header>
     <!-- //header -->
 ​
@@ -164,7 +196,7 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li class="active"><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
              </ul>
@@ -178,7 +210,7 @@
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
                 <li><a href="jqueryPE06.html">6</a></li>
-                <li><a href="jqueryPE07.html">7</a></li>
+                <li class="active"><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
              </ul>
         </div>
@@ -305,87 +337,265 @@
 </code></pre> 
                         </div>
                         <div class="css">
-<pre><code class="language-css">.paraNav {
+<pre><code class="language-css">.parallax {
+    background: #222;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+    }
+    
+    .parallax .source button {
+    float: right;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 20px;
+    color: #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+    
+    .paraScroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 20px;
+    }
+    
+    .paraInfo2 {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    border-radius: 10px;
+    }
+    
+    .paraInfo2 li {
+    list-style: none;
+    }
+    
+    .paraNav {
+    position: fixed;
+    right: 20px;
     top: 20px;
-    transition: top 0.4s ease;
-}
-.paraNav.hide {
-    top: -200px;
-}
-.paraNav li a {
-    width: auto;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 20px;
+    border-radius: 50px;
+    }
+    
+    .paraNav li {
+    display: inline-block;
+    list-style: none;
+    }
+    
+    .paraNav li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
     padding: 5px;
     width: 30px;
     height: 30px;
-}
-.paraNav li.active a {
-    border-radius: 30px;
-}
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    }
+    
+    .paraNav li.active a {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    }
+    
+    .paraInfo {
+    padding: 20px;
+    }
+    
+    .paraInfo h1 {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 8px;
+    font-weight: 400;
+    }
+    
+    .paraInfo h1 a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    .paraInfo p {
+    font-size: 14px;
+    line-height: 1.8;
+    }
+    
+    .paraCont .content-item {
+    width: 1000px;
+    max-width: 70vw;
+    margin: 30vw 0;
+    padding-top: 10vw;
+    text-align: right;
+    position: relative;
+    }
+    
+    .paraCont .content-item .num {
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 25vw;
+    opacity: 0.07;
+    position: absolute;
+    right: -5vw;
+    top: -10vw;
+    }
+    
+    .paraCont .content-item .title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    }
+    
+    .paraCont .content-item .img-Wrap {
+    width: 100%;
+    padding-bottom: 56%;
+    background: #000;
+    position: relative;
+    }
+    
+    .paraCont .content-item .img-Wrap .img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: saturate(0%);
+            filter: saturate(0%);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    }
+    
+    .paraCont .content-item .img-Wrap .img:hover {
+    -webkit-filter: saturate(100%);
+            filter: saturate(100%);
+    }
+    
+    .paraCont .content-item .desc {
+    font-size: 6vw;
+    line-height: 1.4;
+    margin-top: -6vw;
+    margin-right: -3vw;
+    position: relative;
+    z-index: 100;
+    word-break: keep-all;
+    }
+    
+    .paraCont .content-item:nth-child(even) {
+    margin-left: auto;
+    text-align: left;
+    }
+    
+    .paraCont .content-item:nth-child(even) .num {
+    right: auto;
+    left: -5vw;
+    }
+    
+    .paraCont .content-item:nth-child(even) .desc {
+    margin-right: auto;
+    margin-left: -3vw;
+    }
+    
+    .content-item:nth-child(1) .img {
+    background-image: url(../img/bg1.jpg);
+    }
+    
+    .content-item:nth-child(2) .img {
+    background-image: url(../img/bg2.jpg);
+    }
+    
+    .content-item:nth-child(3) .img {
+    background-image: url(../img/bg3.jpg);
+    }
+    
+    .content-item:nth-child(4) .img {
+    background-image: url(../img/bg4.jpg);
+    }
+    
+    .content-item:nth-child(5) .img {
+    background-image: url(../img/bg5.jpg);
+    }
+    
+    .content-item:nth-child(6) .img {
+    background-image: url(../img/bg6.jpg);
+    }
+    
+    .content-item:nth-child(7) .img {
+    background-image: url(../img/bg7.jpg);
+    }
+    
+    .content-item:nth-child(8) .img {
+    background-image: url(../img/bg8.jpg);
+    }
+    
+    .content-item:nth-child(9) .img {
+    background-image: url(../img/bg9.jpg);
+    }
 </code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">// const scrollProgress = function(){    //익명함수
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".paraCont > section").eq(index);
+    let offset = section.offset().top;
+    $("html, body").animate({scrollTop : offset}, 600);
+});
 
-//     document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
 
-//     //출력
-//     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-// }
-// window.addEventListener("scroll", scrollProgress)
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
 
+    //for문
+    // for(let i=0; i&lt;9; i++){
+    //     if(scrollTop >= $(".content-item").eq(i).offset().top -2){
+    //         $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+    //     }
+    // }
 
+    //Each
+    // $(".content-item").each(function(index){
+    //     if(scrollTop >= $(this).eq(index).offset().top -2){
+    //         $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    //     }
+    // });
+
+    //this를 쓰면 eq 생략
+    $(".content-item").each(function(index){
+        if(scrollTop >= $(this).offset().top -2){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
     
-const scrollMenu = function(){
-        document.querySelectorAll(".paraNav ul li a").forEach(li => {
-            li.addEventListener("click", e => { e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-    }
-
-    scrollMenu();
     
-    const scrollProgress = function(){
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    //info
+    $(".paraScroll span").text(parseInt(scrollTop));
 
-        // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
-
-        // document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
-
-        // for(let i=1 ; i<=9; i++ ){
-        //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
-        //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
-        // }
-
-        //forEach
-        document.querySelectorAll(".content-item").forEach(item => {
-            let offset1 = (scrollTop - item.offsetTop) * 0.1;
-            let offset2 = (scrollTop - item.offsetTop) * 0.2;
-
-            item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
-            item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
-        });
-
-        //메뉴
-        document.querySelectorAll(".content-item").forEach((item, index) => {
-            if ( scrollTop >= item.offsetTop-2 ) {
-                document.querySelectorAll(".paraNav ul li").forEach(li => {
-                    li.classList.remove("active");
-                });
-                document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
-            }
-        });
-        
-
-        //출력
-        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+    for(let i=1; i&lt;10; i++){
+        $(".offset"+i).text(parseInt($("#section"+i).offset().top)+ "px");
     }
-
-
-    window.addEventListener("scroll", scrollProgress);
+});
 </code></pre> 
                         </div>
                     </div>
@@ -398,73 +608,122 @@ const scrollMenu = function(){
     <!-- //modal -->
 ​
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
     modal2();
 
-    // const scrollProgress = function(){    //익명함수
-    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    //글씨 쪼개기(한개만)
+        // let text = $("#section1 .desc").text();
+        // let split = text.split('').join("</span><span>");
+        // split = "<span>"+ split +"</span>";
+        // $("#section1 .desc").html(split);
+    
+    //글씨 쪼개기(여러개 - each())
+        $(".content-item .desc").each(function(i){
+            let text = $(this).text();
+            let split = text.split('').join("</span><span aria-hidden='true'>");
+            split = "<span>"+ split +"</span>";
+            $(this).html(split).attr("aria-label", text);  //웹표준 준수 아리아히든 아리아라벨
+        });
 
-    //     document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
+        $(window).scroll(function(){
+            // if($(window).scrollTop() > $("#section1").offset().top){
+            //     $("#section1 .desc").addClass("show");
+            // } else {
+            //     $("#section1 .desc").removeClass("show");
+            // }
+            // if($(window).scrollTop() > $("#section2").offset().top){
+            //     $("#section2 .desc").addClass("show");
+            // } else {
+            //     $("#section2 .desc").removeClass("show");
+            // }
+            // if($(window).scrollTop() > $("#section3").offset().top){
+            //     $("#section3 .desc").addClass("show");
+            // } else {
+            //     $("#section3 .desc").removeClass("show");
+            // } => 반복하는 방법
 
-    //     //출력
-    //     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-    // }
-    // window.addEventListener("scroll", scrollProgress)
+            //each()
+            // $(".content-item .desc").each(function(){
+            //     if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/3 ){
+            //         $(this).addClass("show");
+            //     } else {
+            //         $(this).removeClass("show");
+            //     }
+            // });
 
-
-        
-    const scrollMenu = function(){
-            document.querySelectorAll(".paraNav ul li a").forEach(li => {
-                li.addEventListener("click", e => { e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                });
-            });
-        }
-
-        scrollMenu();
-        
-        const scrollProgress = function(){
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
-
-            // document.getElementById("section1").style.transform = "translateX("+scrollTop+"px)";
-
-            // for(let i=1 ; i<=9; i++ ){
-            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
-            //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+            //한글자씩 나타나기
+            // if($(window).scrollTop() >= $("#section1").offset().top){
+            //     $("#section1 .desc span").each(i => {
+            //         setTimeout(() => {
+            //             $("#section1 .desc span").eq(i).addClass("show");
+            //         }, 50 * i) //i(span갯수)별로 시간차를 주기 위해 *i 
+            //     })
+            // }
+            // if($(window).scrollTop() >= $("#section2").offset().top){
+            //     $("#section2 .desc span").each(i => {
+            //         setTimeout(() => {
+            //             $("#section2 .desc span").eq(i).addClass("show");
+            //         }, 50 * i)
+            //     })
             // }
 
-            //forEach
-            document.querySelectorAll(".content-item").forEach(item => {
-                let offset1 = (scrollTop - item.offsetTop) * 0.1;
-                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+            //for
+            // for(let i=1; i<10; i++){
+            //     if($(window).scrollTop() >= $("#section"+i).offset().top){
+            //         $(this).each((k) => {
+            //             setTimeout(() => {
+            //                 $(this).addClass("show");
+            //             }, 50 * k)
+            //         })
+            //     }
+            // }
+            // for(let i=1; i<=$(".content-item").length; i++){
+            //     if($(window).scrollTop() >= $("#section"+i).offset().top){
+            //         $("#section"+i+" .desc span").each((i) => {
+            //             setTimeout(() => {
+            //                 $(this).addClass("show");
+            //             }, 50 * i)
+            //         })
+            //     }
+            // }
 
-                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
-                item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
-            });
-
-            //메뉴
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                if ( scrollTop >= item.offsetTop-2 ) {
-                    document.querySelectorAll(".paraNav ul li").forEach(li => {
-                        li.classList.remove("active");
+            //each()
+            $('.content-item .desc').each(function(index,item){
+                if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+                    $(this).find('span').each(idx => {
+                        setTimeout(()=>{
+                            $(this).find('span').eq(idx).addClass('show');
+                        },50*idx);
                     });
-                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
             });
-            
 
-            //출력
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-        }
+            //gsap
+            // $(".content-item").each(function(index){
+            //     if($(window).scrollTop() >= $(this).offset().top){
+            //         gsap.to($(this).find(".desc span"), {    //선택자 다음 속성 선택
+            //             duration: .5,
+            //             opacity: 1,
+            //             stagger: .05,
+            //             y: 0,
+            //             ease: "power3.out",
+            //             rotation: 0,
+            //             scale: 1
+            //         });            
+            //     }
+            //     //menu
+            //     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            // });
 
 
-        window.addEventListener("scroll", scrollProgress);
+        });
+
+        
 
     </script>
 </body>
