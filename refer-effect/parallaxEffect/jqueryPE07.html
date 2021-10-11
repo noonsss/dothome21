@@ -41,7 +41,7 @@
         } */
 
         /* 한 글자씩 나타나기 */
-        .content-item .desc span {
+        /* .content-item .desc span {
             display: inline-block;
             min-width: 1vw;
             opacity: 0;
@@ -51,15 +51,15 @@
         .content-item .desc span.show {
             opacity: 1;
             transform: translateY(0) skewX(0);
-        }
+        } */
 
         /* GSAP 한 글자씩 나타내기 */
-        /* .content-item .desc span {
+        .content-item .desc span {
             opacity: 0;
             display: inline-block;
             min-width: 1vw;
             transform: translateY(100px) rotate(90deg) scale(5);
-        } */
+        }
     </style>
 </head>
 <body class="parallax">
@@ -693,32 +693,32 @@ $(window).scroll(function(){
             // }
 
             //each()
-            $('.content-item .desc').each(function(index,item){
-                if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
-                    $(this).find('span').each(idx => {
-                        setTimeout(()=>{
-                            $(this).find('span').eq(idx).addClass('show');
-                        },50*idx);
-                    });
-                }
-            });
+            // $('.content-item .desc').each(function(index,item){
+            //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+            //         $(this).find('span').each(idx => {
+            //             setTimeout(()=>{
+            //                 $(this).find('span').eq(idx).addClass('show');
+            //             },50*idx);
+            //         });
+            //     }
+            // });
 
             //gsap
-            // $(".content-item").each(function(index){
-            //     if($(window).scrollTop() >= $(this).offset().top){
-            //         gsap.to($(this).find(".desc span"), {    //선택자 다음 속성 선택
-            //             duration: .5,
-            //             opacity: 1,
-            //             stagger: .05,
-            //             y: 0,
-            //             ease: "power3.out",
-            //             rotation: 0,
-            //             scale: 1
-            //         });            
-            //     }
-            //     //menu
-            //     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-            // });
+            $(".content-item").each(function(index){
+                if($(window).scrollTop() >= $(this).offset().top){
+                    gsap.to($(this).find(".desc span"), {    //선택자 다음 속성 선택
+                        duration: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        ease: "power3.out",
+                        rotation: 0,
+                        scale: 1
+                    });            
+                }
+                //menu
+                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            });
 
 
         });

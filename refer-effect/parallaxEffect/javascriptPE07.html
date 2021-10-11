@@ -567,30 +567,30 @@
             // }
 
             // forEach()
-            // document.querySelectorAll('.content-item').forEach(function(el,idx){
-            //     if(scrollTop >= el.offsetTop){
-            //         el.querySelectorAll('.split span').forEach((elem, index)=>{
-            //             setTimeout(() => {
-            //                 elem.classList.add('show');
-            //             }, 50*index);
-            //         });
-            //     }
-            // });
-
-            //gsap
-            document.querySelectorAll('.content-item').forEach((el,index)=>{
+            document.querySelectorAll('.content-item').forEach(function(el,idx){
                 if(scrollTop >= el.offsetTop){
-                    gsap.to(el.querySelectorAll(".desc span"),{
-                        duration: .5,
-                        opacity: 1,
-                        stagger: .05,
-                        y: 0,
-                        scale: 1,
-                        ease: "power4.out",
-                        rotation: 0
+                    el.querySelectorAll('.split span').forEach((elem, index)=>{
+                        setTimeout(() => {
+                            elem.classList.add('show');
+                        }, 50*index);
                     });
                 }
             });
+
+            //gsap
+            // document.querySelectorAll('.content-item').forEach((el,index)=>{
+            //     if(scrollTop >= el.offsetTop){
+            //         gsap.to(el.querySelectorAll(".desc span"),{
+            //             duration: .5,
+            //             opacity: 1,
+            //             stagger: .05,
+            //             y: 0,
+            //             scale: 1,
+            //             ease: "power4.out",
+            //             rotation: 0
+            //         });
+            //     }
+            // });
 
 
         })

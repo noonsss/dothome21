@@ -45,9 +45,9 @@
                 <h2 class="ir_so">메인 컨텐츠</h2>
                 <article class="content-article">
                     <div class="boardType">
-                        <h3>내가 쓴 글</h3>
-                        <p class="choice">자유게시판</p>
-                        <p>레시피</p>
+                        <h3>글쓰기</h3>
+                        <p class="choice"><a href="writeBoardFree.html">자유게시판</a></p>
+                        <p><a href="writeBoardRecipe.html">레시피</a></p>
                         <div class="board-write">
                             <form action="boardWriteSave.php" name="boardWrite" method="post">
                                 <fieldset>
@@ -61,8 +61,10 @@
                                         <textarea name="boardContent" id="boardContent" rows="13" class="title-text" placeholder="내용을 입력해주세요" required></textarea>
                                     </div>
                                 </fieldset>
-                                <button class="board-btn btnClear" type="submit" value="저장하기">작성완료</button>
-                                <button class="board-btn" type="submit" value="임시저장하기">임시저장</button>
+                                <div class="button">
+                                    <button class="board-btn" type="submit" value="임시저장하기">임시저장</button>
+                                    <button class="board-btn btnClear" type="submit" value="저장하기">작성완료</button>
+                                </div>
                             </form>
                         </div>
                     </div>
