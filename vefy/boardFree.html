@@ -7,10 +7,12 @@
     <title>게시판</title>
     
     <!-- style -->
-    <link rel="stylesheet" href="assets2/css/fonts.css">
-    <link rel="stylesheet" href="assets2/css/vars.css">
-    <link rel="stylesheet" href="assets2/css/reset.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/vars.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="http://그누보드URL/js/font-awesome/css/font-awesome.min.css"> 
 </head>
 <body>
 
@@ -46,9 +48,10 @@
                                             <option value="content">내용</option>
                                             <option value="name">등록자</option>
                                         </select>
-                                        <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search" required>
-                                        <button type="submit" class="form-btn">?</button>
-                                        <a href="boardWrite.php" class="form-btn black">글쓰기</a>
+                                        <div class="input">
+                                            <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search" required>
+                                            <button>검색</button>
+                                        </div>
                                     </fieldset>
                                 </form>
                             </div>
