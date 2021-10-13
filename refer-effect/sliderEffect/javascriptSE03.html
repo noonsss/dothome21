@@ -119,18 +119,30 @@
                         </ul>
                     </div>
                     <div class="view-cont">
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;!-- ... --&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- ... --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<pre><code class="language-html">const sliderWrap = document.querySelector(".slider-wrap");
+    const sliderImg = document.querySelector(".slider-img");
+    const sliderInner = document.querySelector(".slider-inner");
+    const slider = document.querySelectorAll(".slider");
+
+    let currentIndex = 0;
+    let sliderWidth = document.querySelector(".slider").offsetWidth;
+    let sliderCount = slider.length;
+    let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+    sliderInner.appendChild(sliderClone);
+    
+    setInterval(()=>{
+        currentIndex++;
+        sliderInner.style.transition = "all 0.3s"; 
+        sliderInner.style.transform = "translate("+ -sliderWidth * currentIndex +"px)";
+
+        if(currentIndex == sliderCount ){
+            setTimeout(()=>{
+                sliderInner.style.transition = "0s";
+                sliderInner.style.transform = "translateX(0)";
+            }, 300);
+            currentIndex = 0;
+        }
+    }, 3000);
 </code></pre>
                 </div>
             </div>
