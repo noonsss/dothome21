@@ -31,7 +31,7 @@
         .slider-inner {
             overflow: hidden;
             position: relative;
-            width: 4000px;
+            /* width: 4000px; */
             height: 480px;
         }
         .slider-inner .slider {
@@ -82,6 +82,26 @@
         .slider-btn .next {
             right: 0;
         }
+
+        .slider-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+        }
+        .slider-dot .dot {
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-indent: -9999px;
+            margin: 3px;
+        }
+        .slider-dot .dot.active {
+            background: rgba(255,255,255,0.9);
+        }
     </style>
 </head>
 <body class="bg bg4 brown">
@@ -90,24 +110,31 @@
         <div class="slider-wrap">
             <div class="slider-img">
                 <div class="slider-inner">
-                    <div class="slider" data-name="이미지1"><img src="../assets/img/bg11.jpg" alt="이미지1"></div>
-                    <div class="slider" data-name="이미지2"><img src="../assets/img/bg10.jpg" alt="이미지2"></div>
-                    <div class="slider" data-name="이미지3"><img src="../assets/img/bg9.jpg" alt="이미지3"></div>
-                    <div class="slider" data-name="이미지4"><img src="../assets/img/bg8.jpg" alt="이미지4"></div>
-                    <div class="slider" data-name="이미지5"><img src="../assets/img/bg7.jpg" alt="이미지5"></div>
+                    <div class="slider" data-name="이미지1"><img src="../assets/img/bg3.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지2"><img src="../assets/img/bg4.jpg" alt="이미지2"></div>
+                    <div class="slider" data-name="이미지3"><img src="../assets/img/bg5.jpg" alt="이미지3"></div>
+                    <div class="slider" data-name="이미지4"><img src="../assets/img/bg6.jpg" alt="이미지4"></div>
+                    <div class="slider" data-name="이미지5"><img src="../assets/img/bg1.jpg" alt="이미지5"></div>
                 </div>
             </div>
             <div class="slider-btn">
                 <a href="#" class="prev">prev</a>
                 <a href="#" class="next">next</a>
             </div>
+            <div class="slider-dot">
+                <!-- <a href="#" class="dot active">1</a>
+                <a href="#" class="dot">2</a>
+                <a href="#" class="dot">3</a>
+                <a href="#" class="dot">4</a>
+                <a href="#" class="dot">5</a> -->
+            </div>
         </div>
     </main>
     <!-- contents -->
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Slider Effect05 - Javascript</a></h1>
-        <p>이미지 슬라이드 - 버튼 추가</p>
+        <h1><a href="index.html">Slider Effect06 - jQuery</a></h1>
+        <p>이미지 슬라이드 - 닷 메뉴 추가</p>
     </div>
     <div class="info right">
         <ul>
@@ -115,7 +142,7 @@
             <li><a href="javascriptSE02.html">2</a></li>
             <li><a href="javascriptSE03.html">3</a></li>
             <li><a href="javascriptSE04.html">4</a></li>
-            <li class="active"><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
             <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
@@ -124,6 +151,9 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li class="active"><a href="jquerySE06.html">6</a></li>
+            <li><a href="jquerySE07.html">7</a></li>
+            <li><a href="jquerySE08.html">8</a></li>
         </ul>
     </div>
     <div class="info bottom">
@@ -179,35 +209,54 @@
 <script>
     modal();
 
-    const sliderWrap = document.querySelector(".slider-wrap");
-    const sliderImg = sliderWrap.querySelector(".slider-img");
-    const sliderInner = sliderImg.querySelector(".slider-inner");
-    const slider = sliderInner.querySelectorAll(".slider");
-    const sliderBtn = sliderWrap.querySelector(".slider-btn");
-    const sliderBtnPrev = sliderBtn.querySelector(".prev");
-    const sliderBtnNext = sliderBtn.querySelector(".next");
- 
+    const sliderInner = $(".slider-inner");
+    const slider = $(".slider");
+    const sliderBtn = $(".slider-btn");
+    const sliderDot = $(".slider-dot");
+
     let sliderCount = slider.length;
-    let sliderWidth = document.querySelector(".slider").offsetWidth;
+    let sliderWidth = slider.width();
+    let sliderTotalWidth = sliderWidth * sliderCount;
     let currentIndex = 0;
+    let dotIndex = "";
 
+    //이미지 가로 값 세팅
+    sliderInner.css({width: sliderTotalWidth});
+
+    //닷 버튼 생성:이미지 갯수만큼 닷 메뉴 생성
+    slider.each(function(index){
+        dotIndex += "<a href='#'' class='dot'>"+ index +"</a>";
+    });
+    sliderDot.html(dotIndex);
+    sliderDot.find("a").eq(currentIndex).addClass("active");
+
+    //이미지 움직이기
     function gotoSlider(num){
-        sliderInner.style.transition = "all 300ms";
-        sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
-        currentIndex = num;  //전 페이지에서 - 가 되야되기 때문에 num 입 력?
-    }
-    function movePrev(){
-        let prevIndex = (currentIndex - 1) % sliderCount;
-        if(currentIndex == 0) prevIndex = sliderCount -1;
-        gotoSlider(prevIndex);
-    }
-    function moveNext(){
-        let nextIndex = (currentIndex + 1) % sliderCount;
-        gotoSlider(nextIndex)
+        sliderInner.animate({left: -sliderWidth * num}, 600, "easeInQuart");
+        currentIndex = num;   //직전의 값(num)을 대입 시켜 현재 값 계속 유지
+        sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
     }
 
-    sliderBtnPrev.addEventListener("click", movePrev);
-    sliderBtnNext.addEventListener("click", moveNext);
+    //닷 버튼 클릭
+    sliderDot.on("click", "a", function(e){
+        e.preventDefault();
+        gotoSlider( $(this).index() );
+    })
+
+    //버튼 클릭하기
+    // sliderDot.click(function(){});
+    sliderBtn.on("click", "a", function(e){
+        e.preventDefault();
+        let nextIndex = (currentIndex + 1) % sliderCount;
+        let prevIndex = (currentIndex - 1) % sliderCount;
+        if(currentIndex ==0) prevIndex = sliderCount - 1;
+
+        if( $(this).hasClass("prev") ){
+            gotoSlider(prevIndex);
+        } else {
+            gotoSlider(nextIndex);
+        }
+    });
 </script>
 </body>
 </html>
