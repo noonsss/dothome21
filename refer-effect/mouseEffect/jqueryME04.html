@@ -103,6 +103,8 @@
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -110,6 +112,8 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li class="active"><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
         </ul>
     </div>
 
@@ -172,18 +176,126 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
-    
+<pre><code class="language-html">&lt;main id="contents"&gt;
+&lt;div class="cursor"&gt;&lt;/div&gt;
+&lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+&lt;article class="mouseCont"&gt;
+    &lt;p&gt;&lt;em&gt;Love&lt;/em&gt; your neighbor as yourself.&lt;/p&gt;
+    &lt;h2&gt;네 이웃을 네 몸처럼 &lt;em&gt;사랑하여라&lt;/em&gt;&lt;/h2&gt;
+&lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">body {
+    cursor: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveWrap {
+}
+.moveImage {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all 0.2s;
+}
+.moveImage .mImg {
+    width: 50vw;
+    position: relative;
+}
+.moveImage .mImg::before {
+    content: '';
+    position: absolute;
+    left: 5%; bottom: -3%;
+    width: 90%; height: 40px;
+    background: url(../assets/img/bg10.jpg) no-repeat;
+    background-size: 100% 30px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+.moveImage .mImg img {
+    width: 100%;
+    background-repeat: 5px;
+}
+.moveImage .mText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 150px);
+    text-align: center;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+    background: rgba(0,0,0, .3);
+    padding: 2vw;
+    font-size: 1vw;
+    line-height: 1.6;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.cursor {
+    position: absolute;
+    width: 10px; height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
     
 </code></pre>
                     </div>
                     <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(window).mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //기준점 가운데 변경
+    let standardX = $(window).width()/2 - pageX;
+    let standardY = $(window).height()/2 - pageY;
+
+    //최대, 최소 값 설정
+    // if(standardX >= 50) standardX = 50;
+    // if(standardY >= -50) standardY = 50;
+    // if(standardY >= 50 || standardY <= -50) standardY = 50;
+    // if(standardY >= 50 || standardY <= -50) standardY = 50;
+
+    //최소값 -50, 최대값 50 설정
+    let maxX = Math.max(-100, Math.min(100, standardX)); //스탠다드 x값이 아무리 늘어나도 최대값 지정 가능
+    let maxY = Math.max(-100, Math.min(100, standardY));  //최소값 -10 최대값 50
+
+    //각도를 줄이는 설정
+    let angleX = maxX * 0.12;
+    let angleY = maxY * 0.12;
+
+    //부드럽게 설정
+    let softX = 0;
+    let softY = 0;
     
+    softX += (angleX - softX) * 0.7;
+    softY += (angleY - softY) * 0.7;
+
+    //이미지
+    $(".moveImage").css({"transform" : "translate(-50%, -50%) perspective(600px) rotateX("+ softY+"deg) rotateY("+ -softX+"deg)"});
+
+    //커서
+    gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+    $(".maxX").text(maxX);
+    $(".maxY").text(maxY);
+    $(".angleX").text(parseInt(angleX));
+    $(".angleY").text(parseInt(angleY));
+})  
 </code></pre>
                     </div>
                     <div></div>

@@ -88,7 +88,6 @@
             <li><a href="javascriptME05.html">5</a></li>
             <li><a href="javascriptME06.html">6</a></li>
             <li><a href="javascriptME07.html">7</a></li>
-            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -96,6 +95,8 @@
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
             <li><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME06.html">6</a></li>
+            <li><a href="jqueryME07.html">7</a></li>
         </ul>
     </div>
 
@@ -207,39 +208,39 @@
                     </div>
                     <div class="jquery">
 <pre><code class="language-javascript">const w = document.querySelector(".cursor").clientWidth;
-const h = document.querySelector(".cursor").clientHeight;
+    const h = document.querySelector(".cursor").clientHeight;
 
-//움직임 효과
-document.addEventListener("mousemove", e => {
-    gsap.to(".cursor", {duration: 0.5, left: e.pageX -w, top: e.pageY -h})
-});
-
-//오버 효과
-document.querySelectorAll(".mouseCont em").forEach(em => {
-    em.addEventListener("mouseenter", () => {
-        document.querySelector(".cursor").classList.add("active");
+    //움직임 효과
+    document.addEventListener("mousemove", e => {
+        gsap.to(".cursor", {duration: 0.5, left: e.pageX -w, top: e.pageY -h})
     });
-    em.addEventListener("mouseleave", () => {
-        document.querySelector(".cursor").classList.remove("active");
-    });
-});
 
-//출력용
-// document.querySelectorAll(".info.left.list li").forEach((el, index) => {
-//     document.querySelectorAll(".info.left.list li").remove("active");
-//     document.querySelector(".info.left.list li").eq(index).add("active");
-//     document.querySelector(".cursor").style.cssText.mix-blend-mode;
-// })
-document.querySelectorAll(".info.left.list li").forEach(i => {
-    i.addEventListener("click", function(){
-        const text = this.textContent || this.innerHTML;
-        document.querySelector(".cursor").style.mixBlendMode = text;
-        document.querySelectorAll(".info.left.list li").forEach(li => {
-            li.classList.remove("active");
-            this.classList.add("active");
+    //오버 효과
+    document.querySelectorAll(".mouseCont em").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            document.querySelector(".cursor").classList.add("active");
+        });
+        em.addEventListener("mouseleave", () => {
+            document.querySelector(".cursor").classList.remove("active");
         });
     });
-});
+
+    //출력용
+    // document.querySelectorAll(".info.left.list li").forEach((el, index) => {
+    //     document.querySelectorAll(".info.left.list li").remove("active");
+    //     document.querySelector(".info.left.list li").eq(index).add("active");
+    //     document.querySelector(".cursor").style.cssText.mix-blend-mode;
+    // })
+    document.querySelectorAll(".info.left.list li").forEach(i => {
+        i.addEventListener("click", function(){
+            const text = this.textContent || this.innerHTML;
+            document.querySelector(".cursor").style.mixBlendMode = text;
+            document.querySelectorAll(".info.left.list li").forEach(li => {
+                li.classList.remove("active");
+                this.classList.add("active");
+            });
+        });
+    });
 </code></pre>
                     </div>
                     <div></div>

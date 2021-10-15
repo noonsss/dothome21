@@ -206,18 +206,76 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main id="contents"&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
     
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;&lt;em&gt;Love&lt;/em&gt; your neighbor as yourself.&lt;/p&gt;
+        &lt;h2&gt;네 이웃을 네 몸처럼 &lt;em&gt;사랑하여라&lt;/em&gt;&lt;/h2&gt;
+    &lt;/article&gt;
+    &lt;/main&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
-    
+<pre><code class="language-css">.textWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -25%);
+    color: #fff;
+    font-size: 3vw;
+    line-height: 1.5;
+    font-family: 'NEXONLv1Gothic';
+}
+.textWrap .line {
+    width: 100%;
+    display: flex;
+}
+.textWrap .line .left {
+    width: 50vw;
+    color:rgb(206, 153, 255);
+    overflow: hidden;
+    transform: skew(0deg, -15deg);
+}
+.textWrap .line .left .spanWrap {
+    width: 100vw;
+    text-align: center;
+   
+}
+.textWrap .line .right {
+    width: 50vw;
+    overflow: hidden;
+    transform: skew(0deg, 15deg);
+}
+.textWrap .line .right .spanWrap {
+    width: 100vw;
+    text-align: center;
+    transform: translateX(-50vw);
+}
+.textWrap span {
+    display: inline-block;
+}
+.imgWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.imgWrap img {
+    width: 100%;
+}   
 </code></pre>
                     </div>
                     <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">function mouseMove(e){
+    let positionSlow = (e.pageX - ( document.documentElement.clientWidth/2 )) * 0.1,
+        positionFast = (e.pageX - ( document.documentElement.clientWidth/2 )) * 0.2;
+
+    gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+    gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
+}
     
+window.addEventListener("mousemove", mouseMove);
 </code></pre>
                     </div>
                     <div></div>

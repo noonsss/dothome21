@@ -114,18 +114,89 @@
                 </div>
                 <div class="view-cont">
                     <div class="html">
-<pre><code class="language-html">
-    
+<pre><code class="language-html">&lt;main>
+        &lt;div class="slider-wrap">
+            &lt;div class="slider-img">
+                &lt;div class="slider" data-name="이미지1">&lt;img src="../assets/img/bg1.jpg" alt="이미지1">&lt;/div>
+                &lt;div class="slider" data-name="이미지2">&lt;img src="../assets/img/bg2.jpg" alt="이미지2">&lt;/div>
+                &lt;div class="slider" data-name="이미지3">&lt;img src="../assets/img/bg3.jpg" alt="이미지3">&lt;/div>
+                &lt;div class="slider" data-name="이미지4">&lt;img src="../assets/img/bg10.jpg" alt="이미지4">&lt;/div>
+                &lt;div class="slider" data-name="이미지5">&lt;img src="../assets/img/bg4.jpg" alt="이미지5">&lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/main>
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
-    
+<pre><code class="language-css">.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img img {
+    width: 100%;
+}
+
+.slider-img {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 480px;
+    overflow: hidden;
+}
+.slider-inner {
+    overflow: hidden;
+    position: relative;
+    width: 4000px;
+    height: 480px;
+    transition: all 0.7s;
+    left: 0;
+}
+.slider-inner .slider {
+    float: left;
+    width: 800px;
+    height: 480px;
+    position: relative;
+}
+
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'NEXONLv1GothicOTF';
+}
+
+.slider-inner .slider::before {content: attr(data-name);}
+.slider-inner .slider:nth-child(1){z-index: 5;}
+.slider-inner .slider:nth-child(2){z-index: 4;}
+.slider-inner .slider:nth-child(3){z-index: 3;}
+.slider-inner .slider:nth-child(4){z-index: 2;}
+.slider-inner .slider:nth-child(5){z-index: 1;}
 </code></pre>
                     </div>
                     <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const sliderWrap = $(".slider-wrap");
+    const sliderImg = $(".slider-img");
+    const slider = $(".slider");
 
+    let currentIndex = 0;                   //현재 보이는 이미지(첫번째 이미지)
+    let sliderCount = slider.length;        //이미지 갯수
+
+    setInterval(function(){
+        let nextIndex = (currentIndex + 1) % sliderCount ;
+
+        slider.eq(currentIndex).fadeOut()   //현재 이미지를 사라지게
+        slider.eq(nextIndex).fadeIn()      //다음 이미지를 나타나게
+
+        currentIndex = nextIndex;
+        //0 1 2 3 4 -> 0 1 2 3...
+        //아래의 방법을 for문을 쓸 필요없이 setInterval을 사용 해 함수를 반복시켜서 바뀌는 값만 변하게 설정해준다
+
+    }, 2000);
 </code></pre>
                     </div>
                     <div></div>
