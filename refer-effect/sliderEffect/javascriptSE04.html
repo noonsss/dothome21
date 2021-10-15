@@ -93,6 +93,9 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li class="active"><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">6</a></li>
+            <li><a href="javascriptSE07.html">7</a></li>
+            <li><a href="javascriptSE08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -100,6 +103,9 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jquerySE06.html">6</a></li>
+            <li><a href="jquerySE07.html">7</a></li>
+            <li><a href="jquerySE08.html">8</a></li>
         </ul>
     </div>
     <div class="info bottom">
@@ -157,11 +163,8 @@
 
     const sliderWrap = document.querySelector(".slider-wrap");
     const sliderImg = document.querySelector(".slider-img");
-    const sliderImg1 = document.querySelector(".slider-img1");
     const sliderInner = document.querySelector(".slider-inner");
-    const sliderInner1 = document.querySelector(".slider-inner1");
     const slider = document.querySelector(".slider");
-    const slider1 = document.querySelector(".slider1");
 
     // let currentIndex = 0;
     // let sliderCount = slider1.length; 
@@ -214,6 +217,24 @@
     //     sliderInner1.style.top = -sliderPosition;
     // }, 1000);
 
+    //슬라이드 1번
+    const sliderImg1 = document.querySelector('.slider-img1');
+    const sliderInner1 = document.querySelector('.slider-inner1');
+    const slider1 = document.querySelector('.slider1');
+
+    let currentIndex1 = 0;
+    let sliderHeight1 = slider1.offsetHeight;
+
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = '0';
+    setInterval(() => {
+      currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+
+      let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+      sliderInner1.style.transition = "all 0.3s";
+      sliderInner1.style.top = sliderPosition;
+    }, 2000);
+
 
     //2
     const sliderInner2 = document.querySelector(".slider-inner2");
@@ -239,7 +260,7 @@
             }, 300);
             currentIndex2 = 0;
         }
-    }, 1000);
+    }, 2000);
 </script>
 </body>
 </html>
