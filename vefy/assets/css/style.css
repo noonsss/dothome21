@@ -1,273 +1,94 @@
-/* skip */
-#skip {
-    position: relative;
-    z-index: 10000;
+* {
+    margin: 0;
+    padding: 0;
 }
-#skip a {
-    position: absolute;
-    left: 0;top: -100px;
-    background: #000;
-    color: #fff;
-    padding: 20px 30px;
-    display: inline-block;
-}
-#skip a:active,
-#skip a:focus {
-    top: 0;
-}
-
-/* layout */
-#contents {
-    width: 1200px;
+body {
     margin: 0 auto;
 }
-
-#mainCont {
-    padding-top: 80px;
-}
-#mainCont.gray {
-    background-color: #f4f4f4;
-}
-
-/* container */
-.content-article {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
-    /* background: rgba(0,0,0,0.3); */
-}
-.flow-article {
-    width: 100%;
-    background: #f7f6ff;
-    padding: 100px 0;
-}
-
-
-/* header */
 #header {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
+    background: #c7c7c7;
+    height: 70px;
     width: 100%;
-    padding: 30px 0 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    border: 1px solid #eee;
-    background-color: #4D942C;
 }
-#header h1 {
-    text-transform: uppercase;
+.banner_wrap {}
+.bgImg {
+    background: url('../img/orange1@3x.png') center center;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
 }
-#header h1 a {
-    padding: 10px;
-    margin: 10px;
-}
-#header h1 em {
-    font-size: 16px;
-}
-#header nav li {
-    display: inline;
-}
-#header nav li a {
-    padding: 10px 20px;
-    margin: 15px;
-    display: inline-block;
-    font-size: 16px;
-}
-#header .member {
-    padding: 20px;
-}
-#header .member a {
-    padding: 7px 20px 5px ;
-    border-radius: 50px;
-    transition: background 0.3s, color 0.3s;
-    background: #fff;
-}
-#header .member a:hover {
-    background: #fff;
-    color: #4d942c;
-}
-
-/* boardType */
-.boardType {
-}
-.boardType h3 {
-    font-size: 46px;
-    margin: 200px 0 83px 0;
-    text-align: center;
-    font-weight: 900;
-}
-.boardType p  {
-    display: inline-block;
-    margin-top: 83px;
-    font-size: 26px;
-    padding: 0 10px 0 10px;
-    margin: 0 5px 0 5px;
-    font-weight: 600;
-    color: #c5c5c5;
-}
-.boardType p.choice  {
-    margin-top: 83px;
-    font-size: 26px;
-    padding: 0 10px 0 10px;
-    margin: 0 5px 0 5px;
-    border-bottom: 2px solid #000;
-    color: #000;
-}
-.board {
-    margin-top: 30px;
-}
-fieldset {
-    border: 0;
-}
-.board-search {
-    display: flex;
-    top: 433px; right: 120px;
-    flex-direction: row-reverse;
+.bgBox {
+    width: 45%;
+    height: 340px;
     position: absolute;
-}
-.board-search .form-search {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    padding: 7px 20px;
-}
-.board-search .form-select {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    padding: 8px 20px;
-    background-color: transparent;
-}
-.board-search .form-btn {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    padding: 8px 20px;
-}
-.board-search .form-btn.black {
-    border: 1px solid #222;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 20px;
-}
-.board-table {
-}
-.board-table table {
-    width: 100%;
-}
-.board-table table .height {
-    height: 400px;
-    vertical-align: top;
-}
-.board-table table .left {
-    text-align: left;
-    padding-left: 20px;
-}
-.board-table table th {
-    background-color: #4d942c;
-    font-weight: bold;
-    font-size: 18px;
-    color: #fff;
-}
-.board-table table th,
-.board-table table td {
-    border-bottom: 1px solid #c4c4c4;
-    padding: 19px 0;
-    text-align: center;
-    font-size: 18px;
-    
-}
-.board-table .btn {
-    float: right;
-}
-.board-table .btn a {
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
     background: #000;
-    color: #fff;
-    padding: 10px 20px;
-    margin-top: 20px;
+}
+.bgBox p {
+    color: rgb(248, 226, 226);
+}
+
+
+.community {
+    width: 100%;
+    background: rgb(255, 247, 247);
+}
+.community .container {
+    width: 1200px;
+}
+.community .box_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 75px;
+}
+.community h2 {
+    color: #c9c9c9;
+    font-size: 55px;
+    text-align: center;
+    padding: 80px 0 40px 0;
+    color: #c77f5d;
+    font-weight: 300;
+}
+.community .cm_box .icon {
+    background: rgb(255, 224, 224);
     display: inline-block;
-}
-
-
-.board-page {
-    margin: 100px 0 200px 0;
-}
-.board-page ul {
-    display: flex;
-    justify-content: center;
-}
-.board-page li {}
-.board-page li a {
-    display: block;
-    border: 1px solid #eee;
-    padding: 5px 12px;
-    margin-right: -1px;
-    font-size: 18px;
-}
-.board-page li.active a {
-    background-color: #4d942c;
-    color: #fff;
-}
-.board-write {
-    padding: 50px 0 100px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
     position: relative;
 }
-.board-write label {
-    width: 100%;
-    display: block;
-    padding-bottom: 10px;
-}
-.board-write .title-text {
-    width: 100%;
-    display: block;
-    border: 1px solid #eee;
-    padding: 13px;
-    margin-bottom: 10px;
-    resize: none;
-}
-.board-write .board-btn {
-    background: #000;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 30px;
-    margin-right: 30px;
-}
-
-
-/* footer */
-footer {
-    height: 140px;
-    background: #F5F5F5;
-    margin-top: 200px;
-}
-
-
-.boardType .button {
-    display: inline-block;
+.community .cm_box .icon img {
     position: absolute;
-    left: 50%; 
-    transform: translate(-50%);
-    margin-top: 100px;
-}    
-.boardType .button .board-btn {
-    background: #4d942c;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
 }
 
-.input {
-    display: inline-block;
+.community .cm_box {
+    border: 2px solid rgb(235, 200, 200);
+    text-align: center;
+    padding: 50px;
+    background: #fff;
 }
-.input input {
-    border: 0;
-    text-align: left;
+
+.cm_box h3 {
+    font-size:30px;
+    color: #c77f5d;
+    margin: 5px 0 10px;
 }
-.input button {
-    border: 0;
-    background: #4d942c;
-    padding: 8px 10px;
-    border-radius: 5px;
-    outline: none;
-    color: #fff;
-    font-weight: 900;
+.cm_box p {
+    color: #555;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.cm_box button {
+    margin-top: 10px;
+    padding: 6px 20px;
+    background: #f3e6d6;
 }

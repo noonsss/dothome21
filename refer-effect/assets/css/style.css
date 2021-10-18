@@ -425,11 +425,11 @@ figcaption {
 
 #modal .modal-bg .modal-cont button {
   float: right;
-  border: 1px solid #000;
-  background: #000;
+  border: 1px solid #fff;
+  background: #fff;
   border-radius: 20px;
   color: #fff;
-  padding: 5px 10px;
+  padding: 10px 15px;
   cursor: pointer;
   margin-top: 10px;
 }
