@@ -1182,7 +1182,6 @@ table {
   bottom: 0;
   width: 100%;
   background: #E2DBDB;
-  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1202,7 +1201,7 @@ table {
 }
 
 #footer2 div h4 {
-  font-weight: 100;
+  font-weight: bold;
   text-transform: capitalize;
   padding: 6px;
 }

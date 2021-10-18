@@ -288,7 +288,6 @@
     left: 0; bottom: 0;
     width: 100%;
     background: #E2DBDB;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -300,7 +299,7 @@
         text-align: center;
 
         h4 {
-            font-weight: 100;
+            font-weight: bold;
             text-transform: capitalize;
             padding: 6px;
         }
