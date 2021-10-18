@@ -1348,7 +1348,7 @@ table {
     position: absolute;
     left: 10%;
     top: 25%;
-    font-size: 13vw;
+    font-size: 8vw;
   }
   #mainCont2 .main__cont div:last-child {
     color: transparent;
@@ -1359,7 +1359,7 @@ table {
     position: absolute;
     left: 10%;
     bottom: 20%;
-    font-size: 7vw;
+    font-size: 4vw;
     z-index: 10;
     color: #fff;
     text-align: left;
