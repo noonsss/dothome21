@@ -103,3 +103,91 @@
         }
     }
 }
+
+
+// #aboutCont
+#aboutCont {
+    background: #f0eeeb;
+    font-family: 'saol';
+    width: 100%;
+    
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+        
+        h1 {
+            font-size: 8vw;
+            text-transform: uppercase;
+            line-height: 1.02;
+            padding-top: 235px;
+        }
+        
+        .about1 {
+
+            .aboutImg1 {
+                width: 1200px;
+                height: 800px;
+                padding-top: 250px;
+            }
+            h3 {
+                margin-top: 60px;
+                font-size: 1.1vw;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 1.04vw;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+        .about2 {
+            margin-top: 308px;
+            display: flex;
+            justify-content: space-between;
+
+            .aboutImg2 {
+                flex: 0 0 50%;
+                width: 100%; 
+            }
+            .about2_text {
+                flex: 0 0 32%;
+                margin-left: 45px;
+
+                h3 {
+                    font-size: 1.1vw;
+                }
+                p {
+                    margin-top: 25px;
+                    font-size: 1.04vw;
+                    line-height: 1.5;
+                    text-align: justify;
+                }
+            }
+        }
+        .about3 {
+            margin-top: 368px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 420px;
+
+            .aboutImg3 {
+                flex: 0 0 60%;
+                width: 100%; 
+                margin-left: 55px;
+            }
+            .about3_text {
+                flex: 0 0 40%;
+                text-align: justify;
+
+                h3 {
+                    font-size: 1.1vw;
+                }
+                p {
+                    margin-top: 25px;
+                    font-size: 1.04vw;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

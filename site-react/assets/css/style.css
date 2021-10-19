@@ -1373,3 +1373,110 @@ table {
     width: 350px;
   }
 }
+
+#aboutCont {
+  background: #f0eeeb;
+  font-family: 'saol';
+  width: 100%;
+}
+
+#aboutCont .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#aboutCont .container h1 {
+  font-size: 8vw;
+  text-transform: uppercase;
+  line-height: 1.02;
+  padding-top: 235px;
+}
+
+#aboutCont .container .about1 .aboutImg1 {
+  width: 1200px;
+  height: 800px;
+  padding-top: 250px;
+}
+
+#aboutCont .container .about1 h3 {
+  margin-top: 60px;
+  font-size: 1.1vw;
+}
+
+#aboutCont .container .about1 p {
+  margin-top: 20px;
+  font-size: 1.04vw;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#aboutCont .container .about2 {
+  margin-top: 308px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#aboutCont .container .about2 .aboutImg2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  width: 100%;
+}
+
+#aboutCont .container .about2 .about2_text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+  margin-left: 45px;
+}
+
+#aboutCont .container .about2 .about2_text h3 {
+  font-size: 1.1vw;
+}
+
+#aboutCont .container .about2 .about2_text p {
+  margin-top: 25px;
+  font-size: 1.04vw;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#aboutCont .container .about3 {
+  margin-top: 368px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 420px;
+}
+
+#aboutCont .container .about3 .aboutImg3 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  width: 100%;
+  margin-left: 55px;
+}
+
+#aboutCont .container .about3 .about3_text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  text-align: justify;
+}
+
+#aboutCont .container .about3 .about3_text h3 {
+  font-size: 1.1vw;
+}
+
+#aboutCont .container .about3 .about3_text p {
+  margin-top: 25px;
+  font-size: 1.04vw;
+  line-height: 1.5;
+}
