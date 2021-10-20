@@ -1376,7 +1376,7 @@ table {
 
 #aboutCont {
   background: #f0eeeb;
-  font-family: 'saol';
+  font-family: "Chosunilbo_myungjo";
   width: 100%;
 }
 
@@ -1390,20 +1390,28 @@ table {
   text-transform: uppercase;
   line-height: 1.02;
   padding-top: 235px;
+  font-family: 'saol';
+}
+
+#aboutCont .container .about1 {
+  display: inline-block;
 }
 
 #aboutCont .container .about1 .aboutImg1 {
-  width: 1200px;
-  height: 800px;
+  width: 100%;
   padding-top: 250px;
 }
 
-#aboutCont .container .about1 h3 {
+#aboutCont .container .about1 .about1_txt {
+  width: 842px;
+}
+
+#aboutCont .container .about1 .about1_txt h3 {
   margin-top: 60px;
   font-size: 1.1vw;
 }
 
-#aboutCont .container .about1 p {
+#aboutCont .container .about1 .about1_txt p {
   margin-top: 20px;
   font-size: 1.04vw;
   line-height: 1.5;
@@ -1429,8 +1437,8 @@ table {
 
 #aboutCont .container .about2 .about2_text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 32%;
-          flex: 0 0 32%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   margin-left: 45px;
 }
 
@@ -1466,8 +1474,8 @@ table {
 
 #aboutCont .container .about3 .about3_text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+      -ms-flex: 0 0 37%;
+          flex: 0 0 37%;
   text-align: justify;
 }
 
@@ -1479,4 +1487,68 @@ table {
   margin-top: 25px;
   font-size: 1.04vw;
   line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  #aboutCont .container {
+    width: 100%;
+  }
+  #aboutCont .container h1 {
+    font-size: 14vw;
+    padding: 150px 0 0 50px;
+  }
+  #aboutCont .container .about1 .aboutImg1 {
+    width: 100%;
+    height: auto;
+  }
+  #aboutCont .container .about1 .about1_txt h3 {
+    margin: 60px 20px 0 20px;
+    font-size: 3vw;
+  }
+  #aboutCont .container .about1 .about1_txt p {
+    margin: 20px 20px 0 20px;
+    font-size: 2.5vw;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  #aboutCont .container .about2 {
+    margin-top: 200px;
+    display: inline-block;
+  }
+  #aboutCont .container .about2 .aboutImg2 {
+    width: 100%;
+  }
+  #aboutCont .container .about2 .about2_text {
+    margin: 0 auto;
+  }
+  #aboutCont .container .about2 .about2_text h3 {
+    margin: 60px 20px 0 20px;
+    font-size: 3vw;
+  }
+  #aboutCont .container .about2 .about2_text p {
+    margin: 20px 20px 0 20px;
+    font-size: 2.5vw;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  #aboutCont .container .about3 {
+    margin-top: 200px;
+    display: inline-block;
+  }
+  #aboutCont .container .about3 .aboutImg3 {
+    width: 100%;
+  }
+  #aboutCont .container .about3 .about3_text {
+    margin: 0 auto;
+  }
+  #aboutCont .container .about3 .about3_text h3 {
+    margin: 60px 20px 0 20px;
+    font-size: 3vw;
+  }
+  #aboutCont .container .about3 .about3_text p {
+    margin: 20px 20px 0 20px;
+    font-size: 2.5vw;
+    line-height: 1.5;
+    text-align: justify;
+  }
 }

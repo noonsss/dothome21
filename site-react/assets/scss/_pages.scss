@@ -108,7 +108,7 @@
 // #aboutCont
 #aboutCont {
     background: #f0eeeb;
-    font-family: 'saol';
+    font-family: $font-kor1;
     width: 100%;
     
     .container {
@@ -120,24 +120,29 @@
             text-transform: uppercase;
             line-height: 1.02;
             padding-top: 235px;
+            font-family: 'saol';
         }
         
         .about1 {
+            display: inline-block;
 
             .aboutImg1 {
-                width: 1200px;
-                height: 800px;
+                width: 100%;
                 padding-top: 250px;
             }
-            h3 {
-                margin-top: 60px;
-                font-size: 1.1vw;
-            }
-            p {
-                margin-top: 20px;
-                font-size: 1.04vw;
-                line-height: 1.5;
-                text-align: justify;
+            .about1_txt {
+                width: 842px;
+
+                h3 {
+                    margin-top: 60px;
+                    font-size: 1.1vw;
+                }
+                p {
+                    margin-top: 20px;
+                    font-size: 1.04vw;
+                    line-height: 1.5;
+                    text-align: justify;
+                }
             }
         }
         .about2 {
@@ -150,7 +155,7 @@
                 width: 100%; 
             }
             .about2_text {
-                flex: 0 0 32%;
+                flex: 0 0 25%;
                 margin-left: 45px;
 
                 h3 {
@@ -176,7 +181,7 @@
                 margin-left: 55px;
             }
             .about3_text {
-                flex: 0 0 40%;
+                flex: 0 0 37%;
                 text-align: justify;
 
                 h3 {
@@ -186,6 +191,84 @@
                     margin-top: 25px;
                     font-size: 1.04vw;
                     line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    #aboutCont {
+        
+        .container {
+            width: 100%;
+            
+            h1 {
+                font-size: 14vw;
+                padding: 150px 0 0 50px;
+            }
+            
+            .about1 {
+    
+                .aboutImg1 {
+                    width: 100%;
+                    height: auto;
+                }
+                .about1_txt{
+
+                    h3 {
+                        margin: 60px 20px 0 20px;
+                        font-size: 3vw;
+                    }
+                    p {
+                        margin: 20px 20px 0 20px;
+                        font-size: 2.5vw;
+                        line-height: 1.5;
+                        text-align: justify;
+                    }
+                }
+            }
+            .about2 {
+                margin-top: 200px;
+                display: inline-block;
+    
+                .aboutImg2 {
+                    width: 100%; 
+                }
+                .about2_text {
+                    margin: 0 auto;
+    
+                    h3 {
+                        margin: 60px 20px 0 20px;
+                        font-size: 3vw;
+                    }
+                    p {
+                        margin: 20px 20px 0 20px;
+                        font-size: 2.5vw;
+                        line-height: 1.5;
+                        text-align: justify;
+                    }
+                }
+            }
+            .about3 {
+                margin-top: 200px;
+                display: inline-block;
+    
+                .aboutImg3 {
+                    width: 100%; 
+                }
+                .about3_text {
+                    margin: 0 auto;
+    
+                    h3 {
+                        margin: 60px 20px 0 20px;
+                        font-size: 3vw;
+                    }
+                    p {
+                        margin: 20px 20px 0 20px;
+                        font-size: 2.5vw;
+                        line-height: 1.5;
+                        text-align: justify;
+                    }
                 }
             }
         }
