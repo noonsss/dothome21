@@ -303,7 +303,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        const $card = $(".card"),
+        const $cardWrap = $(".cardWrap"),
+              $card = $(".card"),
               $btnSound = $(".btn-sound"),
               $themeSong = $("#theme-song")[0],
               $success = $(".success"),
@@ -443,6 +444,14 @@
             //     var remove = num.splice(4,1);
             //     var remove = num.splice(6,1);
             // )
+
+            //splice를 통해 하나씩 선택 해 $c 넣어주면 댐
+            let cards = $cardWrap.children();
+            for(let i=0; i<=cards.length; i++){
+                $cardWrap.append( cards.splice(Math.floor(Math.random()*cards.length), 1)[0] )
+            }
+            console.log(cards);
+
             $card.each(function(index){
                 setTimeout(() => {
                     $(this).addClass(selectedClass)
