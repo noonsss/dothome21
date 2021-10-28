@@ -434,11 +434,11 @@
                 data-25000 = "top:150%; height: 0vh;"
                 data-27000 = "top:50%; height: 100vh;"
                 data-40000 = "top:50%; height: 100vh;"
-                data-41000 = "top:-50%; height: 100vh;"
+                data-41000 = "top:-300%; height: 100vh;"
                 >
                 <span class="s1"
-                    data-27000 = "width: 1vw"
-                    data-27300 = "width: 5vw"
+                    data-27000 = "width: 1vw;"
+                    data-27300 = "width: 5vw;"
                     data-31600 = "width: 5vw; height: 100vh;"
                     data-32600 = "width: 5vw; height: 16vh;"
                 ><em
@@ -511,7 +511,7 @@
                     data-38500 = "transform: translate3d(-50%, -80%, 0px); opacity:1"
                     data-39500 = "transform: translate3d(-50%, -80%, 1000px); opacity:0"
                 ></iframe>
-                <iframe class="i3" src="../mouseEffect/jqueryME04.html" alt="mouse"
+                <iframe class="i3" src="../gameEffect/cardGame.html" alt="mouse"
                     data-36000 = "transform: translate3d(-30%, -30%, -10000px); opacity:0"
                     data-37000 = "transform: translate3d(-30%, -30%, 0px); opacity:1"
                     data-38000 = "transform: translate3d(-30%, -30%, 0px); opacity:1"
@@ -573,6 +573,16 @@
                 position: absolute;
                 left: 0; top: 0;
             }
+            .s4Text5 iframe {
+                width: 70vw;
+                height: 70vh;
+                transform-style: preserve-3d;
+                transform: translate3d(-50%, -50%, 0);
+            }
+            .s4Text5 .i3{
+                position: absolute;
+                left: 0; top: 0;
+            }
         </style>
         <section id="section4">
             <div class="s4Text1"
@@ -608,9 +618,9 @@
                 ></div>
             </div>
             <div class="s4Text2 fixed"
-                data-42000="font-size: 0vw;"
+                data-41000="font-size: 0vw;"
+                data-41500="font-size: 10vw; top: 50%"
                 data-42500="font-size: 10vw; top: 50%"
-                data-43500="font-size: 10vw; top: 50%"
                 data-44500="font-size: 10vw; top: -100%"
             >Animation</div>
             <div class="s4Text3 fixed"
@@ -628,6 +638,14 @@
                 data-48000="top: -100%;"
             >
             <iframe class="i2" src="codepen2.html" frameborder="0"></iframe>
+            </div>
+            <div class="s4Text5 fixed"
+                data-47500="top: 200%;"
+                data-48500="top: 50%;"
+                data-49500="top: 50%;"
+                data-50000="top: -100%;"
+            >
+            <iframe class="i3" src="codepen3.html" frameborder="0"></iframe>
             </div>
         </section><!-- section4 -->
         <section id="section5">
