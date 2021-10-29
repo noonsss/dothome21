@@ -207,7 +207,8 @@
         const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당(저장)
         const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
 
-        tabBtn.click(function(){
+        tabBtn.click(function(e){
+            e.preventDefault();
             let target = $(this);
             tabBtn.removeClass("active");
             target.addClass("active");
