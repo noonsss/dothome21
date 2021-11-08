@@ -324,6 +324,45 @@
             height: 5px;
             background: #C2EA8B;
         }
+        .question_result {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: #ccc;
+            padding: 30px;
+            font-size: 25px;
+            text-align: center;
+            white-space: nowrap;
+            display: none;
+        }
+        .question_result.show {
+            display: block;
+        }
+        .question_result .score {
+            padding-top: 30px;
+            font-size: 20px;
+        }
+        .question_result .score span {
+            color: rgb(187, 48, 48);
+        }
+        .question_result .buttons {
+            font-size: 20px;
+            padding-top: 40px;
+            font-family: 'DungGeunMo';
+        }
+        .question_result .buttons .restart {
+            border: 5px ridge #dddddd;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .question_result .buttons .quit {
+            border: 5px ridge #ddd;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
 
 
         @media (max-width:1200px){
@@ -776,11 +815,20 @@
                     <!-- <span>1</span> / <span class="to">5</span> -->
                 </div>
                 <button class="question_answer_next">다음 문제</button>
-                <!-- <div class="question_answer_view"></div>
-                <div class="question_answer_ex"></div> -->
+                <div class="question_answer_view"></div>
+                <div class="question_answer_ex"></div>
             </div>
         </div>
         <div class="question_start active"><span>start</span></div>
+        <div class="question_result">
+            <div>퀴즈가 끝났습니다. 수고하셨습니다.</div>
+            <div class="score">
+                <!-- 당신은 <span>!</span>문제 중에 <span>!</span>개를 맞췄습니다! -->
+            </div>
+            <div class="buttons">
+                <button class="restart">다시 도전하기</button>
+            </div>
+        </div>
     </div>
 
 <!-- script -->
@@ -834,11 +882,17 @@
     const questionLength = quizWrap.querySelector(".question_answer_count");
     const questionTimer = quizWrap.querySelector(".question_timer_sec");
     const questionTimerLine = quizWrap.querySelector(".question_timer_line");
+    const questionResult = quizWrap.querySelector(".question_result");
+    const questionResultScore = quizWrap.querySelector(".question_result .score");
+    const questionResultRestart = quizWrap.querySelector(".question_result .restart");
+    const questionAnswerView = quizWrap.querySelector(".question_answer_view");
+    const questionAnswerEx = quizWrap.querySelector(".question_answer_ex");
 
     let quizCount = 0;
     let quizNum = 1;
     let counter;
     let counterLine;
+    let userScore = 0;
 
     // 시작 버튼 클릭
     questionStartBtn.onclick = () => {
@@ -849,6 +903,20 @@
         startTimerLine(0);
     };
     // showQuestion(0);
+
+    //다시 시작 버튼 클릭
+    questionResultRestart.onclick = () => {
+        questionResult.classList.remove("show");
+        quizCount = 0;
+        quizNum = 1;
+        userScore = 0;
+
+        showQuestion(0);
+        questionCount(1);
+        startTimer(15);
+        startTimerLine(0);
+        
+    }
 
     // 문제 출력하기
     function showQuestion(index){
@@ -883,6 +951,13 @@
         for(let i=0; i<choice.length; i++){
             choice[i].setAttribute("onclick", "choiceSelected(this)")
         }
+
+        questionAnswerView.innerHTML = quizInfo[0].quizAnswer;
+        questionAnswerEx.innerHTML = quizInfo[0].quizEx;
+        
+        //정답, 설명 감추기
+        questionAnswerView.style.display = "none";
+        questionAnswerEx.style.display = "none";
     }
 
     //정답 확인하기
@@ -892,19 +967,28 @@
         let userAnswer = answer.textContent.trim();
         let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
         let allChoice = questionSelects.children.length;
+        let iconYes = `<i class="fa fa-check" aria-hidden="true"></i>`;
+        let iconNo = `<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>`;
 
         if(userAnswer == currentAnswer){
             //클래스 추가 correct
-            answer.parentNode.classList.add("correct")
+            answer.parentNode.classList.add("correct");
+            answer.insertAdjacentHTML("beforeend", iconYes);
+            questionAnswerView.style.display = "block";
+            
+            userScore++;
             
         }else{
             //클래스 추가 incorrect
-            answer.parentNode.classList.add("incorrect")
+            answer.parentNode.classList.add("incorrect");
+            answer.insertAdjacentHTML("beforeend", iconNo);
+            questionAnswerEx.style.display = "block";
 
             //정답 알려주기
             for(let i=0; i<allChoice; i++){
                 if(questionSelects.children[i].querySelector(".choice").textContent == currentAnswer){
                     questionSelects.children[i].classList.add("correct");
+                    questionSelects.children[i].querySelector(".choice").insertAdjacentHTML("beforeend", iconYes); 
                 }
             }
         }
@@ -913,14 +997,31 @@
         for(let i=0; i<allChoice; i++){
             questionSelects.children[i].classList.add("disabled");
         }
+
+        //시간 정지 + 버튼
+        clearInterval(counter);
+        clearInterval(counterLine);
+        questionNext.classList.add("show");
     }
 
     //다음 문제 클릭할 때
     questionNext.onclick = () => {
-        quizCount++;
-        quizNum++;
-        showQuestion(quizCount);
-        questionCount(quizNum);
+        if(quizCount < quizInfo.length -1 ){
+            quizCount++;
+            quizNum++;
+            showQuestion(quizCount);
+            questionCount(quizNum);
+            
+            questionNext.classList.remove("show");
+            clearInterval(counter);
+            clearInterval(counterLine);
+            startTimer(15);
+            startTimerLine(0);
+        }else{
+            clearInterval(counter);
+            clearInterval(counterLine);
+            showResult();
+        }
     }
 
     //문제 카운팅
@@ -973,6 +1074,14 @@
                 clearInterval(counterLine);
             }
         }, 10);
+    }
+
+    //결과 보여주기
+    function showResult(){
+        questionResult.classList.add("show");
+
+        const scoreTag = `당신은 <span>${quizInfo.length}</span>문제 중에 <span>${userScore}</span>개를 맞췄습니다!`
+        questionResultScore.innerHTML = scoreTag;
     }
 
 </script>
