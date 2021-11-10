@@ -220,7 +220,8 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family: 'Gaegu', cursive; font-size: 40px;
+	font-family: 'Noto Serif KR', serif;
+	font-size: 25px;
 }
 #contents_tit p a {
 	color:#4b3b78; 
@@ -290,7 +291,6 @@
 	display: block;
 	border-bottom: 3px solid #8432c4;
 	margin-right: 20px;
-	
 }
 .gridly .photoshop a {
 	color: #8ccc3d;
