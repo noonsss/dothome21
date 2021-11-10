@@ -201,28 +201,28 @@ figcaption {
 }
 
 #main.menu {
-  background: -webkit-gradient(linear, left top, left bottom, from(#33a38d), to(#ceaf34));
-  background: linear-gradient(to bottom, #33a38d 0%, #ceaf34 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#17692f), to(#fff695));
+  background: linear-gradient(to bottom, #17692f 0%, #fff695 100%);
 }
 
 #main.mouse {
-  background: -webkit-gradient(linear, left top, left bottom, from(#c76da6), to(#d6c053));
-  background: linear-gradient(to bottom, #c76da6 0%, #d6c053 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f26), to(#c886ff));
+  background: linear-gradient(to bottom, #ff8f26 0%, #c886ff 100%);
 }
 
 #main.slider {
-  background: -webkit-gradient(linear, left top, left bottom, from(#A8BFFF), to(#884D80));
-  background: linear-gradient(to bottom, #A8BFFF 0%, #884D80 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#004cff), to(#faffb6));
+  background: linear-gradient(to bottom, #004cff 0%, #faffb6 100%);
 }
 
 #main.parallax {
-  background: -webkit-gradient(linear, left top, left bottom, from(#78dad5), to(#dd97ad));
-  background: linear-gradient(to bottom, #78dad5 0%, #dd97ad 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b73cff), to(#85cc91));
+  background: linear-gradient(to bottom, #b73cff 0%, #85cc91 100%);
 }
 
 #main.game {
-  background: -webkit-gradient(linear, left top, left bottom, from(#718cca), to(#82af97));
-  background: linear-gradient(to bottom, #718cca 0%, #82af97 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdfc2), to(#eb4c4c));
+  background: linear-gradient(to bottom, #ffdfc2 0%, #eb4c4c 100%);
 }
 
 #contents h1 {
@@ -241,6 +241,31 @@ figcaption {
   -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a600ff), to(#1000a0));
   background-image: linear-gradient(to bottom, #a600ff, #1000a0);
+}
+
+#contents h1.menu {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#17692f), to(#006da0));
+  background-image: linear-gradient(to bottom, #17692f, #006da0);
+}
+
+#contents h1.game {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f700ff), to(#ff8800));
+  background-image: linear-gradient(to bottom, #f700ff, #ff8800);
+}
+
+#contents h1.mouse {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6f00ff), to(#330867));
+  background-image: linear-gradient(to bottom, #6f00ff, #330867);
+}
+
+#contents h1.slider {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#301769), to(#0066ff));
+  background-image: linear-gradient(to bottom, #301769, #0066ff);
+}
+
+#contents h1.parallax {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1d5f31), to(#5800a0));
+  background-image: linear-gradient(to bottom, #1d5f31, #5800a0);
 }
 
 #nav {
