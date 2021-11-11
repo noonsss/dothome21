@@ -68,11 +68,11 @@ a {
     flex-grow: 0;
     border: solid 80px #9ab7e0;
     border-radius: 50%;
-    animation: ani1 8.2s infinite alternate cubic-bezier( 0.36, 0.45, 0.63, 0.53);
+    animation: ani1 4.2s infinite alternate cubic-bezier( 0.36, 0.45, 0.63, 0.53);
 }
 @keyframes ani1 {
     0% {transform: translate(0, 0);}
-    100% {transform: translate(2px, 30px);}
+    100% {transform: translateY(15px);}
 }
 /* @keyframes ani2 {
     0% {transform: translate(0, 0);}
