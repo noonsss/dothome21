@@ -22,7 +22,10 @@ a {
     z-index: 10;
 }
 .title_desc {
-    display: inline-block;
+    position: absolute;
+    left: 0; top: 40px;
+    z-index: 100;
+    background: none;
     font-family: Montserrat;
     font-size: 60px;
     font-weight: 300;
@@ -38,9 +41,12 @@ a {
 }
 
 .title_text {
-    display: block;
+    position: absolute;
+    left: 0; top: 360px;
+    z-index: 100;
+    background: none;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     text-align: left;
     color: #fff;
@@ -48,10 +54,12 @@ a {
     margin: 30px 0 0 30px;
 }
 .main_btn {
+    position: absolute;
+    left: 0; top: 450px;
+    z-index: 100;
     padding: 12px 25px 12px 25px;
-    display: inline-block;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     border: 1px solid #fff;
     background-color: #fff;
@@ -63,18 +71,24 @@ a {
     z-index: 1;
     position: absolute;
     left: 0; top: 0;
-    width: 190px;
-    height: 190px;
+    width: 250px;
+    height: 250px;
     flex-grow: 0;
-    border: solid 80px #9ab7e0;
+    border: solid 120px #9ab7e0;
+    background: #011842;
     border-radius: 50%;
-    animation: ani1 4.2s infinite alternate cubic-bezier( 0.36, 0.45, 0.63, 0.53);
+    animation: ani1 8.2s infinite alternate cubic-bezier( 0.36, 0.45, 0.63, 0.53);
+}
+.circle2 {
+    
 }
 @keyframes ani1 {
     0% {transform: translate(0, 0);}
-    100% {transform: translateY(15px);}
+    100% {transform: translate(-85px, -85px);}
 }
-/* @keyframes ani2 {
+/* 
+transform: translate(30px, 30px);}
+@keyframes ani2 {
     0% {transform: translate(0, 0);}
     100% {transform: translate(0, 10px);}
 } */

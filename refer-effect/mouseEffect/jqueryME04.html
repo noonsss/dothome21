@@ -321,50 +321,51 @@
     modal();
 
     $(window).mousemove(function(e){
-        let pageX = e.pageX;
-        let pageY = e.pageY;
+            let pageX = e.pageX;
+            let pageY = e.pageY;
 
-        //기준점 가운데 변경
-        let standardX = $(window).width()/2 - pageX;
-        let standardY = $(window).height()/2 - pageY;
+            //기준점을 가운데로 변경
+            let standardX = $(window).width()/2 - pageX;
+            let standardY = $(window).height()/2 - pageY;
 
-        //최대, 최소 값 설정
-        // if(standardX >= 50) standardX = 50;
-        // if(standardY >= -50) standardY = 50;
-        // if(standardY >= 50 || standardY <= -50) standardY = 50;
-        // if(standardY >= 50 || standardY <= -50) standardY = 50;
+            //최댓값, 최솟값 설정
+            // if (standardX >= 50) standardX = 50;
+            // if (standardX <= -50) standardX = -50;
+            // if (standardY >= 50) standardY = 50;
+            // if (standardY <= -50) standardY = -50;
 
-        //최소값 -50, 최대값 50 설정
-        let maxX = Math.max(-100, Math.min(100, standardX)); //스탠다드 x값이 아무리 늘어나도 최대값 지정 가능
-        let maxY = Math.max(-100, Math.min(100, standardY));  //최소값 -10 최대값 50
+            //최솟값은 -50, 최댓값은 50 설정
+            //600이 나온다고 치면 최솟값은 50 
+            let maxX = Math.max(-100, Math.min(100, standardX));
+            let maxY = Math.max(-100, Math.min(100, standardY));
 
-        //각도를 줄이는 설정
-        let angleX = maxX * 0.12;
-        let angleY = maxY * 0.12;
+            //각도를 줄이는 설정
+            let angleX = maxX * 0.12;
+            let angleY = maxY * 0.12;
 
-        //부드럽게 설정
-        let softX = 0;
-        let softY = 0;
-        
-        softX += (angleX - softX) * 0.7;
-        softY += (angleY - softY) * 0.7;
+            //부드럽게 설정
+            let softX = 0;
+            let softY = 0;
 
-        //이미지
-        $(".moveImage").css({"transform" : "translate(-50%, -50%) perspective(600px) rotateX("+ softY+"deg) rotateY("+ -softX+"deg)"});
+            softX += (angleX - softX) * 0.7;
+            softY += (angleY - softY) * 0.7;
 
-        //커서
-        gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+            //이미지
+            $(".moveImage").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+softY+"deg) rotateY("+ -softX+"deg)"});
 
-        //출력
-        $(".pageX").text(pageX);
-        $(".pageY").text(pageY);
-        $(".standardX").text(standardX);
-        $(".standardY").text(standardY);
-        $(".maxX").text(maxX);
-        $(".maxY").text(maxY);
-        $(".angleX").text(parseInt(angleX));
-        $(".angleY").text(parseInt(angleY));
-    })
+            //커서
+            gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+            //출력
+            $(".pageX").text(pageX);
+            $(".pageY").text(pageY);
+            $(".standardX").text(standardX);
+            $(".standardY").text(standardY);
+            $(".maxX").text(maxX);
+            $(".maxY").text(maxY);
+            $(".angleX").text(parseInt(angleX));
+            $(".angleY").text(parseInt(angleY));
+        })
 
 </script>
 </body>

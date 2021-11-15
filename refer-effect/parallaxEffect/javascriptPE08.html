@@ -570,7 +570,7 @@ window.addEventListener("scroll", scrollReveal)
             reveal.forEach(el=>{
                 let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight; //스크롤값 + 화면높이값 = 더 빨리 나타남
                 let revealData = el.dataset.delay;
-                console.log(revealData)
+                // console.log(revealData)
                 
                 
                 if(scrollTop >= el.parentElement.offsetTop){
