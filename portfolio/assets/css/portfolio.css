@@ -20,6 +20,7 @@ a {
 
 .main_title {
     z-index: 10;
+    position: relative;
 }
 .title_desc {
     position: absolute;
@@ -35,10 +36,21 @@ a {
     letter-spacing: 2.4px;
     margin: 260px 0 0 30px;
 }
+.title_desc.list {
+    text-transform: uppercase;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
   
 .title_desc em {
     font-weight: bold;
     background: none;
+}
+.title_desc.list em {
+    font-size: 60px;
 }
 
 .title_text {
@@ -102,6 +114,24 @@ a {
     background: #011842;
     border-radius: 50%;
     animation: ani3 22.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+}
+.cross {
+    z-index: 1;
+    position: absolute;
+    left: 0; bottom: -100px;
+    background: red;
+    height: 100px;
+    position: relative;
+    width: 20px;
+}
+.cross:after {
+    background: red;
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
 }
 @keyframes ani1 {
     0% {transform: translate(-285px, -285px);}
