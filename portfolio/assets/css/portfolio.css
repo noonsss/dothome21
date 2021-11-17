@@ -17,26 +17,23 @@ a {
 
 
 .main_title {
-    z-index: 10;
     position: relative;
 }
 .title_desc {
     position: absolute;
-    left: 0%; top: 15%;
+    left: 0; top: 0;
     z-index: 100;
     background: none;
     font-family: Montserrat;
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-weight: 300;
-    text-align: left;
     color: #fff;
     white-space: nowrap;
-    margin: 260px 0 0 30px;
-    
+    margin-top: 20%;
 }
 .title_desc.list {
     text-transform: uppercase;
-    left: 50%; top: 50%;
+    left: 0%; top: 0%;
     transform: translate(-50%, -50%);
     justify-content: center;
     text-align: center;
@@ -117,11 +114,10 @@ a {
 .cross {
     z-index: 1;
     position: absolute;
-    right: -1100px;
+    right: 500px;
     top: 30px;
     background: #005083;
     height: 400px;
-    position: relative;
     width: 110px;
     animation: ani4 35.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
     box-shadow:
