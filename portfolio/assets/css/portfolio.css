@@ -17,10 +17,11 @@ a {
 
 .main_title {
     position: relative;
+    height: 100vh;
 }
 .title_desc {
     position: absolute;
-    left: 0; top: 0;
+    left: 0; top: 40%;
     z-index: 100;
     background: none;
     font-family: Montserrat;
@@ -28,7 +29,6 @@ a {
     font-weight: 300;
     color: #fff;
     white-space: nowrap;
-    margin-top: 25%;
 }
 .title_desc.list {
     text-transform: uppercase;
@@ -36,7 +36,7 @@ a {
     transform: translate(-50%, -50%);
     justify-content: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 4.2vw;
 }
   
 .title_desc em {
@@ -44,7 +44,7 @@ a {
     background: none;
 }
 .title_desc.list em {
-    font-size: 60px;
+    font-size: 5vw;
 }
 
 .title_text {
@@ -58,7 +58,7 @@ a {
     text-align: left;
     color: #fff;
     white-space: nowrap;
-    margin-top: 3%;
+    margin-top: 7vh;
 }
 .main_btn {
     position: absolute;
