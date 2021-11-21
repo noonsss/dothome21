@@ -32,7 +32,7 @@ a {
 }
 .title_desc.list {
     text-transform: uppercase;
-    left: 0%; top: 0%;
+    left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     text-align: center;
@@ -60,11 +60,24 @@ a {
     white-space: nowrap;
     margin-top: 7vh;
 }
-.main_btn {
+/* .main_btn {
     position: absolute;
     left: 0; top: 450px;
     z-index: 100;
+    text-transform: uppercase;
+    font-size: 0.6vw;
+    font-weight: 600;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-top: 11%;
+} */
+.main_btn a {
     padding: 12px 25px 12px 25px;
+    position: absolute;
+    left: 0;
+    top: 450px;
+    z-index: 100;
     text-transform: uppercase;
     font-size: 0.6vw;
     font-weight: 600;
@@ -310,7 +323,7 @@ a {
     rgba(1, 24, 65, 1) 187px 187px,
     rgba(1, 24, 65, 1) 188px 188px,
     rgba(1, 24, 65, 1) 189px 189px,
-    rgba(1, 24, 65, 1) 190px 190px;
+    rgba(1, 24, 65, 1) 190px 190px,
 
 }
 .cross:after {
