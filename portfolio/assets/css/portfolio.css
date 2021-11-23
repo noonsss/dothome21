@@ -30,21 +30,9 @@ a {
     color: #fff;
     white-space: nowrap;
 }
-.title_desc.list {
-    text-transform: uppercase;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    text-align: center;
-    font-size: 4.2vw;
-}
-  
 .title_desc em {
     font-weight: bold;
     background: none;
-}
-.title_desc.list em {
-    font-size: 5vw;
 }
 
 .title_text {
@@ -365,3 +353,127 @@ transform: translate(30px, 30px);}
 #background img#bg_cloud2 {
     animation:ani2 1s infinite alternate cubic-bezier( 0.36, 0.45, 0.63, 0.53);  
 } */
+
+
+.page_title {
+    position: relative;
+    height: 100vh;
+}
+
+.title_desc.list {
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5vw;
+    line-height: 1;
+}
+
+.title_desc.list em {
+    font-size: 5vw;
+}
+.boxWrap {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.box1 {
+    cursor: pointer;
+}
+.box1 .WEBSITE_WORK {
+    position: absolute;
+    top: 70%;
+    left: -120%;
+    transform: translate(-150%, -50%);
+    width: 45%;
+    border: 45px solid #01BBF0;
+}
+.box1 .WEBSITE_WORK::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+/* .box1 .WEBSITE_WORK a {
+    cursor: pointer;
+} */
+.box1 .box1span {
+    font-size: 1.3vw;
+    color: #667A91;
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    top: 120%;
+    left: -266%;
+    background: transparent;
+}
+.box2 {
+    cursor: pointer;
+}
+.box2 .SCRIPT {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background: #1DB593;
+}
+.box2 .box2span {
+    position: absolute;
+    top: 190%;
+    left: -70%;
+    color: #667A91;
+    font-size: 1.3vw;
+    background: transparent;
+}
+.box3 {
+    cursor: pointer;
+}
+.box3 .ANIMATION {
+    position: absolute;
+    top: 100%;
+    left: 170%;
+    background: #DFE8F5;
+    height: 170px;
+    width: 45px;
+}
+.box3 .ANIMATION::after {
+    background: #DFE8F5;
+    content: "";
+    height: 45px;
+    width: 170px;
+    position: absolute;
+    left: -135%;
+    top: 35%;
+}
+.box3 .box3span {
+    position: absolute;
+    top: 192%;
+    left: 150%;
+    color: #667A91;
+    font-size: 1.3vw;
+    background: transparent;
+}
+.box4 {
+    cursor: pointer;
+}
+.box4 .ABOUT {
+    position: relative;
+    top: 25%;
+    left: 270%;
+    width: 75px;
+    height: 75px;
+    border: 45px solid #005083;
+    border-radius: 50%;
+}
+.box4 .box4span {
+    top: 31%;
+    left: 303%;
+    color: #667A91;
+    font-size: 1.3vw;
+    position: relative;
+}

@@ -39,7 +39,6 @@ a {
 #nav {
 }
 #nav .title:hover {
-    display: block;
 }
 #nav .sub {
     display: none;
@@ -58,16 +57,30 @@ a {
 
 /* slider */
 .slider-wrap {
+    display: flex;
     position: relative;
+    height: 100vh;
 }
-.slider-img {}
-.slider-inner .slider {
-    height: 650px;
+.slider-img img {
+    width: 1440px;
 }
-.slider-inner .slider img {
+.slider-img {
     width: 100%;
     height: 650px;
+    overflow: hidden;
 }
+.slider-inner {
+    overflow: hidden;
+    position: relative;
+    width: 7200px;
+    height: 650px;
+}
+.slider-inner .slider {
+    float: left;
+    height: 100vh;
+    width: 100%;
+}
+
 .slider-text {
     position: absolute;
     left: 130px;
@@ -81,6 +94,26 @@ a {
 }
 .slider-text span {
     font-size: 21px;
+}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    font-size: 60px;
+    color: #fff;
+}
+.slider-btn a:hover {
+    cursor: pointer;
+}
+
+.slider-btn .prev {
+    left: 20px;
+}
+
+.slider-btn .next {
+    right: 20px;
 }
 
 /* cont1 */
@@ -277,6 +310,16 @@ a {
 #footer .line {
     border-bottom: 1px solid #3F5773;
 }
+#footer .footH select {
+    padding: 0px 5px;
+    background: transparent;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: lighter;
+}
 
 #footer .footH ul {
     padding: 25px 0 25px 0;
@@ -301,10 +344,12 @@ a {
     padding: 10px;
     background-color: transparent;
     border: 1px solid #aec1cf;
+    
 }
 #footer .footH a::after {
     content: '▴';
     margin-left: 30px;
+    
 }
 #footer .footB {
     width: 1100px;
