@@ -371,31 +371,30 @@ transform: translate(30px, 30px);}
     text-transform: uppercase;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 40%;
     transform: translate(-50%, -50%);
     justify-content: center;
     text-align: center;
     font-size: 2.5vw;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .title_desc.list em {
     font-size: 5vw;
 }
 .boxWrap {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+    position: relative;
+    height: 100vh;
 }
 .box1 {
     cursor: pointer;
-}
-.box1 .WEBSITE_WORK {
     position: absolute;
-    top: 70%;
-    left: -120%;
-    transform: translate(-150%, -50%);
+    top: 40%;
+    left: 0;
+    text-align: center;
+}
+
+.box1 .WEBSITE_WORK {
     width: 45%;
     border: 45px solid #01BBF0;
 }
@@ -408,79 +407,89 @@ transform: translate(30px, 30px);}
     cursor: pointer;
 } */
 .box1 .box1span {
-    font-size: 1.3vw;
-    color: #667A91;
     display: inline-block;
+    padding-top: 5%;
+    font-size: 1.3vw;
     white-space: nowrap;
-    position: absolute;
-    top: 120%;
-    left: -266%;
     background: transparent;
+    color: #667A91;
+    transition: all 0.5s;
+}
+.boxWrap .box1span:hover {
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.box1 .box1shadow {
+
 }
 .box2 {
     cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 27%;
+    text-align: center;
 }
 .box2 .SCRIPT {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    width: 165px;
-    height: 165px;
+    width: 11vw;
+    height: 11vw;
     border-radius: 50%;
     background: #1DB593;
 }
 .box2 .box2span {
-    position: absolute;
-    top: 190%;
-    left: -70%;
+    display: inline-block;
+    padding-top: 5%;
     color: #667A91;
     font-size: 1.3vw;
     background: transparent;
 }
 .box3 {
     cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 65%;
 }
 .box3 .ANIMATION {
-    position: absolute;
-    top: 100%;
-    left: 170%;
     background: #DFE8F5;
-    height: 170px;
-    width: 45px;
+    height: 11vw;
+    width: 3.1vw;
+    position: relative;
 }
 .box3 .ANIMATION::after {
     background: #DFE8F5;
     content: "";
-    height: 45px;
-    width: 170px;
+    height: 3.1vw;
+    width: 11vw;
     position: absolute;
-    left: -135%;
+    left: -125%;
     top: 35%;
 }
 .box3 .box3span {
-    position: absolute;
-    top: 192%;
-    left: 150%;
     color: #667A91;
     font-size: 1.3vw;
     background: transparent;
+    display: inline-block;
+    padding-top: 5%;
+    position: absolute;
+    left: -65%;
 }
 .box4 {
     cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    text-align: center;
 }
 .box4 .ABOUT {
-    position: relative;
-    top: 25%;
-    left: 270%;
-    width: 75px;
-    height: 75px;
+
+    width: 5vw;
+    height: 5vw;
     border: 45px solid #005083;
     border-radius: 50%;
 }
 .box4 .box4span {
-    top: 31%;
-    left: 303%;
+    display: inline-block;
+    padding-top: 5%;
     color: #667A91;
     font-size: 1.3vw;
-    position: relative;
 }

@@ -19,7 +19,7 @@
         * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Aldrich', sans-serif;}
         a {text-decoration: none;}
         li {list-style: none;}
-        body {height: 10000px;}
+        body {height: 10000px; background: #002850;}
         iframe {border: 0;}
 
         .scroll {
@@ -45,20 +45,13 @@
             z-index: 10000;
             font-family: 'Montserrat', sans-serif;
         }
-        #contents {}
+        #contents {
+        }
         #contents > div {
             position: relative;
         }
         #section1 {
-            background-color: #4ab9ef;
-            background-repeat: no-repeat;
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            width: 100vw;
-            height: 100vh;
         }
-
         img {
             width: 100%;
             vertical-align: top;
@@ -72,57 +65,44 @@
         .s1Text1 {
             perspective: 500px;
         }
-        /* .s1Text1 iframe {
-            width: 60vw;
-            height: 60vh;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-        } */
-        /* .s1Text1 .il-text {
-            width: 60vw;
-            height: 60vh;
-            transform-style: preserve-3d;
-            transform: translate3d(0, 0, 0);
-        } */
         .s1Text1 .i1 {
-            display: block;
-            left: 100%; top: 0;
-            transform-style: preserve-3d;
+            position: absolute;
+            left: 0; top: 0;
             font-family: Montserrat;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
             color: #fff;
             white-space: nowrap;
-            position: relative;
         }
         .s1Text1 .i2 {
             position: absolute;
-            left: 145%; top: 210%;
-            transform-style: preserve-3d;
+            left: 0; top: 0;
             color: #4ab9ef;
             font-size: 6vw;
             text-transform: uppercase;
             white-space: nowrap;
-
         }
         .s1Text1 .i3 {
-            display: block;
+            position: absolute;
             left: 0; top: 0;
-            transform-style: preserve-3d;
             font-family: Montserrat;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
             color: #fff;
             white-space: nowrap;
-            position: relative;
+            text-align: center;
         }
         .s1Text1 .i4 {
             position: absolute;
             left: 0; top: 0;
-            transform-style: preserve-3d;
-            color: #4ab9ef;
+            color: #fff;
             font-size: 6vw;
             text-transform: uppercase;
             white-space: nowrap;
-
+        }
+        .s1Text1 .i5 {
+            position: absolute;
+            left: 0; top: 0;
+            width: 830px;
+            height: 610px;
         }
 
     </style>
@@ -135,25 +115,32 @@
         <section id="section1"
             <div class="s1Text1 fixed">
                 <div class="i1"
-                    data-0 = "transform: translate3d(-100%, -180%, 0px); opacity:1"
-                    data-1 = "transform: translate3d(-100%, -180%, 0px); opacity:1"
-                    data-500 = "transform: translate3d(-100%, -15%, 1000px); opacity:0"
+                    data-0 = "transform: translate3d(-50%, -280%, 0px); opacity:1"
+                    data-50 = "transform: translate3d(-50%, -280%, 0px); opacity:1"
+                    data-500 = "transform: translate3d(-50%, -280%, 1000px); opacity:0"
                 >You’re in a website work mood today</div>
                 <div class="i2"
-                    data-0 = "transform: translate3d(-100%, -80%, 0px); opacity:1"
-                    data-1 = "transform: translate3d(-100%, -80%, 0px); opacity:1"
-                    data-500 = "transform: translate3d(-100%, -50%, 1000px); opacity:0"
+                    data-0 = "transform: translate3d(-50%, -50%, 0px); opacity:1"
+                    data-50 = "transform: translate3d(-50%, -50%, 0px); opacity:1"
+                    data-500 = "transform: translate3d(-50%, -50%, 1000px); opacity:0"
                 >Website Works</div>
                 <div class="i3"
-                data-250 = "transform: translate3d(0%, -50%, -3500px); opacity:0"
-                data-300 = "transform: translate3d(0%, -50%, 0px); opacity:1"
-                data-600 = "transform: translate3d(0%, -50%, 1000px); opacity:0"
-                >You’re in a website work mood today</div>
+                data-250 = "transform: translate3d(-50%, -240%, -3500px); opacity:0"
+                data-400 = "transform: translate3d(-50%, -240%, 0px); opacity:1"
+                data-600 = "transform: translate3d(-50%, -240%, 1000px); opacity:0"
+                >웹표준을 준수해 만든 웹표준 사이트입니다.<br>
+                모든 사용자가 사용에 불편함이 없도록 웹 접근성을 고려 해 작업했습니다.<br>
+                크로스 브라우징이 가능합니다.</div>
                 <div class="i4"
-                data-250 = "transform: translate3d(-50%, -50%, -3500px); opacity:0"
-                data-300 = "transform: translate3d(-50%, -50%, 0px); opacity:1"
-                data-600 = "transform: translate3d(-50%, -50%, 1000px); opacity:0"
-                >힘내세요 조은선씨 당신은 할 수 있어요!!!!</div>
+                data-250 = "transform: translate3d(-50%, -90%, -3500px); opacity:0"
+                data-400 = "transform: translate3d(-50%, -90%, 0px); opacity:1"
+                data-600 = "transform: translate3d(-50%, -90%, 1000px); opacity:0"
+                >web standard</div>
+                <img class="i5" src="../portfolio/assets/img/page1.png"
+                data-250 = "transform: translate3d(-50%, 0%, -3500px); opacity:0"
+                data-400 = "transform: translate3d(-50%, 0%, 0px); opacity:1"
+                data-600 = "transform: translate3d(-50%, 0%, 1000px); opacity:0"
+                ></img>
             </div>
         </section>
         <!-- //section3 -->
