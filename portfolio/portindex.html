@@ -80,7 +80,7 @@
     </div>
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 <script>
 
 
@@ -90,35 +90,18 @@
             elem.addEventListener("click", (e) => {
                 e.preventDefault();
 
-                // const siv0 = setInterval(() => {
-                //     document.querySelector(".main_title").style.opacity = "0";
-                // }, 400);
-                const siv1 = setInterval(() => {
-                    document.querySelector(".circle1").style.top = "12000px";
-                    document.querySelector(".circle1").style.left = "12000px";
-                }, 500);
-                const siv2 = setInterval(() => {
-                    document.querySelector(".circle2").style.top = "6000px";
-                    document.querySelector(".circle2").style.left = "6000px";
-                }, 600);
-                const siv3 = setInterval(() => {
-                    document.querySelector(".circle3").style.top = "6000px";
-                    document.querySelector(".circle3").style.left = "6000px";
-                }, 700);
-                const siv4 = setInterval(() => {
-                    document.querySelector(".circle4").style.top = "6000px";
-                    document.querySelector(".circle4").style.left = "6000px";
-                }, 800);
+                gsap.to(".main_title", {opacity:0, duration:0.3});
+                gsap.to(".circle1", {top: 12000, left: 12000, delay: 0.1, ease: "expo.out"});
+                gsap.to(".circle2", {top: 12000, left: 12000, delay: 0.4, ease: "expo.out"});
+                gsap.to(".circle3", {top: 12000, left: 12000, delay: 0.8, ease: "expo.out"});
+                gsap.to(".circle4", {top: 12000, left: 12000, delay: 1, ease: "expo.out"});
 
-                setInterval(() => {
-                    document.querySelector(".main_title").style.display = "none";
-                }, 200);
+                gsap.to(".title_desc.list", {duration:1, opacity: 1, delay: 1.4});
 
-                setInterval(() => {
-                    document.querySelector(".title_desc.list").style.visibility = "visible";
-                }, 1000);
-
-
+                // setTimeout(() => {
+                //     window.location.href =
+                //     "https://noonsss.github.io/dothome21/portfolio/" + dataName + ".html";
+                // }, 2000);
             });
         });
     }
@@ -141,6 +124,34 @@
     //     });
     // }
     // pageClick();
+
+    //     // const siv0 = setInterval(() => {
+    // //     document.querySelector(".main_title").style.opacity = "0";
+    // // }, 400);
+    // const siv1 = setInterval(() => {
+    //     document.querySelector(".circle1").style.top = "12000px";
+    //     document.querySelector(".circle1").style.left = "12000px";
+    // }, 500);
+    // const siv2 = setInterval(() => {
+    //     document.querySelector(".circle2").style.top = "6000px";
+    //     document.querySelector(".circle2").style.left = "6000px";
+    // }, 600);
+    // const siv3 = setInterval(() => {
+    //     document.querySelector(".circle3").style.top = "6000px";
+    //     document.querySelector(".circle3").style.left = "6000px";
+    // }, 700);
+    // const siv4 = setInterval(() => {
+    //     document.querySelector(".circle4").style.top = "6000px";
+    //     document.querySelector(".circle4").style.left = "6000px";
+    // }, 800);
+
+    // setInterval(() => {
+    //     document.querySelector(".main_title").style.display = "none";
+    // }, 200);
+
+    // setInterval(() => {
+    //     document.querySelector(".title_desc.list").style.visibility = "visible";
+    // }, 1000);
 </script>
     
 </body>

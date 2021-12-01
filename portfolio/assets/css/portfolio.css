@@ -233,6 +233,7 @@ transform: translate(30px, 30px);}
 }
 
 .title_desc.list {
+    z-index: 3;
     text-transform: uppercase;
     position: absolute;
     left: 50%;
@@ -242,7 +243,7 @@ transform: translate(30px, 30px);}
     text-align: center;
     font-size: 2.5vw;
     line-height: 1.2;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .title_desc.list em {
