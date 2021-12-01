@@ -230,7 +230,6 @@ transform: translate(30px, 30px);}
     position: relative;
     height: 100vh;
     /* display: none; */
-    visibility: hidden;
 }
 
 .title_desc.list {
@@ -243,6 +242,7 @@ transform: translate(30px, 30px);}
     text-align: center;
     font-size: 2.5vw;
     line-height: 1.2;
+    visibility: hidden;
 }
 
 .title_desc.list em {
@@ -251,6 +251,8 @@ transform: translate(30px, 30px);}
 .boxWrap {
     position: relative;
     height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .box1 {
     cursor: pointer;

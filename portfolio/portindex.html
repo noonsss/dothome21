@@ -82,6 +82,49 @@
 
 
 <script>
+
+
+
+    function pageClick() {
+        document.querySelectorAll(".main_btn").forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                // const siv0 = setInterval(() => {
+                //     document.querySelector(".main_title").style.opacity = "0";
+                // }, 400);
+                const siv1 = setInterval(() => {
+                    document.querySelector(".circle1").style.top = "12000px";
+                    document.querySelector(".circle1").style.left = "12000px";
+                }, 500);
+                const siv2 = setInterval(() => {
+                    document.querySelector(".circle2").style.top = "6000px";
+                    document.querySelector(".circle2").style.left = "6000px";
+                }, 600);
+                const siv3 = setInterval(() => {
+                    document.querySelector(".circle3").style.top = "6000px";
+                    document.querySelector(".circle3").style.left = "6000px";
+                }, 700);
+                const siv4 = setInterval(() => {
+                    document.querySelector(".circle4").style.top = "6000px";
+                    document.querySelector(".circle4").style.left = "6000px";
+                }, 800);
+
+                setInterval(() => {
+                    document.querySelector(".main_title").style.display = "none";
+                }, 200);
+
+                setInterval(() => {
+                    document.querySelector(".title_desc.list").style.visibility = "visible";
+                }, 1000);
+
+
+            });
+        });
+    }
+    pageClick();
+
+
     // function pageClick() {
     //     document.querySelectorAll(".main_btn").forEach((elem) => {
     //         elem.addEventListener("click", (e) => {
@@ -98,43 +141,6 @@
     //     });
     // }
     // pageClick();
-
-
-    function pageClick() {
-        document.querySelectorAll(".main_btn").forEach((elem) => {
-            elem.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                const siv1 = setInterval(() => {
-                    document.querySelector(".circle1").style.top = "12000px";
-                    document.querySelector(".circle1").style.left = "12000px";
-                }, 400);
-                const siv2 = setInterval(() => {
-                    document.querySelector(".circle2").style.top = "6000px";
-                    document.querySelector(".circle2").style.left = "6000px";
-                }, 800);
-                const siv3 = setInterval(() => {
-                    document.querySelector(".circle3").style.top = "6000px";
-                    document.querySelector(".circle3").style.left = "6000px";
-                }, 1200);
-                const siv4 = setInterval(() => {
-                    document.querySelector(".circle4").style.top = "6000px";
-                    document.querySelector(".circle4").style.left = "6000px";
-                }, 1600);
-
-                setInterval(() => {
-                    document.querySelector(".main_title").style.display = "none";
-                }, 1800);
-
-                setInterval(() => {
-                    document.querySelector(".page_title").style.visibility = "visible";
-                }, 2200);
-
-
-            });
-        });
-    }
-    pageClick();
 </script>
     
 </body>
