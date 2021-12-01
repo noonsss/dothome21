@@ -208,7 +208,7 @@ a {
     100% {transform: translate(-100px, 250px);}
 }
 @keyframes ani4 {
-    0% {transform: translate(285px, 285px);}
+    0% {transform: translate(285px, 325px);}
     100% {transform: translate(0, 0);}
 }
 /* 

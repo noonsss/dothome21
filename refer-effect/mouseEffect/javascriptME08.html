@@ -339,6 +339,7 @@
                 const score = Math.exp(dist * -0.003);
                 item.style.transform = `scale(${score})`;
             });
+            
             //움직임 효과
             gsap.to(".cursor", {duration: 0.3, left: e.pageX - w, top: e.pageY - h});
         });
