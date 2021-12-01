@@ -25,16 +25,117 @@
                 Hello, my name is <em>Eunsun Jo</em> and I am a <em>Front-End Developer.</em> <br>
                 This site was created with my passion for web development. <br>Thank you so much!
             </div>
-            <div class="main_btn">
-                <a href="portList.html"> view more portfolio</a>
+            <div class="main_btn" data-name="portList">
+                <a href="portlist.html"> view more portfolio</a>
             </div>
         </div>
     </div>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-    <div class="cross"></div>
+    <div class="circle1">
+        <img class="blue1" src="../portfolio/assets/img/donut_light_blue.svg" alt="도형">
+        <img class="shadow1" src="../portfolio/assets/img/donut_light_blue_shadow.svg" alt="그림자">
+    </div>
+    <div class="circle2">
+        <img class="green1" src="../portfolio/assets/img/donut_green.svg" alt="도형">
+        <img class="shadow2" src="../portfolio/assets/img/donut_green_shadow.svg" alt="그림자">
+    </div>
+    <div class="circle3">
+        <img class="plus" src="../portfolio/assets/img/plus (1).svg" alt="도형">
+        <img class="shadow3" src="../portfolio/assets/img/plus_shadow (1).svg" alt="도형">
+    </div>
+     <div class="circle4">
+        <img class="navy" src="../portfolio/assets/img/sphere.svg" alt="도형">
+    </div> 
+
+    <div class="page_title">
+        <span class="title_desc list">
+            what's your <br><em> mood today?</em>
+        </span>
+        <div class="boxWrap">
+            <div class="box1">
+                <a href="websitework.html">
+                    <div class="WEBSITE_WORK"></div>
+                    <span class="box1span">WEBSITE WORK</span>
+                    <div class="box1shadow"></div>
+                </a>
+            </div>
+            <div class="box2">
+                <a href="#">
+                    <div class="SCRIPT"></div>
+                    <span class="box2span">SCRIPT</span>
+                </a>
+            </div>
+            <div class="box3">
+                <a href="#">
+                    <div class="ANIMATION"></div>
+                    <span class="box3span">ANIMATION</span>
+                </a>
+            </div>
+            <div class="box4">
+                <a href="#">
+                    <div class="ABOUT"></div>
+                    <span class="box4span">ABOUT</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<script>
+    // function pageClick() {
+    //     document.querySelectorAll(".main_btn").forEach((elem) => {
+    //         elem.addEventListener("click", (e) => {
+    //             e.preventDefault();
+    //             const dataName = elem.getAttribute('data-name');
+
+    //             // gsap.to()
+
+    //             setTimeout(() => {
+    //                 window.location.href =
+    //                 "https://noonsss.github.io/dothome21/portfolio/" + dataName + ".html";
+    //             }, 2000);
+    //         });
+    //     });
+    // }
+    // pageClick();
+
+
+    function pageClick() {
+        document.querySelectorAll(".main_btn").forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                const siv1 = setInterval(() => {
+                    document.querySelector(".circle1").style.top = "12000px";
+                    document.querySelector(".circle1").style.left = "12000px";
+                }, 400);
+                const siv2 = setInterval(() => {
+                    document.querySelector(".circle2").style.top = "6000px";
+                    document.querySelector(".circle2").style.left = "6000px";
+                }, 800);
+                const siv3 = setInterval(() => {
+                    document.querySelector(".circle3").style.top = "6000px";
+                    document.querySelector(".circle3").style.left = "6000px";
+                }, 1200);
+                const siv4 = setInterval(() => {
+                    document.querySelector(".circle4").style.top = "6000px";
+                    document.querySelector(".circle4").style.left = "6000px";
+                }, 1600);
+
+                setInterval(() => {
+                    document.querySelector(".main_title").style.display = "none";
+                }, 1800);
+
+                setInterval(() => {
+                    document.querySelector(".page_title").style.visibility = "visible";
+                }, 2200);
+
+
+            });
+        });
+    }
+    pageClick();
+</script>
     
 </body>
 </html>
