@@ -127,10 +127,10 @@
         tl.to(".circle4", {duration:0.1, left:"100%", top: "100%", opacity: 0})
 
         tl.to(".page_desc", {duration:0.3, opacity: 1})
-        tl.to(".box1", {duration:0.4, top: "40%", left: "12vw", opacity: 1})
-        tl.to(".box2", {duration:0.4, top: "60%", left: "35vw", opacity: 1})
-        tl.to(".box3", {duration:0.4, top: "60%", right: "35vw", opacity: 1})
-        tl.to(".box4", {duration:0.4, top: "40%", right: "12vw", opacity: 1})
+        tl.to(".box1", {duration:0.5, top: "40%", left: "12vw", opacity: 1})
+        tl.to(".box2", {duration:0.5, top: "60%", left: "35vw", opacity: 1})
+        tl.to(".box3", {duration:0.5, top: "60%", right: "35vw", opacity: 1})
+        tl.to(".box4", {duration:0.5, top: "40%", right: "12vw", opacity: 1})
 
     });
 
@@ -141,17 +141,17 @@
                 const dataName = elem.getAttribute('data-name');
                 let tl = gsap.timeline();
 
-                tl.to(".box1", {duration:0.8, top: "240%", left: "212vw", opacity: 1})
-                tl.to(".box2", {duration:0.8, top: "260%", left: "235vw", opacity: 1})
-                tl.to(".box3", {duration:0.8, top: "260%", right: "235vw", opacity: 1})
-                tl.to(".box4", {duration:0.8, top: "240%", right: "212vw", opacity: 1})
-                tl.to(".page_desc", {duration:0.8, opacity: 0})
+                tl.to(".box1", {duration:0.5, top: "240%", right: "212vw"});
+                tl.to(".box2", {duration:0.5, top: "260%", right: "235vw"});
+                tl.to(".box3", {duration:0.5, top: "260%", left: "235vw"})
+                tl.to(".box4", {duration:0.5, top: "240%", left: "212vw"})
+                tl.to(".page_desc", {duration:0.5, opacity: 0})
 
 
                 setTimeout(() => {
                     window.location.href =
                     "https://noonsss.github.io/dothome21/portfolio/" + dataName + ".html";
-                }, 2000);
+                }, 3000);
             });
         });
     }
