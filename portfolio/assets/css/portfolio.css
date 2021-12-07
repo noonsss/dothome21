@@ -139,7 +139,6 @@ a {
 .circle2.ani2 {
     animation: ani2 24.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
 }
-
 .circle2 .green1 {
     position: relative;
     z-index: 2;
@@ -147,7 +146,6 @@ a {
     height: 100%;
     background: none;
 }
-
 .circle2 .shadow2 {
     position: absolute;
     left: 0;
@@ -174,7 +172,7 @@ a {
 }
 
 
-.plus {
+.circle3 .plus {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -182,7 +180,7 @@ a {
     background: transparent;
 }
 
-.shadow3 {
+.circle3 .shadow3 {
     position: absolute;
     left: 0;
     top: 0;
@@ -208,7 +206,7 @@ a {
 }
 
 
-.navy {
+.circle4 .navy {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -276,6 +274,42 @@ a {
 @keyframes ani5 {
     0% {
         transform: translate(-185px, -135px);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+@keyframes ani6 {
+    0% {
+        transform: translate(-85px, -35px);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+@keyframes ani7 {
+    0% {
+        transform: translate(-185px, -85px);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+@keyframes ani8 {
+    0% {
+        transform: translate(-185px, -85px);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+@keyframes ani7 {
+    0% {
+        transform: translate(-185px, -85px);
     }
 
     100% {
@@ -565,20 +599,19 @@ transform: translate(30px, 30px);}
 .square2 {
     z-index: 1;
     position: absolute;
-    left: 10%;
+    right: 10%;
     bottom: 10%;
-    width: 16.3541vw;
-    height: 16.2529vw;
+    width: 14.5476vw;
+    height: 14.547vw;
     background: none;
-    opacity: 0;
-
+    /* opacity: 0; */
 }
-.square2.ani2 {
-    animation: ani2 24.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+.square2.ani6 {
+    animation: ani6 27.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
 }
 .square2 .green1 {
-    position: relative;
     z-index: 2;
+    position: relative;
     width: 100%;
     height: 100%;
     background: none;
@@ -591,5 +624,46 @@ transform: translate(30px, 30px);}
     height: 62.0565vw;
     background: none;
 }
-.square3 {}
-.square4 {}
+.square3 {
+    z-index: 2;
+    position: absolute;
+    left: 60%;
+    bottom: 60%;
+    width: 55.9524vw;
+    height: 55.9524vw;
+    background: none;
+    transition: all 3s;
+    /* opacity: 0; */
+}
+.square3.ani7 {
+    animation: ani7 25.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+}
+.square3 .navy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+.square4 {
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    bottom: -30%;
+    width: 33.5713vw;
+    height: 33.5713vw;
+    background: none;
+    transition: all 3s;
+    /* opacity: 0; */
+}
+.square4.ani8 {
+    animation: ani8 18.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+}
+.square4 .plus {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
