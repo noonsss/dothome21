@@ -109,7 +109,7 @@ a {
     animation: ani1 35.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
 }
 
-.blue1 {
+.circle1 .blue1 {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -117,7 +117,7 @@ a {
     height: 100%;
 }
 
-.shadow1 {
+.circle1 .shadow1 {
     position: absolute;
     left: 0;
     top: 0;
@@ -140,21 +140,21 @@ a {
     animation: ani2 24.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
 }
 
-.green1 {
+.circle2 .green1 {
     position: relative;
     z-index: 2;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: none;
 }
 
-.shadow2 {
+.circle2 .shadow2 {
     position: absolute;
     left: 0;
     top: 0;
     width: 61.9738vw;
     height: 62.0565vw;
-    background: transparent;
+    background: none;
 }
 
 .circle3 {
@@ -270,6 +270,16 @@ a {
 
     100% {
         transform: translate(0, 0);
+    }
+}
+
+@keyframes ani5 {
+    0% {
+        transform: translate(-185px, -135px);
+    }
+
+    100% {
+        transform: translate(100px, 100px);
     }
 }
 
@@ -495,3 +505,91 @@ transform: translate(30px, 30px);}
     font-size: 1.3vw;
     background: none;
 }
+
+
+.contact_title {
+    height: 100vh;
+}
+.contact_desc {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    z-index: 2;
+    background: none;
+}
+.contact_desc img {
+    background: none;
+}
+
+.contact_text {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 200%);
+    font-family: 'Aldrich', sans-serif;
+    color: #fff;
+    font-size: 1.6vw;
+    text-align: center;
+    z-index: 2;
+    background: none;
+}
+
+.square1 {
+    z-index: 1;
+    position: absolute;
+    bottom: 64%;
+    right: 62%;
+    width: 14.5476vw;
+    height: 14.5476vw;
+    transition: all 3s;
+    /* opacity: 0; */
+}
+.square1.ani5 {
+    animation: ani5 32.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+}
+.square1 .blue1 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: transparent;
+    height: 100%;
+}
+.square1 .shadow1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70.9274vw;
+    height: 70.9893vw;
+}
+
+.square2 {
+    z-index: 1;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 16.3541vw;
+    height: 16.2529vw;
+    background: none;
+    opacity: 0;
+
+}
+.square2.ani2 {
+    animation: ani2 24.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
+}
+.square2 .green1 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.square2 .shadow2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 61.9738vw;
+    height: 62.0565vw;
+    background: none;
+}
+.square3 {}
+.square4 {}
