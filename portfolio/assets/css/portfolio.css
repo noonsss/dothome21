@@ -576,7 +576,7 @@ transform: translate(30px, 30px);}
     width: 14.5476vw;
     height: 14.5476vw;
     transition: all 3s;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .square1.ani5 {
     animation: ani5 32.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
@@ -604,7 +604,7 @@ transform: translate(30px, 30px);}
     width: 14.5476vw;
     height: 14.547vw;
     background: none;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .square2.ani6 {
     animation: ani6 27.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
@@ -633,7 +633,7 @@ transform: translate(30px, 30px);}
     height: 55.9524vw;
     background: none;
     transition: all 3s;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .square3.ani7 {
     animation: ani7 25.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
@@ -655,7 +655,7 @@ transform: translate(30px, 30px);}
     height: 33.5713vw;
     background: none;
     transition: all 3s;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .square4.ani8 {
     animation: ani8 18.2s infinite alternate cubic-bezier(0.255, -0.045, 0.690, 1.045);
